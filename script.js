@@ -144,8 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('current-year').textContent = new Date().getFullYear();
     document.getElementById('info-direccion').textContent = ADDRESS;
     document.getElementById('info-horarios').innerHTML = HOURS.replace(/\n/g, '<br>');
-    document.getElementById('info-whatsapp').textContent = `+${WHATSAPP_NUMBER.slice(0,3)} ${WHATSAPP_NUMBER.slice(3,5)} ${WHATSAPP_NUMBER.slice(5,8)} ${WHATSAPP_NUMBER.slice(8)}`;
-    
+    document.getElementById('info-whatsapp').textContent = `+${WHATSAPP_NUMBER.slice(0, 3)} ${WHATSAPP_NUMBER.slice(3, 5)} ${WHATSAPP_NUMBER.slice(5, 8)} ${WHATSAPP_NUMBER.slice(8)}`;
+
     document.getElementById('btn-escribir-wa').href = `https://wa.me/${WHATSAPP_NUMBER}`;
     document.getElementById('hero-whatsapp-btn').href = `https://wa.me/${WHATSAPP_NUMBER}`;
     document.getElementById('btn-instagram').href = INSTAGRAM_URL;
@@ -193,7 +193,7 @@ function initScrollReveal() {
 function initNavbar() {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
-    
+
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
@@ -252,8 +252,8 @@ function renderMenu(searchTerm = '') {
 
     const filtered = MENU_DATA.filter(item => {
         const matchCategory = currentCategory === 'Todas' || item.category === currentCategory;
-        const matchSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                            item.desc.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            item.desc.toLowerCase().includes(searchTerm.toLowerCase());
         return matchCategory && matchSearch;
     });
 
@@ -262,7 +262,7 @@ function renderMenu(searchTerm = '') {
     if (filtered.length > 4) numRows = 2;
     if (filtered.length > 8) numRows = 3;
     grid.style.gridTemplateRows = `repeat(${numRows}, 300px)`;
-    grid.style.gridTemplateColumns = 'initial'; 
+    grid.style.gridTemplateColumns = 'initial';
     grid.style.gridAutoFlow = 'column';
     grid.style.gridAutoColumns = '320px';
 
@@ -301,8 +301,8 @@ function renderMenu(searchTerm = '') {
 function initCarousel() {
     const track = document.getElementById('carousel-track');
     const nav = document.getElementById('carousel-nav');
-    
-    if(imagesArray.length === 0) return;
+
+    if (imagesArray.length === 0) return;
 
     // Crear slides
     imagesArray.forEach((img, index) => {
@@ -327,15 +327,15 @@ function initCarousel() {
     let autoplayInterval;
 
     function moveToSlide(index) {
-        if(index < 0) index = imagesArray.length - 1;
-        if(index >= imagesArray.length) index = 0;
-        
+        if (index < 0) index = imagesArray.length - 1;
+        if (index >= imagesArray.length) index = 0;
+
         track.style.transform = `translateX(-${index * 100}%)`;
-        
+
         const dots = nav.querySelectorAll('.carousel-indicator');
         dots.forEach(d => d.classList.remove('current-slide'));
-        if(dots[index]) dots[index].classList.add('current-slide');
-        
+        if (dots[index]) dots[index].classList.add('current-slide');
+
         currentIndex = index;
     }
 
@@ -384,7 +384,7 @@ function initGallery() {
         imgEl.src = `IMG/${img}`;
         imgEl.alt = "Foto de platillo o local";
         imgEl.loading = "lazy";
-        
+
         div.addEventListener('click', () => {
             lightboxImg.src = `IMG/${img}`;
             lightbox.style.display = 'block';
@@ -419,7 +419,7 @@ function initCart() {
     const cartClose = document.getElementById('cart-close');
     const checkoutBtn = document.getElementById('btn-checkout');
 
-    toggleCartGlobal = function(forceOpen = false) {
+    toggleCartGlobal = function (forceOpen = false) {
         if (forceOpen) {
             cartPanel.classList.add('active');
             cartOverlay.classList.add('active');
@@ -448,7 +448,7 @@ function addToCart(productId) {
     }
 
     updateCartUI();
-    
+
     // Animación feedback
     const badge = document.getElementById('cart-badge');
     badge.style.transform = 'scale(1.5)';
@@ -463,18 +463,18 @@ function showToast(message) {
     const toast = document.createElement('div');
     toast.className = 'toast';
     toast.textContent = message;
-    
+
     container.appendChild(toast);
-    
+
     // Trigger animation
     setTimeout(() => toast.classList.add('show'), 10);
-    
+
     // Animate cart button
     const cartBtn = document.getElementById('cart-floating-btn');
     cartBtn.classList.remove('cart-pop');
     void cartBtn.offsetWidth; // Trigger reflow
     cartBtn.classList.add('cart-pop');
-    
+
     // Auto-remove
     setTimeout(() => {
         toast.classList.remove('show');
@@ -497,7 +497,7 @@ function updateCartUI() {
     const container = document.getElementById('cart-items');
     const badge = document.getElementById('cart-badge');
     const totalEl = document.getElementById('cart-total-price');
-    
+
     container.innerHTML = '';
     let total = 0;
     let count = 0;
@@ -558,24 +558,24 @@ function handleCheckout() {
     msg += `\n*Total aproximado:* $${total}\n\n`;
     msg += `*Nombre:* ${nombre}\n`;
     msg += `*Dirección/Retiro:* ${direccion}\n`;
-    
+
     if (comentarios) {
         msg += `*Comentarios:* ${comentarios}\n`;
     }
 
     const encodedMsg = encodeURIComponent(msg);
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMsg}`;
-    
+
     window.open(url, '_blank');
 }
 
 // --- RESERVAS ---
 function initReservations() {
     const form = document.getElementById('reservas-form');
-    
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const nombre = document.getElementById('res-nombre').value;
         const fecha = document.getElementById('res-fecha').value;
         const hora = document.getElementById('res-hora').value;
@@ -585,7 +585,7 @@ function initReservations() {
         // --- VALIDACIÓN DE HORARIOS ---
         const dateObj = new Date(fecha + 'T12:00:00');
         const dayOfWeek = dateObj.getDay(); // 0=Dom, 1=Lun, 2=Mar...
-        
+
         if (dayOfWeek === 1) { // Lunes
             alert("¡Lo sentimos! Los lunes estamos cerrados. Por favor selecciona otro día.");
             return;
@@ -597,7 +597,7 @@ function initReservations() {
         // Nuevos Horarios de Reservas:
         // Martes a Viernes (2-5): 19:00 - 23:00
         // Sábados y Domingos (6, 0): 13:00 - 23:00
-        
+
         let isValidTime = false;
         let scheduleMsg = "";
 
@@ -619,14 +619,14 @@ function initReservations() {
         msg += `*Fecha:* ${fecha}\n`;
         msg += `*Hora:* ${hora}\n`;
         msg += `*Cantidad de personas:* ${personas}\n`;
-        
+
         if (comentarios) {
             msg += `*Comentarios:* ${comentarios}\n`;
         }
 
         const encodedMsg = encodeURIComponent(msg);
         const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMsg}`;
-        
+
         window.open(url, '_blank');
         form.reset();
         showToast("Solicitud de reserva enviada");
