@@ -166,11 +166,20 @@ section {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-family: 'Outfit', sans-serif;
     font-size: 1.7rem;
     font-weight: 700;
     color: var(--primary);
     text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.logo-img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-links {
@@ -233,6 +242,13 @@ section {
     z-index: 1;
     padding: 0 2rem;
     max-width: 800px;
+}
+
+.hero-logo {
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 15px var(--primary-glow));
 }
 
 .hero h1 {
