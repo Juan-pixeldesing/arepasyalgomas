@@ -6,32 +6,85 @@ const ADDRESS = "Av. Giannattasio KM 22,000, 15000 Ciudad de la Costa, Canelones
 const HOURS = "Martes a Viernes: 19:00 - 23:00 \n Sábados y Domingos: 13:00 - 23:00";
 
 const MENU_DATA = [
-
-    // --- PATACONES ---
-    { id: 1, name: "Patacón Carne, pollo, chorizo o cerdo", desc: "Plátano frito con el relleno de tu elección.", price: 490, category: "Patacones" },
-    { id: 2, name: "Patacón Veggie", desc: "Plátano frito con vegetales.", price: 460, category: "Patacones" },
-    { id: 3, name: "Tostones", desc: "Ración de tostones de plátano.", price: 250, category: "Patacones" },
-
-    // --- CACHAPAS ---
-    { id: 4, name: "Cachapa Carne, pollo, chorizo o cerdo", desc: "Fina masa de maíz tierno molido cocinada a la plancha en forma de tortilla y rellena con el gusto de tu preferencia.", price: 450, category: "Cachapas" },
-    { id: 5, name: "Cachapa Burger", desc: "Cachapa rellena de 2 hamburguesas de carne vacuna, panceta y queso mozzarella acompañado de fritas.", price: 500, category: "Cachapas" },
-    { id: 6, name: "Cachapa Crispy", desc: "Cachapa rellena de pollo crispy.", price: 450, category: "Cachapas" },
-    { id: 7, name: "Cachapa Jamón y queso", desc: "Cachapa clásica con jamón y queso.", price: 420, category: "Cachapas" },
-    { id: 8, name: "Cachapa Solo queso", desc: "Cachapa rellena de abundante queso.", price: 400, category: "Cachapas" },
-    { id: 9, name: "Cachapa Veggie", desc: "Cachapa con vegetales y queso.", price: 410, category: "Cachapas" },
-
-    // --- POLLO CRISPY ---
-    { id: 10, name: "Pollo Crispy Solo", desc: "Ración de pollo crispy crujiente.", price: 350, category: "Pollo Crispy" },
-    { id: 11, name: "Pollo Crispy Con fritas", desc: "Pollo crispy acompañado de papas fritas.", price: 450, category: "Pollo Crispy" },
-
-    // --- AREPAS ESPECIALES ---
+    // --- POLLO ---
+    { id: 201, name: "Patacón de Pollo", desc: "Plátano frito relleno de pollo.", price: 490, category: "Pollo" },
+    { id: 202, name: "Cachapa de Pollo", desc: "Fina masa de maíz tierno molido a la plancha rellena de pollo.", price: 450, category: "Pollo" },
+    { id: 6, name: "Cachapa Crispy", desc: "Cachapa rellena de pollo crispy.", price: 450, category: "Pollo" },
+    { id: 10, name: "Pollo Crispy Solo", desc: "Ración de pollo crispy crujiente.", price: 350, category: "Pollo" },
+    { id: 11, name: "Pollo Crispy Con fritas", desc: "Pollo crispy acompañado de papas fritas.", price: 450, category: "Pollo" },
+    { id: 32, name: "Arepa Reina Pepiada (Sola)", desc: "Una mezcla de pollo, palta y mayonesa.", price: 370, category: "Pollo" },
+    { id: 33, name: "Arepa Reina Pepiada (Con tequeños)", desc: "Una mezcla de pollo, palta y mayonesa.", price: 650, category: "Pollo" },
+    { id: 34, name: "Arepa Reina Pepiada (Con fritas)", desc: "Una mezcla de pollo, palta y mayonesa.", price: 550, category: "Pollo" },
+    { id: 35, name: "Arepa Sifrina (Sola)", desc: "Una Reina Pepiada con mucho queso.", price: 360, category: "Pollo" },
+    { id: 36, name: "Arepa Sifrina (Con tequeños)", desc: "Una Reina Pepiada con mucho queso.", price: 640, category: "Pollo" },
+    { id: 37, name: "Arepa Sifrina (Con fritas)", desc: "Una Reina Pepiada con mucho queso.", price: 540, category: "Pollo" },
+    { id: 56, name: "Arepa Turca (Sola)", desc: "Tomate, lechuga, croquetas árabes (falafel) y un trozo de pollo.", price: 350, category: "Pollo" },
+    { id: 57, name: "Arepa Turca (Con tequeños)", desc: "Tomate, lechuga, croquetas árabes (falafel) y un trozo de pollo.", price: 630, category: "Pollo" },
+    { id: 58, name: "Arepa Turca (Con fritas)", desc: "Tomate, lechuga, croquetas árabes (falafel) y un trozo de pollo.", price: 530, category: "Pollo" },
+    { id: 203, name: "Arroz chow fan con Pollo", desc: "Arroz salteado con verduras y pollo.", price: 430, category: "Comida China" },
+    { id: 204, name: "Chow mein con Pollo", desc: "Fideos al wok con verduras y pollo.", price: 510, category: "Comida China" },
+    { id: 90, name: "Pollo frito (Casa China)", desc: "Ración de pollo frito estilo chino.", price: 320, category: "Comida China" },
+    
+    // --- CARNE ---
+    { id: 205, name: "Patacón de Carne", desc: "Plátano frito relleno de carne.", price: 490, category: "Carne" },
+    { id: 206, name: "Cachapa de Carne", desc: "Fina masa de maíz tierno molido a la plancha rellena de carne.", price: 450, category: "Carne" },
+    { id: 5, name: "Cachapa Burger", desc: "Cachapa rellena de 2 hamburguesas de carne vacuna, panceta y queso mozzarella acompañado de fritas.", price: 500, category: "Carne" },
     { id: 12, name: "Burguer Especial (Arepa)", desc: "Doble hamburguesa de carne vacuna casera a la arepa con tomate, lechuga, huevo frito, panceta, queso y salsas.", price: 480, category: "Arepas Especiales" },
     { id: 13, name: "Arepa Pabellón", desc: "Carne mechada, porotos negros y queso mozzarella.", price: 390, category: "Arepas Especiales" },
-    { id: 14, name: "Arepa Veggie Especial", desc: "Verduritas salteadas y queso mozzarella.", price: 350, category: "Arepas Especiales" },
     { id: 15, name: "Arepa Mixta Especial", desc: "Relleno de carne mechada, verduras salteadas y queso.", price: 380, category: "Arepas Especiales" },
-    { id: 16, name: "Salchiarepa", desc: "Huevos revueltos con tomate, cebolla y panchos picado en trozos.", price: 360, category: "Arepas Especiales" },
+    { id: 38, name: "Arepa Pelua (Sola)", desc: "Carne vacuna en hierbas salteadas con morrón, cebolla y queso mozzarella.", price: 370, category: "Carne" },
+    { id: 39, name: "Arepa Pelua (Con tequeños)", desc: "Carne vacuna en hierbas salteadas con morrón, cebolla y queso mozzarella.", price: 650, category: "Carne" },
+    { id: 40, name: "Arepa Pelua (Con fritas)", desc: "Carne vacuna en hierbas salteadas con morrón, cebolla y queso mozzarella.", price: 550, category: "Carne" },
+    { id: 59, name: "Arepa Burguer Sencilla (Sola)", desc: "Arepa rellena con una hamburguesa, queso mozzarella, lechuga, tomate y salsa a elección.", price: 340, category: "Carne" },
+    { id: 60, name: "Arepa Burguer Sencilla (Con tequeños)", desc: "Arepa rellena con una hamburguesa, queso mozzarella, lechuga, tomate y salsa a elección.", price: 620, category: "Carne" },
+    { id: 61, name: "Arepa Burguer Sencilla (Con fritas)", desc: "Arepa rellena con una hamburguesa, queso mozzarella, lechuga, tomate y salsa a elección.", price: 520, category: "Carne" },
+    { id: 74, name: "Arepa Carne Mechada (Sola)", desc: "Carne mechada jugosa.", price: 400, category: "Carne" },
+    { id: 75, name: "Arepa Carne Mechada (Con tequeños)", desc: "Carne mechada jugosa.", price: 660, category: "Carne" },
+    { id: 76, name: "Arepa Carne Mechada (Con fritas)", desc: "Carne mechada jugosa.", price: 560, category: "Carne" },
+    { id: 207, name: "Arroz chow fan con Carne", desc: "Arroz salteado con verduras y res.", price: 430, category: "Comida China" },
+    { id: 208, name: "Chow mein con Carne", desc: "Fideos al wok con verduras y res.", price: 510, category: "Comida China" },
 
-    // --- TEQUEÑOS ---
+    // --- CERDO ---
+    { id: 209, name: "Patacón de Cerdo / Chorizo", desc: "Plátano frito relleno de cerdo o chorizo.", price: 490, category: "Cerdo" },
+    { id: 210, name: "Cachapa de Cerdo / Chorizo", desc: "Fina masa de maíz tierno molido a la plancha rellena de cerdo o chorizo.", price: 450, category: "Cerdo" },
+    { id: 7, name: "Cachapa Jamón y queso", desc: "Cachapa clásica con jamón y queso.", price: 420, category: "Cerdo" },
+    { id: 41, name: "Arepa Rumbera (Sola)", desc: "Carne de cerdo a la plancha y queso mozzarella.", price: 360, category: "Cerdo" },
+    { id: 42, name: "Arepa Rumbera (Con tequeños)", desc: "Carne de cerdo a la plancha y queso mozzarella.", price: 640, category: "Cerdo" },
+    { id: 43, name: "Arepa Rumbera (Con fritas)", desc: "Carne de cerdo a la plancha y queso mozzarella.", price: 540, category: "Cerdo" },
+    { id: 53, name: "Arepa Gringa (Sola)", desc: "Queso, panceta y huevos revueltos.", price: 360, category: "Cerdo" },
+    { id: 54, name: "Arepa Gringa (Con tequeños)", desc: "Queso, panceta y huevos revueltos.", price: 640, category: "Cerdo" },
+    { id: 55, name: "Arepa Gringa (Con fritas)", desc: "Queso, panceta y huevos revueltos.", price: 540, category: "Cerdo" },
+    { id: 62, name: "Arepa Jamón y Queso (Sola)", desc: "Jamón en trocitos y queso mozzarella rallado.", price: 340, category: "Cerdo" },
+    { id: 63, name: "Arepa Jamón y Queso (Con tequeños)", desc: "Jamón en trocitos y queso mozzarella rallado.", price: 620, category: "Cerdo" },
+    { id: 64, name: "Arepa Jamón y Queso (Con fritas)", desc: "Jamón en trocitos y queso mozzarella rallado.", price: 520, category: "Cerdo" },
+    { id: 65, name: "Chori Arepa (Sola)", desc: "Trozos de chorizo premium a la plancha con queso.", price: 350, category: "Cerdo" },
+    { id: 66, name: "Chori Arepa (Con tequeños)", desc: "Trozos de chorizo premium a la plancha con queso.", price: 630, category: "Cerdo" },
+    { id: 67, name: "Chori Arepa (Con fritas)", desc: "Trozos de chorizo premium a la plancha con queso.", price: 530, category: "Cerdo" },
+    { id: 16, name: "Salchiarepa", desc: "Huevos revueltos con tomate, cebolla y panchos picado en trozos.", price: 360, category: "Arepas Especiales" },
+    { id: 211, name: "Arroz chow fan con Cerdo", desc: "Arroz salteado con verduras y cerdo o jamón.", price: 430, category: "Comida China" },
+    { id: 212, name: "Chow mein con Cerdo", desc: "Fideos al wok con verduras y cerdo o jamón.", price: 510, category: "Comida China" },
+
+    // --- VEGETARIANO & OTROS ---
+    { id: 2, name: "Patacón Veggie", desc: "Plátano frito con vegetales.", price: 460, category: "Vegetariano & Otros" },
+    { id: 3, name: "Tostones", desc: "Ración de tostones de plátano.", price: 250, category: "Vegetariano & Otros" },
+    { id: 8, name: "Cachapa Solo queso", desc: "Cachapa rellena de abundante queso.", price: 400, category: "Vegetariano & Otros" },
+    { id: 9, name: "Cachapa Veggie", desc: "Cachapa con vegetales y queso.", price: 410, category: "Vegetariano & Otros" },
+    { id: 14, name: "Arepa Veggie Especial", desc: "Verduritas salteadas y queso mozzarella.", price: 350, category: "Arepas Especiales" },
+    { id: 44, name: "Arepa Perico (Sola)", desc: "Huevos revueltos con morrones y cebolla.", price: 350, category: "Vegetariano & Otros" },
+    { id: 45, name: "Arepa Perico (Con tequeños)", desc: "Huevos revueltos con morrones y cebolla.", price: 630, category: "Vegetariano & Otros" },
+    { id: 46, name: "Arepa Perico (Con fritas)", desc: "Huevos revueltos con morrones y cebolla.", price: 530, category: "Vegetariano & Otros" },
+    { id: 47, name: "Arepa Domino (Sola)", desc: "Porotos negros con queso mozzarella.", price: 350, category: "Vegetariano & Otros" },
+    { id: 48, name: "Arepa Domino (Con tequeños)", desc: "Porotos negros con queso mozzarella.", price: 630, category: "Vegetariano & Otros" },
+    { id: 49, name: "Arepa Domino (Con fritas)", desc: "Porotos negros con queso mozzarella.", price: 530, category: "Vegetariano & Otros" },
+    { id: 50, name: "Arepa Veggie Sencilla (Sola)", desc: "Mix de vegetales, verduras salteadas y palta.", price: 350, category: "Vegetariano & Otros" },
+    { id: 51, name: "Arepa Veggie Sencilla (Con tequeños)", desc: "Mix de vegetales, verduras salteadas y palta.", price: 630, category: "Vegetariano & Otros" },
+    { id: 52, name: "Arepa Veggie Sencilla (Con fritas)", desc: "Mix de vegetales, verduras salteadas y palta.", price: 550, category: "Vegetariano & Otros" },
+    { id: 68, name: "Arepa Weekend (Sola)", desc: "Atún con tomates, cebolla, mayonesa y queso mozzarella.", price: 350, category: "Vegetariano & Otros" },
+    { id: 69, name: "Arepa Weekend (Con tequeños)", desc: "Atún con tomates, cebolla, mayonesa y queso mozzarella.", price: 630, category: "Vegetariano & Otros" },
+    { id: 70, name: "Arepa Weekend (Con fritas)", desc: "Atún con tomates, cebolla, mayonesa y queso mozzarella.", price: 530, category: "Vegetariano & Otros" },
+    { id: 71, name: "Arepa Caprese (Sola)", desc: "Arepa rellena de queso, tomates, albahaca con un toque de aceite de oliva.", price: 350, category: "Vegetariano & Otros" },
+    { id: 72, name: "Arepa Caprese (Con tequeños)", desc: "Arepa rellena de queso, tomates, albahaca con un toque de aceite de oliva.", price: 630, category: "Vegetariano & Otros" },
+    { id: 73, name: "Arepa Caprese (Con fritas)", desc: "Arepa rellena de queso, tomates, albahaca con un toque de aceite de oliva.", price: 530, category: "Vegetariano & Otros" },
     { id: 17, name: "Tequeños Mozarella x5", desc: "5 dedos de queso mozzarella envueltos en masa crujiente.", price: 275, category: "Tequeños" },
     { id: 18, name: "Tequeños Mozarella x10", desc: "10 dedos de queso mozzarella envueltos en masa crujiente.", price: 500, category: "Tequeños" },
     { id: 19, name: "Tequeños Cheddar x5", desc: "5 dedos de queso cheddar envueltos en masa crujiente.", price: 300, category: "Tequeños" },
@@ -39,8 +92,12 @@ const MENU_DATA = [
     { id: 21, name: "Tequeños Chocolate x5", desc: "5 tequeños rellenos de chocolate.", price: 310, category: "Tequeños" },
     { id: 22, name: "Tequeños Chocolate x10", desc: "10 tequeños rellenos de chocolate.", price: 560, category: "Tequeños" },
     { id: 23, name: "Burger Tequeño", desc: "Hamburguesa con tequeños.", price: 580, category: "Tequeños" },
+    { id: 77, name: "Arroz chow fan con verduras", desc: "Ración de arroz salteado con huevo frito y verduras.", price: 350, category: "Comida China" },
+    { id: 82, name: "Chow mein de verduras", desc: "Fideos al wok con verduras.", price: 450, category: "Comida China" },
+    { id: 88, name: "Chop suey sencillo", desc: "Verduras salteadas.", price: 320, category: "Comida China" },
+    { id: 91, name: "Arrolladitos de primavera", desc: "Ración de arrolladitos primavera.", price: 250, category: "Comida China" },
 
-    // --- COMBOS ---
+    // --- COMBOS MIXTOS ---
     { id: 24, name: "Combo la Llovizna", desc: "2 cachapas grandes a elección + 5 tequeños + bebida de 1.5.", price: 1200, category: "Combos" },
     { id: 25, name: "Combo los Roques", desc: "2 cachapas grandes a elección + bebida de 1.5.", price: 980, category: "Combos" },
     { id: 26, name: "Combo la Guaricha", desc: "3 cachapas medianas rellenas de queso + 10 tequeños + bebida de 1.5.", price: 1010, category: "Combos" },
@@ -49,70 +106,14 @@ const MENU_DATA = [
     { id: 29, name: "Combo Bien Resuelta", desc: "3 arepas a elección + 10 tequeños + bebida de 1.5.", price: 1600, category: "Combos" },
     { id: 30, name: "Combo Entre Panas", desc: "6 tequeños + media ración de pollo crispy y 3 mini arepitas a elección.", price: 630, category: "Combos" },
     { id: 31, name: "Combo Full Equipo", desc: "Pollo Crispy + 3 arepitas + 3 tequeños + 3 cachapas medianas rellenas con queso.", price: 840, category: "Combos" },
-
-    // --- AREPAS CLÁSICAS ---
-    { id: 32, name: "Arepa Reina Pepiada (Sola)", desc: "Una mezcla de pollo, palta y mayonesa.", price: 370, category: "Arepas" },
-    { id: 33, name: "Arepa Reina Pepiada (Con tequeños)", desc: "Una mezcla de pollo, palta y mayonesa.", price: 650, category: "Arepas" },
-    { id: 34, name: "Arepa Reina Pepiada (Con fritas)", desc: "Una mezcla de pollo, palta y mayonesa.", price: 550, category: "Arepas" },
-    { id: 35, name: "Arepa Sifrina (Sola)", desc: "Una Reina Pepiada con mucho queso.", price: 360, category: "Arepas" },
-    { id: 36, name: "Arepa Sifrina (Con tequeños)", desc: "Una Reina Pepiada con mucho queso.", price: 640, category: "Arepas" },
-    { id: 37, name: "Arepa Sifrina (Con fritas)", desc: "Una Reina Pepiada con mucho queso.", price: 540, category: "Arepas" },
-    { id: 38, name: "Arepa Pelua (Sola)", desc: "Carne vacuna en hierbas salteadas con morrón, cebolla y queso mozzarella.", price: 370, category: "Arepas" },
-    { id: 39, name: "Arepa Pelua (Con tequeños)", desc: "Carne vacuna en hierbas salteadas con morrón, cebolla y queso mozzarella.", price: 650, category: "Arepas" },
-    { id: 40, name: "Arepa Pelua (Con fritas)", desc: "Carne vacuna en hierbas salteadas con morrón, cebolla y queso mozzarella.", price: 550, category: "Arepas" },
-    { id: 41, name: "Arepa Rumbera (Sola)", desc: "Carne de cerdo a la plancha y queso mozzarella.", price: 360, category: "Arepas" },
-    { id: 42, name: "Arepa Rumbera (Con tequeños)", desc: "Carne de cerdo a la plancha y queso mozzarella.", price: 640, category: "Arepas" },
-    { id: 43, name: "Arepa Rumbera (Con fritas)", desc: "Carne de cerdo a la plancha y queso mozzarella.", price: 540, category: "Arepas" },
-    { id: 44, name: "Arepa Perico (Sola)", desc: "Huevos revueltos con morrones y cebolla.", price: 350, category: "Arepas" },
-    { id: 45, name: "Arepa Perico (Con tequeños)", desc: "Huevos revueltos con morrones y cebolla.", price: 630, category: "Arepas" },
-    { id: 46, name: "Arepa Perico (Con fritas)", desc: "Huevos revueltos con morrones y cebolla.", price: 530, category: "Arepas" },
-    { id: 47, name: "Arepa Domino (Sola)", desc: "Porotos negros con queso mozzarella.", price: 350, category: "Arepas" },
-    { id: 48, name: "Arepa Domino (Con tequeños)", desc: "Porotos negros con queso mozzarella.", price: 630, category: "Arepas" },
-    { id: 49, name: "Arepa Domino (Con fritas)", desc: "Porotos negros con queso mozzarella.", price: 530, category: "Arepas" },
-    { id: 50, name: "Arepa Veggie Sencilla (Sola)", desc: "Mix de vegetales, verduras salteadas y palta.", price: 350, category: "Arepas" },
-    { id: 51, name: "Arepa Veggie Sencilla (Con tequeños)", desc: "Mix de vegetales, verduras salteadas y palta.", price: 630, category: "Arepas" },
-    { id: 52, name: "Arepa Veggie Sencilla (Con fritas)", desc: "Mix de vegetales, verduras salteadas y palta.", price: 550, category: "Arepas" },
-    { id: 53, name: "Arepa Gringa (Sola)", desc: "Queso, panceta y huevos revueltos.", price: 360, category: "Arepas" },
-    { id: 54, name: "Arepa Gringa (Con tequeños)", desc: "Queso, panceta y huevos revueltos.", price: 640, category: "Arepas" },
-    { id: 55, name: "Arepa Gringa (Con fritas)", desc: "Queso, panceta y huevos revueltos.", price: 540, category: "Arepas" },
-    { id: 56, name: "Arepa Turca (Sola)", desc: "Tomate, lechuga, croquetas árabes (falafel) y un trozo de pollo.", price: 350, category: "Arepas" },
-    { id: 57, name: "Arepa Turca (Con tequeños)", desc: "Tomate, lechuga, croquetas árabes (falafel) y un trozo de pollo.", price: 630, category: "Arepas" },
-    { id: 58, name: "Arepa Turca (Con fritas)", desc: "Tomate, lechuga, croquetas árabes (falafel) y un trozo de pollo.", price: 530, category: "Arepas" },
-    { id: 59, name: "Arepa Burguer Sencilla (Sola)", desc: "Arepa rellena con una hamburguesa, queso mozzarella, lechuga, tomate y salsa a elección.", price: 340, category: "Arepas" },
-    { id: 60, name: "Arepa Burguer Sencilla (Con tequeños)", desc: "Arepa rellena con una hamburguesa, queso mozzarella, lechuga, tomate y salsa a elección.", price: 620, category: "Arepas" },
-    { id: 61, name: "Arepa Burguer Sencilla (Con fritas)", desc: "Arepa rellena con una hamburguesa, queso mozzarella, lechuga, tomate y salsa a elección.", price: 520, category: "Arepas" },
-    { id: 62, name: "Arepa Jamón y Queso (Sola)", desc: "Jamón en trocitos y queso mozzarella rallado.", price: 340, category: "Arepas" },
-    { id: 63, name: "Arepa Jamón y Queso (Con tequeños)", desc: "Jamón en trocitos y queso mozzarella rallado.", price: 620, category: "Arepas" },
-    { id: 64, name: "Arepa Jamón y Queso (Con fritas)", desc: "Jamón en trocitos y queso mozzarella rallado.", price: 520, category: "Arepas" },
-    { id: 65, name: "Chori Arepa (Sola)", desc: "Trozos de chorizo premium a la plancha con queso.", price: 350, category: "Arepas" },
-    { id: 66, name: "Chori Arepa (Con tequeños)", desc: "Trozos de chorizo premium a la plancha con queso.", price: 630, category: "Arepas" },
-    { id: 67, name: "Chori Arepa (Con fritas)", desc: "Trozos de chorizo premium a la plancha con queso.", price: 530, category: "Arepas" },
-    { id: 68, name: "Arepa Weekend (Sola)", desc: "Atún con tomates, cebolla, mayonesa y queso mozzarella.", price: 350, category: "Arepas" },
-    { id: 69, name: "Arepa Weekend (Con tequeños)", desc: "Atún con tomates, cebolla, mayonesa y queso mozzarella.", price: 630, category: "Arepas" },
-    { id: 70, name: "Arepa Weekend (Con fritas)", desc: "Atún con tomates, cebolla, mayonesa y queso mozzarella.", price: 530, category: "Arepas" },
-    { id: 71, name: "Arepa Caprese (Sola)", desc: "Arepa rellena de queso, tomates, albahaca con un toque de aceite de oliva.", price: 350, category: "Arepas" },
-    { id: 72, name: "Arepa Caprese (Con tequeños)", desc: "Arepa rellena de queso, tomates, albahaca con un toque de aceite de oliva.", price: 630, category: "Arepas" },
-    { id: 73, name: "Arepa Caprese (Con fritas)", desc: "Arepa rellena de queso, tomates, albahaca con un toque de aceite de oliva.", price: 530, category: "Arepas" },
-    { id: 74, name: "Arepa Carne Mechada (Sola)", desc: "Carne mechada jugosa.", price: 400, category: "Arepas" },
-    { id: 75, name: "Arepa Carne Mechada (Con tequeños)", desc: "Carne mechada jugosa.", price: 660, category: "Arepas" },
-    { id: 76, name: "Arepa Carne Mechada (Con fritas)", desc: "Carne mechada jugosa.", price: 560, category: "Arepas" },
-
-    // --- CASA CHINA ---
-    { id: 77, name: "Arroz chow fan con verduras", desc: "Ración de arroz salteado con huevo frito y las verduras de su preferencia. Sazonado con aceite de sésamo y salsa de soya.", price: 350, category: "Comida China" },
-    { id: 78, name: "Arroz chow fan con verdura y una proteína", desc: "Arroz salteado con verduras y una proteína (cerdo, pollo, res o jamón).", price: 430, category: "Comida China" },
     { id: 79, name: "Arroz chow fan con dos proteínas", desc: "Arroz salteado con verduras y dos proteínas a elección.", price: 450, category: "Comida China" },
     { id: 80, name: "Arroz chow fan con verduras y tres proteínas", desc: "Arroz salteado con verduras y tres proteínas a elección.", price: 480, category: "Comida China" },
     { id: 81, name: "Arroz chow fan con verduras y cuatro proteínas", desc: "Arroz salteado con verduras y cuatro proteínas a elección.", price: 510, category: "Comida China" },
-    { id: 82, name: "Chow mein de verduras", desc: "Fideos al wok con verduras sazonado con aceite de sésamo y salsa de soya.", price: 450, category: "Comida China" },
-    { id: 83, name: "Chow mein con verduras y una proteína", desc: "Fideos al wok con verduras y una proteína a elección.", price: 510, category: "Comida China" },
     { id: 84, name: "Chow mein con verduras y dos proteínas", desc: "Fideos al wok con verduras y dos proteínas a elección.", price: 530, category: "Comida China" },
     { id: 85, name: "Chow mein con verduras y tres proteínas", desc: "Fideos al wok con verduras y tres proteínas a elección.", price: 570, category: "Comida China" },
     { id: 86, name: "Promo Arroz chow fan con verduras", desc: "Media ración de arroz salteado con huevo frito y verduras.", price: 310, category: "Comida China" },
     { id: 87, name: "Promo Arroz chow fan con verduras y una proteína", desc: "Media ración de arroz salteado con huevo frito, verduras y una proteína.", price: 330, category: "Comida China" },
-    { id: 88, name: "Chop suey sencillo", desc: "Verduras salteadas. Sazonadas con aceite de sésamo y de soya.", price: 320, category: "Comida China" },
     { id: 89, name: "Chop suey con una proteína", desc: "Verduras salteadas con una proteína a elección.", price: 360, category: "Comida China" },
-    { id: 90, name: "Pollo frito (Casa China)", desc: "Ración de pollo frito estilo chino.", price: 320, category: "Comida China" },
-    { id: 91, name: "Arrolladitos de primavera", desc: "Ración de arrolladitos primavera.", price: 250, category: "Comida China" },
     { id: 92, name: "Combo China 1", desc: "Media ración arroz chow fan con verduras y media ración de pollo frito.", price: 340, category: "Comida China" },
     { id: 93, name: "Combo China 2", desc: "Media ración arroz chow fan con verduras, una proteína y acompañado pollo frito.", price: 470, category: "Comida China" },
     { id: 94, name: "Combo China 3", desc: "Media ración arroz chow fan con verduras y dos proteínas, acompañado de media ración de pollo frito.", price: 410, category: "Comida China" },
@@ -121,14 +122,14 @@ const MENU_DATA = [
     { id: 97, name: "Combo China 6", desc: "Media ración de arroz chow fan y 1 proteína.", price: 330, category: "Comida China" },
 
     // --- BEBIDAS & POSTRES ---
-    { id: 98, name: "Coca Cola 600 ml", desc: "Refresco individual.", price: 130, category: "Bebidas" },
-    { id: 99, name: "Coca Cola 1.5 L", desc: "Refresco familiar.", price: 220, category: "Bebidas" },
-    { id: 100, name: "Postre Tres leches", desc: "Clásico postre tres leches.", price: 240, category: "Postres" },
-    { id: 101, name: "Postre Tres leches de chocolate", desc: "Tres leches sabor chocolate.", price: 240, category: "Postres" },
-    { id: 102, name: "Postre Tres leches de coco y DDL", desc: "Tres leches sabor coco y dulce de leche.", price: 240, category: "Postres" },
-    { id: 103, name: "Quesillo", desc: "Postre tradicional tipo flan.", price: 240, category: "Postres" },
-    { id: 104, name: "Salsa Soja", desc: "Porción extra de salsa de soja.", price: 40, category: "Extras" },
-    { id: 105, name: "Salsa Agridulce", desc: "Porción extra de salsa agridulce.", price: 40, category: "Extras" },
+    { id: 98, name: "Coca Cola 600 ml", desc: "Refresco individual.", price: 130, category: "Bebidas & Postres" },
+    { id: 99, name: "Coca Cola 1.5 L", desc: "Refresco familiar.", price: 220, category: "Bebidas & Postres" },
+    { id: 100, name: "Postre Tres leches", desc: "Clásico postre tres leches.", price: 240, category: "Bebidas & Postres" },
+    { id: 101, name: "Postre Tres leches de chocolate", desc: "Tres leches sabor chocolate.", price: 240, category: "Bebidas & Postres" },
+    { id: 102, name: "Postre Tres leches de coco y DDL", desc: "Tres leches sabor coco y dulce de leche.", price: 240, category: "Bebidas & Postres" },
+    { id: 103, name: "Quesillo", desc: "Postre tradicional tipo flan.", price: 240, category: "Bebidas & Postres" },
+    { id: 104, name: "Salsa Soja", desc: "Porción extra de salsa de soja.", price: 40, category: "Bebidas & Postres" },
+    { id: 105, name: "Salsa Agridulce", desc: "Porción extra de salsa agridulce.", price: 40, category: "Bebidas & Postres" },
 ];
 
 // --- IMÁGENES CARPETA IMG ---
@@ -221,11 +222,31 @@ function initMenu() {
     const filtersContainer = document.getElementById('category-filters');
     const searchInput = document.getElementById('search-input');
 
-    // Obtener categorías únicas
-    const categories = ['Todas', ...new Set(MENU_DATA.map(item => item.category))];
+    const orderedCategories = [
+        'Todas', 'Pollo', 'Carne', 'Cerdo', 'Arepas Especiales', 'Tequeños',
+        'Vegetariano & Otros', 'Combos', 'Comida China', 'Bebidas & Postres'
+    ];
+
+    // Asegurar que solo añadimos las que existen, más las adicionales
+    const allCategoriesInMenu = [...new Set(MENU_DATA.map(item => item.category))];
+    const finalCategories = [];
+
+    // Añadir primero las ordenadas
+    orderedCategories.forEach(cat => {
+        if (cat === 'Todas' || allCategoriesInMenu.includes(cat)) {
+            finalCategories.push(cat);
+        }
+    });
+
+    // Añadir cualquier otra que no estuviera en el orden
+    allCategoriesInMenu.forEach(cat => {
+        if (!finalCategories.includes(cat)) {
+            finalCategories.push(cat);
+        }
+    });
 
     // Renderizar filtros
-    categories.forEach(cat => {
+    finalCategories.forEach(cat => {
         const btn = document.createElement('button');
         btn.className = `filter-btn ${cat === 'Todas' ? 'active' : ''}`;
         btn.textContent = cat;
