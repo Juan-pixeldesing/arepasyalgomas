@@ -1045,4 +1045,8 @@ footer {
     .nav-links.active { display: flex; }
     .hamburger { display: block; }
     .cart-panel { width: 100%; right: -100%; }
+    .gallery-grid {
+        grid-template-rows: repeat(2, 160px);
+        grid-auto-columns: calc(65% - 15px);
+    }
 }
