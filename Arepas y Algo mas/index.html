@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arepas y Algo Más - El mejor sabor casero de arepas, cachapas, patacones y comida china en Lagomar, Uruguay. Pedidos por WhatsApp.">
+    <meta name="keywords" content="Arepas, Cachapas, Patacones, Comida China, Lagomar, Uruguay, Delivery, WhatsApp">
+    <meta name="author" content="Arepas y Algo Más">
+    <title>Arepas y Algo Más | Sabor Casero en Lagomar</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arepasyalgomas.com.uy/">
+    <meta property="og:title" content="Arepas y Algo Más | Sabor Casero en Lagomar">
+    <meta property="og:description" content="Deliciosas arepas, cachapas y más. ¡Haz tu pedido por WhatsApp!">
+    <meta property="og:image" content="IMG/img-4.jpg">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Arepas y Algo Más</a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-links" id="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#menu">Menú</a>
+                <a href="#galeria">Galería</a>
+                <a href="#reservas">Reservas</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Arepas y Algo Más</h1>
+            <p>Sabores caseros, comida rica y pedidos por WhatsApp</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Ver menú</a>
+                <a href="#" id="hero-whatsapp-btn" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel -->
+    <section class="carousel-section">
+        <h2 class="section-title">Nuestras Delicias</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn" id="carousel-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track" id="carousel-track">
+                    <!-- Dinámico desde JS -->
+                </ul>
+            </div>
+            <button class="carousel-btn next-btn" id="carousel-next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-nav" id="carousel-nav">
+                <!-- Indicadores dinámicos -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú -->
+    <section class="menu-section" id="menu">
+        <h2 class="section-title">Nuestro Menú</h2>
+        
+        <div class="menu-controls">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Buscar productos...">
+            </div>
+            <div class="filters" id="category-filters">
+                <!-- Botones de filtro dinámicos -->
+            </div>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+            <!-- Productos dinámicos -->
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="gallery-section" id="galeria">
+        <h2 class="section-title">Galería de Fotos</h2>
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Fotos dinámicas -->
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Imagen ampliada">
+    </div>
+
+    <!-- Reservas -->
+    <section class="reservas-section" id="reservas">
+        <div class="reservas-container">
+            <h2 class="section-title">Reserva tu Mesa</h2>
+            <form class="reservas-form" id="reservas-form">
+                <div class="form-group">
+                    <label for="res-nombre">Nombre</label>
+                    <input type="text" id="res-nombre" required placeholder="Tu nombre">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="res-fecha">Fecha</label>
+                        <input type="date" id="res-fecha" required min="">
+                    </div>
+                    <div class="form-group">
+                        <label for="res-hora">Hora</label>
+                        <input type="time" id="res-hora" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="res-personas">Cantidad de personas</label>
+                    <input type="number" id="res-personas" min="1" required placeholder="Ej: 2">
+                </div>
+                <div class="form-group">
+                    <label for="res-comentarios">Comentarios</label>
+                    <textarea id="res-comentarios" rows="3" placeholder="Algún requerimiento especial..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100"><i class="fab fa-whatsapp"></i> Reservar por WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contacto-section" id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contacto-grid">
+            <div class="contacto-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Dirección</h3>
+                        <p id="info-direccion">Lagomar, Uruguay</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="far fa-clock"></i>
+                    <div>
+                        <h3>Horarios</h3>
+                        <p id="info-horarios">Mar a Dom: 19:00 - 23:30</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p id="info-whatsapp">+598 00 000 000</p>
+                    </div>
+                </div>
+                <div class="contacto-buttons">
+                    <a href="#" id="btn-escribir-wa" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Escribir</a>
+                    <a href="#" id="btn-instagram" target="_blank" class="btn btn-outline"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.google.com/maps/search/Av.+Giannattasio+KM+22,000,+Ciudad+de+la+Costa" target="_blank" class="btn btn-outline"><i class="fas fa-map-marked-alt"></i> Cómo llegar</a>
+                </div>
+            </div>
+            <div class="contacto-mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.653629471714!2d-55.9815256!3d-34.8329208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQ5JzU4LjUiUyA1NcKwNTgnNTMuNSJX!5e0!3m2!1ses!2suy!4v1715324355555!5m2!1ses!2suy" width="100%" height="100%" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> Arepas y Algo Más. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Carrito Flotante -->
+    <button class="cart-floating-btn" id="cart-floating-btn">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge" id="cart-badge">0</span>
+    </button>
+
+    <!-- Modal del Carrito -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h2>Tu Pedido</h2>
+            <button class="cart-close" id="cart-close">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items dinámicos -->
+            <div class="empty-cart-msg">Tu carrito está vacío</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0</span>
+            </div>
+            
+            <div class="cart-customer-info">
+                <input type="text" id="cart-nombre" placeholder="Tu nombre" required>
+                <input type="text" id="cart-direccion" placeholder="Dirección o 'Retiro en local'" required>
+                <textarea id="cart-comentarios" rows="2" placeholder="Comentarios adicionales..."></textarea>
+            </div>
+
+            <button class="btn btn-primary w-100" id="btn-checkout"><i class="fab fa-whatsapp"></i> Enviar pedido por WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Notificaciones -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
