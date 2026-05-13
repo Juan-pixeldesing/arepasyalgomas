@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --primary: #FFD700; /* Gold Maize */
     --primary-glow: rgba(255, 215, 0, 0.4);
     --secondary: #FF4D4D; /* Neon Red */
@@ -360,7 +360,7 @@ section {
     transform: scale(1.2);
 }
 
-/* Menú */
+/* MenÃº */
 .menu-section {
     background-color: var(--bg-dark);
     background-image: var(--pattern);
@@ -423,23 +423,13 @@ section {
 .filters {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
-    margin-top: 1.5rem;
-    max-width: 950px; /* Ajuste para repartir 11 items en ~6 y 5 */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (max-width: 768px) {
-    .filters {
-        max-width: 100%;
-        gap: 8px;
-    }
+    margin-top: 1rem;
 }
 
 .filter-btn {
-    padding: 10px 20px;
+    padding: 10px 24px;
     border: 1px solid rgba(255, 215, 0, 0.2);
     background: rgba(255, 255, 255, 0.03);
     color: var(--text-muted);
@@ -448,7 +438,6 @@ section {
     font-weight: 600;
     transition: var(--transition);
     backdrop-filter: blur(5px);
-    white-space: nowrap;
 }
 
 .filter-btn.active {
@@ -469,11 +458,11 @@ section {
     display: grid;
     gap: 2rem;
     overflow-x: auto;
-    padding: 2rem 0.5rem 2.5rem 0.5rem; /* Más espacio abajo para la barra */
+    padding: 2rem 0.5rem 2.5rem 0.5rem; /* MÃ¡s espacio abajo para la barra */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: auto; /* Barra más gruesa en Firefox */
+    scrollbar-width: auto; /* Barra mÃ¡s gruesa en Firefox */
     scrollbar-color: var(--primary) rgba(255, 255, 255, 0.1);
     position: relative;
     z-index: 1;
@@ -484,7 +473,7 @@ section {
 }
 
 .menu-grid::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.08); /* Track más visible */
+    background: rgba(255, 255, 255, 0.08); /* Track mÃ¡s visible */
     border-radius: 10px;
     margin: 0 20px;
     box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
@@ -505,104 +494,76 @@ section {
     overflow: hidden;
     transition: var(--transition);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border: 1px solid var(--border-color);
     position: relative;
-    height: 100%;
+    height: 100%; /* Ocupa el alto de la fila fija */
     animation: cardAppear 0.8s backwards;
-    cursor: pointer;
+}
+
+@keyframes cardAppear {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .menu-card:hover {
-    transform: translateY(-5px) scale(1.01);
+    transform: translateY(-10px) scale(1.02);
     border-color: var(--primary);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-.menu-card-img {
-    width: 110px; /* Tamaño de mini preview aún más compacto */
-    height: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    order: 2; /* Mueve la imagen a la derecha */
-    border-left: 1px solid var(--border-color);
-}
-
-.menu-card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.menu-card:hover .menu-card-img img {
-    transform: scale(1.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), var(--shadow-neon);
 }
 
 .menu-card-content {
-    padding: 0.8rem 1rem; /* Padding más reducido */
+    padding: 1.8rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     z-index: 1;
-    order: 1;
-    overflow: hidden;
 }
 
 .menu-card-header {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 0.2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
 }
 
 .menu-card h3 {
-    font-size: 1rem; /* Un poco más pequeño */
+    font-size: 1.3rem;
     color: var(--text-light);
-    margin-bottom: 0.1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-bottom: 0.5rem;
 }
 
 .menu-price {
     font-weight: 700;
     color: var(--primary);
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-shadow: 0 0 10px var(--primary-glow);
 }
 
 .menu-desc {
     color: var(--text-muted);
-    font-size: 0.8rem; /* Más pequeño para que entre */
-    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 4; /* MÃ¡ximo 4 lÃ­neas */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 1.3;
-}
-
-.menu-card-footer {
-    display: flex;
-    justify-content: flex-start;
 }
 
 .btn-add {
     background: linear-gradient(135deg, var(--primary), #FFB300);
     color: #000;
     border: none;
-    padding: 6px 12px; /* Más compacto */
-    border-radius: 20px;
+    padding: 12px;
+    border-radius: 12px;
     cursor: pointer;
     font-weight: 700;
-    font-size: 0.75rem;
     transition: var(--transition);
+    width: 100%;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    letter-spacing: 1px;
 }
 
 .btn-add:hover {
@@ -611,7 +572,7 @@ section {
     box-shadow: 0 0 20px var(--primary-glow);
 }
 
-/* Galería */
+/* GalerÃ­a */
 .gallery-section {
     background-color: var(--bg-dark);
     max-width: 100%;
@@ -1108,7 +1069,7 @@ footer {
     right: 0;
 }
 
-/* Modal de Configuración de Producto */
+/* Modal de ConfiguraciÃ³n de Producto */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -1207,7 +1168,7 @@ footer {
     color: var(--text-light);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .option-group h3 span {
@@ -1334,96 +1295,16 @@ footer {
 }
 
 /* Cart Item Enhancements */
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.cart-item-info {
-    flex: 1;
-    padding-right: 15px;
-}
-
-.cart-item-info h4 {
-    font-size: 1.05rem;
-    margin-bottom: 4px;
-    color: var(--text-light);
-}
-
-.cart-item-price {
-    color: var(--primary);
-    font-weight: 700;
-    font-size: 1rem;
-}
-
 .cart-item-config {
     font-size: 0.85rem;
     color: var(--text-muted);
-    margin-top: 6px;
+    margin-top: 4px;
     line-height: 1.4;
 }
 
 .cart-item-config span {
     display: block;
 }
-
-.cart-item-controls {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-shrink: 0;
-}
-
-.cart-qty-btn {
-    width: 38px; /* Más grandes como solicitó el usuario */
-    height: 38px;
-    border-radius: 50%;
-    border: 1px solid var(--border-color);
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-light);
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cart-qty-btn:hover {
-    background: var(--primary);
-    color: #000;
-    border-color: var(--primary);
-    transform: scale(1.1);
-}
-
-.cart-item-controls span {
-    font-weight: 700;
-    font-size: 1.1rem;
-    min-width: 25px;
-    text-align: center;
-}
-
-.cart-remove {
-    background: none;
-    border: none;
-    color: var(--secondary);
-    cursor: pointer;
-    font-size: 1.2rem;
-    margin-left: 8px;
-    transition: var(--transition);
-    padding: 5px;
-}
-
-.cart-remove:hover {
-    transform: scale(1.2);
-    filter: brightness(1.2);
-    color: #ff3333;
-}
-
 
 /* Toast / Notificaciones */
 .toast-container {
@@ -1433,7 +1314,7 @@ footer {
     z-index: 3000;
     display: flex;
     flex-direction: column-reverse;
-    gap: 12px;
+    gap: 10px;
     pointer-events: none;
 }
 
@@ -1542,26 +1423,3 @@ footer {
         font-size: 1rem;
     }
 }
-
-/* Animaciones Faltantes */
-@keyframes cardAppear {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes cart-pop {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
-}
-
-.cart-pop {
-    animation: cart-pop 0.3s ease-out;
-}
-

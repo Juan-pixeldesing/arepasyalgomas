@@ -1,0 +1,115 @@
+Titulo
+REINA PEPIADA
+Descripcion
+Una mezcla de pollo, palta y mayonesa
+Sola 370
+con tequeños 650
+con fritas 550
+
+Titulo
+SIFRINA
+Descripcion
+Una Reina Pepiada con mucho queso
+Sola 360
+con tequeños 640
+con fritas 540
+
+Titulo
+PELUA
+Descripcion
+Carne vacuna en hierbas salteadas con morron ,cebolla y queso mozzarela
+Sola 370
+con tequeños 650
+con fritas 550
+
+Titulo
+Rumbera
+Descripcion
+Carne de cerdo a la plancha y queso mozzarela
+Sola 360
+con tequeños 640
+con fritas 540
+
+Titulo
+Perico
+Descripcion
+Huevos revueltos con morrones y cebolla
+Sola 350
+con tequeños 630
+con fritas 530
+
+Titulo
+DOMINO
+Descripcion
+Porotos negros con queso mozarella 
+Sola 350
+con tequeños 630
+con fritas 530
+
+Titulo
+VAGGIE SENCILLA
+Descripcion
+Mix de vegetales,verduras salteadas y palta
+Sola 350
+con tequeños 630
+con fritas 530
+
+Titulo
+GRINGA
+Descripcion
+Queso,panceta y huevos revueltos
+Sola 360
+con tequeños 640 
+con fritas 540
+
+Titulo
+TURCA
+Descripcion
+Tomate,lechuga,croquetas arabes (falafel),y un trozo de pollo 
+Sola 350
+con tequeños 630
+con fritas 530
+
+Titulo
+BURGUER SENCILLA
+Descripcion
+Arepa rellena con una hamburguesa queso mozzarela,lechuga y tomate y salsa a eleccion
+Sola 340
+con tequeños 620
+con fritas 520
+
+Titulo
+JAMON Y QUESO
+Descripcion
+Jamon en trocitos y queso mozarella rallado 
+Sola 340
+con tequeños 620
+con fritas 520
+
+Titulo
+CHORI AREPA
+Descripcion
+Trozos de chorizo premium a la plancha con queso.
+Sola 350
+con tequeños 630
+con fritas 530
+
+Titulo
+WEEKEND 
+Descripcion
+Atun con tomates, cebolla, mayonesa queso mozarella.
+Sola 350
+con tequeños 630
+con fritas 530
+
+Título: CAPRESE
+Descripción: Arepa rellena de queso, tomates, albahaca con un toque de aceite de oliva.
+Sola: $350
+Con tequeños: $630
+Con fritas: $530
+
+Título: CARNE MECHADA
+Descripción: Carne mechada.
+Sola: $400
+Con tequeños: $660
+Con fritas: $560

@@ -1,137 +1,11 @@
+
+
 // --- VARIABLES EDITABLES ---
 const WHATSAPP_NUMBER = "59897330314";
 const INSTAGRAM_URL = "https://www.instagram.com/arepasyalgomas_uy/";
 const BUSINESS_NAME = "Arepas y Algo Más";
 const ADDRESS = "Av. Giannattasio KM 22,000, 15000 Ciudad de la Costa, Canelones";
 const HOURS = "Martes a Viernes: 19:00 - 23:00 \n Sábados y Domingos: 13:00 - 23:00";
-
-const MENU_DATA = [
-    // --- POLLO ---
-    { id: 201, name: "Patacón de Pollo", desc: "Plátano frito relleno de pollo.", price: 490, category: "Pollo" },
-    { id: 202, name: "Cachapa de Pollo", desc: "Fina masa de maíz tierno molido a la plancha rellena de pollo.", price: 450, category: "Pollo" },
-    { id: 6, name: "Cachapa Crispy", desc: "Cachapa rellena de pollo crispy.", price: 450, category: "Pollo" },
-    { id: 10, name: "Pollo Crispy Solo", desc: "Ración de pollo crispy crujiente.", price: 350, category: "Pollo" },
-    { id: 11, name: "Pollo Crispy Con fritas", desc: "Pollo crispy acompañado de papas fritas.", price: 450, category: "Pollo" },
-    { id: 32, name: "Arepa Reina Pepiada (Sola)", desc: "Una mezcla de pollo, palta y mayonesa.", price: 370, category: "Pollo" },
-    { id: 33, name: "Arepa Reina Pepiada (Con tequeños)", desc: "Una mezcla de pollo, palta y mayonesa.", price: 650, category: "Pollo" },
-    { id: 34, name: "Arepa Reina Pepiada (Con fritas)", desc: "Una mezcla de pollo, palta y mayonesa.", price: 550, category: "Pollo" },
-    { id: 35, name: "Arepa Sifrina (Sola)", desc: "Una Reina Pepiada con mucho queso.", price: 360, category: "Pollo" },
-    { id: 36, name: "Arepa Sifrina (Con tequeños)", desc: "Una Reina Pepiada con mucho queso.", price: 640, category: "Pollo" },
-    { id: 37, name: "Arepa Sifrina (Con fritas)", desc: "Una Reina Pepiada con mucho queso.", price: 540, category: "Pollo" },
-    { id: 56, name: "Arepa Turca (Sola)", desc: "Tomate, lechuga, croquetas árabes (falafel) y un trozo de pollo.", price: 350, category: "Pollo" },
-    { id: 57, name: "Arepa Turca (Con tequeños)", desc: "Tomate, lechuga, croquetas árabes (falafel) y un trozo de pollo.", price: 630, category: "Pollo" },
-    { id: 58, name: "Arepa Turca (Con fritas)", desc: "Tomate, lechuga, croquetas árabes (falafel) y un trozo de pollo.", price: 530, category: "Pollo" },
-    { id: 203, name: "Arroz chow fan con Pollo", desc: "Arroz salteado con verduras y pollo.", price: 430, category: "Comida China" },
-    { id: 204, name: "Chow mein con Pollo", desc: "Fideos al wok con verduras y pollo.", price: 510, category: "Comida China" },
-    { id: 90, name: "Pollo frito (Casa China)", desc: "Ración de pollo frito estilo chino.", price: 320, category: "Comida China" },
-    
-    // --- CARNE ---
-    { id: 205, name: "Patacón de Carne", desc: "Plátano frito relleno de carne.", price: 490, category: "Carne" },
-    { id: 206, name: "Cachapa de Carne", desc: "Fina masa de maíz tierno molido a la plancha rellena de carne.", price: 450, category: "Carne" },
-    { id: 5, name: "Cachapa Burger", desc: "Cachapa rellena de 2 hamburguesas de carne vacuna, panceta y queso mozzarella acompañado de fritas.", price: 500, category: "Carne" },
-    { id: 12, name: "Burguer Especial (Arepa)", desc: "Doble hamburguesa de carne vacuna casera a la arepa con tomate, lechuga, huevo frito, panceta, queso y salsas.", price: 480, category: "Arepas Especiales" },
-    { id: 13, name: "Arepa Pabellón", desc: "Carne mechada, porotos negros y queso mozzarella.", price: 390, category: "Arepas Especiales" },
-    { id: 15, name: "Arepa Mixta Especial", desc: "Relleno de carne mechada, verduras salteadas y queso.", price: 380, category: "Arepas Especiales" },
-    { id: 38, name: "Arepa Pelua (Sola)", desc: "Carne vacuna en hierbas salteadas con morrón, cebolla y queso mozzarella.", price: 370, category: "Carne" },
-    { id: 39, name: "Arepa Pelua (Con tequeños)", desc: "Carne vacuna en hierbas salteadas con morrón, cebolla y queso mozzarella.", price: 650, category: "Carne" },
-    { id: 40, name: "Arepa Pelua (Con fritas)", desc: "Carne vacuna en hierbas salteadas con morrón, cebolla y queso mozzarella.", price: 550, category: "Carne" },
-    { id: 59, name: "Arepa Burguer Sencilla (Sola)", desc: "Arepa rellena con una hamburguesa, queso mozzarella, lechuga, tomate y salsa a elección.", price: 340, category: "Carne" },
-    { id: 60, name: "Arepa Burguer Sencilla (Con tequeños)", desc: "Arepa rellena con una hamburguesa, queso mozzarella, lechuga, tomate y salsa a elección.", price: 620, category: "Carne" },
-    { id: 61, name: "Arepa Burguer Sencilla (Con fritas)", desc: "Arepa rellena con una hamburguesa, queso mozzarella, lechuga, tomate y salsa a elección.", price: 520, category: "Carne" },
-    { id: 74, name: "Arepa Carne Mechada (Sola)", desc: "Carne mechada jugosa.", price: 400, category: "Carne" },
-    { id: 75, name: "Arepa Carne Mechada (Con tequeños)", desc: "Carne mechada jugosa.", price: 660, category: "Carne" },
-    { id: 76, name: "Arepa Carne Mechada (Con fritas)", desc: "Carne mechada jugosa.", price: 560, category: "Carne" },
-    { id: 207, name: "Arroz chow fan con Carne", desc: "Arroz salteado con verduras y res.", price: 430, category: "Comida China" },
-    { id: 208, name: "Chow mein con Carne", desc: "Fideos al wok con verduras y res.", price: 510, category: "Comida China" },
-
-    // --- CERDO ---
-    { id: 209, name: "Patacón de Cerdo / Chorizo", desc: "Plátano frito relleno de cerdo o chorizo.", price: 490, category: "Cerdo" },
-    { id: 210, name: "Cachapa de Cerdo / Chorizo", desc: "Fina masa de maíz tierno molido a la plancha rellena de cerdo o chorizo.", price: 450, category: "Cerdo" },
-    { id: 7, name: "Cachapa Jamón y queso", desc: "Cachapa clásica con jamón y queso.", price: 420, category: "Cerdo" },
-    { id: 41, name: "Arepa Rumbera (Sola)", desc: "Carne de cerdo a la plancha y queso mozzarella.", price: 360, category: "Cerdo" },
-    { id: 42, name: "Arepa Rumbera (Con tequeños)", desc: "Carne de cerdo a la plancha y queso mozzarella.", price: 640, category: "Cerdo" },
-    { id: 43, name: "Arepa Rumbera (Con fritas)", desc: "Carne de cerdo a la plancha y queso mozzarella.", price: 540, category: "Cerdo" },
-    { id: 53, name: "Arepa Gringa (Sola)", desc: "Queso, panceta y huevos revueltos.", price: 360, category: "Cerdo" },
-    { id: 54, name: "Arepa Gringa (Con tequeños)", desc: "Queso, panceta y huevos revueltos.", price: 640, category: "Cerdo" },
-    { id: 55, name: "Arepa Gringa (Con fritas)", desc: "Queso, panceta y huevos revueltos.", price: 540, category: "Cerdo" },
-    { id: 62, name: "Arepa Jamón y Queso (Sola)", desc: "Jamón en trocitos y queso mozzarella rallado.", price: 340, category: "Cerdo" },
-    { id: 63, name: "Arepa Jamón y Queso (Con tequeños)", desc: "Jamón en trocitos y queso mozzarella rallado.", price: 620, category: "Cerdo" },
-    { id: 64, name: "Arepa Jamón y Queso (Con fritas)", desc: "Jamón en trocitos y queso mozzarella rallado.", price: 520, category: "Cerdo" },
-    { id: 65, name: "Chori Arepa (Sola)", desc: "Trozos de chorizo premium a la plancha con queso.", price: 350, category: "Cerdo" },
-    { id: 66, name: "Chori Arepa (Con tequeños)", desc: "Trozos de chorizo premium a la plancha con queso.", price: 630, category: "Cerdo" },
-    { id: 67, name: "Chori Arepa (Con fritas)", desc: "Trozos de chorizo premium a la plancha con queso.", price: 530, category: "Cerdo" },
-    { id: 16, name: "Salchiarepa", desc: "Huevos revueltos con tomate, cebolla y panchos picado en trozos.", price: 360, category: "Arepas Especiales" },
-    { id: 211, name: "Arroz chow fan con Cerdo", desc: "Arroz salteado con verduras y cerdo o jamón.", price: 430, category: "Comida China" },
-    { id: 212, name: "Chow mein con Cerdo", desc: "Fideos al wok con verduras y cerdo o jamón.", price: 510, category: "Comida China" },
-
-    // --- VEGETARIANO & OTROS ---
-    { id: 2, name: "Patacón Veggie", desc: "Plátano frito con vegetales.", price: 460, category: "Vegetariano & Otros" },
-    { id: 3, name: "Tostones", desc: "Ración de tostones de plátano.", price: 250, category: "Vegetariano & Otros" },
-    { id: 8, name: "Cachapa Solo queso", desc: "Cachapa rellena de abundante queso.", price: 400, category: "Vegetariano & Otros" },
-    { id: 9, name: "Cachapa Veggie", desc: "Cachapa con vegetales y queso.", price: 410, category: "Vegetariano & Otros" },
-    { id: 14, name: "Arepa Veggie Especial", desc: "Verduritas salteadas y queso mozzarella.", price: 350, category: "Arepas Especiales" },
-    { id: 44, name: "Arepa Perico (Sola)", desc: "Huevos revueltos con morrones y cebolla.", price: 350, category: "Vegetariano & Otros" },
-    { id: 45, name: "Arepa Perico (Con tequeños)", desc: "Huevos revueltos con morrones y cebolla.", price: 630, category: "Vegetariano & Otros" },
-    { id: 46, name: "Arepa Perico (Con fritas)", desc: "Huevos revueltos con morrones y cebolla.", price: 530, category: "Vegetariano & Otros" },
-    { id: 47, name: "Arepa Domino (Sola)", desc: "Porotos negros con queso mozzarella.", price: 350, category: "Vegetariano & Otros" },
-    { id: 48, name: "Arepa Domino (Con tequeños)", desc: "Porotos negros con queso mozzarella.", price: 630, category: "Vegetariano & Otros" },
-    { id: 49, name: "Arepa Domino (Con fritas)", desc: "Porotos negros con queso mozzarella.", price: 530, category: "Vegetariano & Otros" },
-    { id: 50, name: "Arepa Veggie Sencilla (Sola)", desc: "Mix de vegetales, verduras salteadas y palta.", price: 350, category: "Vegetariano & Otros" },
-    { id: 51, name: "Arepa Veggie Sencilla (Con tequeños)", desc: "Mix de vegetales, verduras salteadas y palta.", price: 630, category: "Vegetariano & Otros" },
-    { id: 52, name: "Arepa Veggie Sencilla (Con fritas)", desc: "Mix de vegetales, verduras salteadas y palta.", price: 550, category: "Vegetariano & Otros" },
-    { id: 68, name: "Arepa Weekend (Sola)", desc: "Atún con tomates, cebolla, mayonesa y queso mozzarella.", price: 350, category: "Vegetariano & Otros" },
-    { id: 69, name: "Arepa Weekend (Con tequeños)", desc: "Atún con tomates, cebolla, mayonesa y queso mozzarella.", price: 630, category: "Vegetariano & Otros" },
-    { id: 70, name: "Arepa Weekend (Con fritas)", desc: "Atún con tomates, cebolla, mayonesa y queso mozzarella.", price: 530, category: "Vegetariano & Otros" },
-    { id: 71, name: "Arepa Caprese (Sola)", desc: "Arepa rellena de queso, tomates, albahaca con un toque de aceite de oliva.", price: 350, category: "Vegetariano & Otros" },
-    { id: 72, name: "Arepa Caprese (Con tequeños)", desc: "Arepa rellena de queso, tomates, albahaca con un toque de aceite de oliva.", price: 630, category: "Vegetariano & Otros" },
-    { id: 73, name: "Arepa Caprese (Con fritas)", desc: "Arepa rellena de queso, tomates, albahaca con un toque de aceite de oliva.", price: 530, category: "Vegetariano & Otros" },
-    { id: 17, name: "Tequeños Mozarella x5", desc: "5 dedos de queso mozzarella envueltos en masa crujiente.", price: 275, category: "Tequeños" },
-    { id: 18, name: "Tequeños Mozarella x10", desc: "10 dedos de queso mozzarella envueltos en masa crujiente.", price: 500, category: "Tequeños" },
-    { id: 19, name: "Tequeños Cheddar x5", desc: "5 dedos de queso cheddar envueltos en masa crujiente.", price: 300, category: "Tequeños" },
-    { id: 20, name: "Tequeños Cheddar x10", desc: "10 dedos de queso cheddar envueltos en masa crujiente.", price: 550, category: "Tequeños" },
-    { id: 21, name: "Tequeños Chocolate x5", desc: "5 tequeños rellenos de chocolate.", price: 310, category: "Tequeños" },
-    { id: 22, name: "Tequeños Chocolate x10", desc: "10 tequeños rellenos de chocolate.", price: 560, category: "Tequeños" },
-    { id: 23, name: "Burger Tequeño", desc: "Hamburguesa con tequeños.", price: 580, category: "Tequeños" },
-    { id: 77, name: "Arroz chow fan con verduras", desc: "Ración de arroz salteado con huevo frito y verduras.", price: 350, category: "Comida China" },
-    { id: 82, name: "Chow mein de verduras", desc: "Fideos al wok con verduras.", price: 450, category: "Comida China" },
-    { id: 88, name: "Chop suey sencillo", desc: "Verduras salteadas.", price: 320, category: "Comida China" },
-    { id: 91, name: "Arrolladitos de primavera", desc: "Ración de arrolladitos primavera.", price: 250, category: "Comida China" },
-
-    // --- COMBOS MIXTOS ---
-    { id: 24, name: "Combo la Llovizna", desc: "2 cachapas grandes a elección + 5 tequeños + bebida de 1.5.", price: 1200, category: "Combos" },
-    { id: 25, name: "Combo los Roques", desc: "2 cachapas grandes a elección + bebida de 1.5.", price: 980, category: "Combos" },
-    { id: 26, name: "Combo la Guaricha", desc: "3 cachapas medianas rellenas de queso + 10 tequeños + bebida de 1.5.", price: 1010, category: "Combos" },
-    { id: 27, name: "Combo Canaima", desc: "3 cachapas medianas rellenas de queso + 3 tequeños + media ración de pollo frito.", price: 700, category: "Combos" },
-    { id: 28, name: "Combo Cachamay", desc: "Tres cachapas rellenas de queso.", price: 460, category: "Combos" },
-    { id: 29, name: "Combo Bien Resuelta", desc: "3 arepas a elección + 10 tequeños + bebida de 1.5.", price: 1600, category: "Combos" },
-    { id: 30, name: "Combo Entre Panas", desc: "6 tequeños + media ración de pollo crispy y 3 mini arepitas a elección.", price: 630, category: "Combos" },
-    { id: 31, name: "Combo Full Equipo", desc: "Pollo Crispy + 3 arepitas + 3 tequeños + 3 cachapas medianas rellenas con queso.", price: 840, category: "Combos" },
-    { id: 79, name: "Arroz chow fan con dos proteínas", desc: "Arroz salteado con verduras y dos proteínas a elección.", price: 450, category: "Comida China" },
-    { id: 80, name: "Arroz chow fan con verduras y tres proteínas", desc: "Arroz salteado con verduras y tres proteínas a elección.", price: 480, category: "Comida China" },
-    { id: 81, name: "Arroz chow fan con verduras y cuatro proteínas", desc: "Arroz salteado con verduras y cuatro proteínas a elección.", price: 510, category: "Comida China" },
-    { id: 84, name: "Chow mein con verduras y dos proteínas", desc: "Fideos al wok con verduras y dos proteínas a elección.", price: 530, category: "Comida China" },
-    { id: 85, name: "Chow mein con verduras y tres proteínas", desc: "Fideos al wok con verduras y tres proteínas a elección.", price: 570, category: "Comida China" },
-    { id: 86, name: "Promo Arroz chow fan con verduras", desc: "Media ración de arroz salteado con huevo frito y verduras.", price: 310, category: "Comida China" },
-    { id: 87, name: "Promo Arroz chow fan con verduras y una proteína", desc: "Media ración de arroz salteado con huevo frito, verduras y una proteína.", price: 330, category: "Comida China" },
-    { id: 89, name: "Chop suey con una proteína", desc: "Verduras salteadas con una proteína a elección.", price: 360, category: "Comida China" },
-    { id: 92, name: "Combo China 1", desc: "Media ración arroz chow fan con verduras y media ración de pollo frito.", price: 340, category: "Comida China" },
-    { id: 93, name: "Combo China 2", desc: "Media ración arroz chow fan con verduras, una proteína y acompañado pollo frito.", price: 470, category: "Comida China" },
-    { id: 94, name: "Combo China 3", desc: "Media ración arroz chow fan con verduras y dos proteínas, acompañado de media ración de pollo frito.", price: 410, category: "Comida China" },
-    { id: 95, name: "Combo China 4", desc: "Media ración arroz chow fan con verduras y proteína a elección y 2 arrolladitos de primavera.", price: 480, category: "Comida China" },
-    { id: 96, name: "Combo China 5", desc: "Media ración de arroz chow fan y 1/4 de ración de pollo.", price: 330, category: "Comida China" },
-    { id: 97, name: "Combo China 6", desc: "Media ración de arroz chow fan y 1 proteína.", price: 330, category: "Comida China" },
-
-    // --- BEBIDAS & POSTRES ---
-    { id: 98, name: "Coca Cola 600 ml", desc: "Refresco individual.", price: 130, category: "Bebidas & Postres" },
-    { id: 99, name: "Coca Cola 1.5 L", desc: "Refresco familiar.", price: 220, category: "Bebidas & Postres" },
-    { id: 100, name: "Postre Tres leches", desc: "Clásico postre tres leches.", price: 240, category: "Bebidas & Postres" },
-    { id: 101, name: "Postre Tres leches de chocolate", desc: "Tres leches sabor chocolate.", price: 240, category: "Bebidas & Postres" },
-    { id: 102, name: "Postre Tres leches de coco y DDL", desc: "Tres leches sabor coco y dulce de leche.", price: 240, category: "Bebidas & Postres" },
-    { id: 103, name: "Quesillo", desc: "Postre tradicional tipo flan.", price: 240, category: "Bebidas & Postres" },
-    { id: 104, name: "Salsa Soja", desc: "Porción extra de salsa de soja.", price: 40, category: "Bebidas & Postres" },
-    { id: 105, name: "Salsa Agridulce", desc: "Porción extra de salsa agridulce.", price: 40, category: "Bebidas & Postres" },
-];
-
 // --- IMÁGENES CARPETA IMG ---
 const imagesArray = Array.from({ length: 22 }, (_, i) => `img-${i + 1}.jpg`);
 
@@ -139,6 +13,11 @@ const imagesArray = Array.from({ length: 22 }, (_, i) => `img-${i + 1}.jpg`);
 let cart = [];
 let currentCategory = 'Todas';
 let toggleCartGlobal;
+
+// --- ESTADO MODAL PRODUCTO ---
+let currentConfigProduct = null;
+let modalQty = 1;
+let selectedOptions = {};
 
 // --- INICIALIZACIÓN ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -157,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCarousel();
     initGallery();
     initCart();
+    initProductModal();
     initReservations();
     initScrollReveal();
 
@@ -223,8 +103,8 @@ function initMenu() {
     const searchInput = document.getElementById('search-input');
 
     const orderedCategories = [
-        'Todas', 'Pollo', 'Carne', 'Cerdo', 'Arepas Especiales', 'Tequeños',
-        'Vegetariano & Otros', 'Combos', 'Comida China', 'Bebidas & Postres'
+        'Todas', 'Arepas', 'Combos & Promos', 'Comida China', 'Cachapas',
+        'Tequeños', 'Empanadas', 'Picadas & Entradas', 'Bebidas', 'Postres', 'Salsas & Extras', 'Otros & Snacks'
     ];
 
     // Asegurar que solo añadimos las que existen, más las adicionales
@@ -282,38 +162,60 @@ function renderMenu(searchTerm = '') {
     let numRows = 1;
     if (filtered.length > 4) numRows = 2;
     if (filtered.length > 8) numRows = 3;
-    grid.style.gridTemplateRows = `repeat(${numRows}, 300px)`;
+    grid.style.gridTemplateRows = `repeat(${numRows}, 150px)`;
     grid.style.gridTemplateColumns = 'initial';
     grid.style.gridAutoFlow = 'column';
     grid.style.gridAutoColumns = '320px';
 
     if (filtered.length === 0) {
-        grid.style.gridTemplateRows = 'auto';
-        grid.style.gridTemplateColumns = '1fr';
-        grid.innerHTML = '<p style="text-align:center; color: var(--text-muted); padding: 2rem;">No se encontraron productos.</p>';
+        grid.style.gridTemplateRows = "auto";
+        grid.style.gridTemplateColumns = "1fr";
+        grid.innerHTML = `<p style="text-align:center; color: var(--text-muted); padding: 2rem;">No se encontraron productos.</p>`;
         return;
     }
 
     filtered.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'menu-card';
+        const card = document.createElement("div");
+        card.className = "menu-card";
+        const displayPrice = item.hasOptions ? (item.priceBase > 0 ? `Desde $${item.priceBase}` : "Ver opciones") : `$${item.price}`;
+        const btnText = "Agregar";
+        const btnAction = item.hasOptions ? `openProductModal("${item.id}")` : `addToCart("${item.id}")`;
+
+        card.style.cursor = "pointer";
+        card.setAttribute("onclick", btnAction);
+
+        let imgSrc = item.img;
+        if (!imgSrc) {
+            if (item.category === "Arepas") imgSrc = "IMG/menu-arepa.png";
+            else if (item.category === "Cachapas") imgSrc = "";
+            else if (item.category === "Comida China") imgSrc = "";
+            else if (item.category === "Tequeños") imgSrc = "";
+            else if (item.category === "Empanadas") imgSrc = "IMG/menu-empanada.png";
+            else if (item.category === "Postres") imgSrc = "IMG/menu-postre.png";
+            else imgSrc = "IMG/img-1.jpg";
+        }
+
         card.innerHTML = `
+            <div class="menu-card-img">
+                <img src="${imgSrc}" alt="${item.name}" loading="lazy">
+            </div>
             <div class="menu-card-content">
                 <div class="menu-card-header">
                     <h3>${item.name}</h3>
-                    <span class="menu-price">$${item.price}</span>
+                    <span class="menu-price">${displayPrice}</span>
                 </div>
                 <p class="menu-desc">${item.desc}</p>
-                <button class="btn-add" onclick="addToCart(${item.id})">
-                    <i class="fas fa-plus"></i> Agregar
-                </button>
+                <div class="menu-card-footer">
+                    <button class="btn-add">
+                        <i class="fas ${item.hasOptions ? "fa-cog" : "fa-plus"}"></i> ${btnText}
+                    </button>
+                </div>
             </div>
         `;
         grid.appendChild(card);
     });
 
-    // Reset scroll al inicio al filtrar
-    grid.scrollTo({ left: 0, behavior: 'smooth' });
+    grid.scrollTo({ left: 0, behavior: "smooth" });
 }
 
 
@@ -457,15 +359,37 @@ function initCart() {
     checkoutBtn.addEventListener('click', handleCheckout);
 }
 
-function addToCart(productId) {
-    const product = MENU_DATA.find(p => p.id === productId);
+function addToCart(productId, config = null) {
+    const product = MENU_DATA.find(p => p.id == productId);
     if (!product) return;
 
-    const existingItem = cart.find(item => item.id === productId);
-    if (existingItem) {
-        existingItem.qty++;
+    if (config) {
+        // Items con configuración son únicos basados en su config
+        const configId = btoa(JSON.stringify(config));
+        const existingItem = cart.find(item => item.id == productId && item.configId === configId);
+
+        if (existingItem) {
+            existingItem.qty += config.qty;
+        } else {
+            cart.push({
+                ...product,
+                price: config.totalPrice / config.qty,
+                qty: config.qty,
+                config: config.details,
+                configId: configId,
+                notes: config.notes
+            });
+        }
+        showToast(`${product.name} configurado agregado`);
     } else {
-        cart.push({ ...product, qty: 1 });
+        // Items simples
+        const existingItem = cart.find(item => item.id == productId && !item.config);
+        if (existingItem) {
+            existingItem.qty++;
+        } else {
+            cart.push({ ...product, qty: 1 });
+        }
+        showToast(`${product.name} agregado`);
     }
 
     updateCartUI();
@@ -474,9 +398,239 @@ function addToCart(productId) {
     const badge = document.getElementById('cart-badge');
     badge.style.transform = 'scale(1.5)';
     setTimeout(() => badge.style.transform = 'scale(1)', 200);
+}
 
-    // Toast notification
-    showToast(`${product.name} agregado`);
+// --- LOGICA MODAL PRODUCTO ---
+function initProductModal() {
+    const overlay = document.getElementById('product-modal-overlay');
+    const closeBtn = document.getElementById('product-modal-close');
+    const minusBtn = document.getElementById('modal-qty-minus');
+    const plusBtn = document.getElementById('modal-qty-plus');
+    const addBtn = document.getElementById('btn-modal-add');
+
+    closeBtn.onclick = closeProductModal;
+    overlay.onclick = closeProductModal;
+
+    minusBtn.onclick = () => updateModalQty(-1);
+    plusBtn.onclick = () => updateModalQty(1);
+
+    addBtn.onclick = handleModalAdd;
+}
+
+function openProductModal(productId) {
+    const product = MENU_DATA.find(p => p.id == productId);
+    if (!product) return;
+
+    currentConfigProduct = product;
+    modalQty = 1;
+    selectedOptions = {};
+
+    // Inicializar opciones por defecto (primera opción si es requerida)
+    if (product.options) {
+        Object.keys(product.options).forEach(key => {
+            const group = product.options[key];
+            if (group.required) {
+                selectedOptions[key] = group.items[0];
+            } else if (group.multiple) {
+                selectedOptions[key] = [];
+            }
+        });
+    }
+
+    renderModalOptions();
+    updateModalUI();
+
+    document.getElementById('product-modal-overlay').classList.add('active');
+    document.getElementById('product-modal').classList.add('active');
+}
+
+function closeProductModal() {
+    document.getElementById('product-modal-overlay').classList.remove('active');
+    document.getElementById('product-modal').classList.remove('active');
+    currentConfigProduct = null;
+}
+
+function renderModalOptions() {
+    const body = document.getElementById('product-modal-body');
+    const product = currentConfigProduct;
+
+    document.getElementById('modal-product-name').textContent = product.name;
+    updateSelectionSummary();
+    body.innerHTML = '';
+
+    if (product.options) {
+        Object.keys(product.options).forEach(key => {
+            const group = product.options[key];
+            const groupDiv = document.createElement('div');
+            groupDiv.className = 'option-group';
+
+            groupDiv.innerHTML = `
+                <h3>${group.title} ${group.required ? '<span>Obligatorio</span>' : ''}</h3>
+            `;
+
+            group.items.forEach((item, index) => {
+                const itemDiv = document.createElement('div');
+                const isSelected = group.multiple ?
+                    (selectedOptions[key] && selectedOptions[key].some(i => i.name === item.name)) :
+                    (selectedOptions[key] && selectedOptions[key].name === item.name);
+
+                itemDiv.className = `option-item ${isSelected ? 'selected' : ''}`;
+                const inputId = `opt-${key}-${index}`;
+                const inputType = group.multiple ? 'checkbox' : 'radio';
+
+                itemDiv.innerHTML = `
+                    <div class="option-info">
+                        <span class="option-name">${item.name}</span>
+                        <span class="option-price">${item.price > 0 ? `+$${item.price}` : (item.price < 0 ? `-$${Math.abs(item.price)}` : 'Incluido')}</span>
+                    </div>
+                    <div class="selection-box">
+                        ${isSelected ? '<i class="fas fa-check"></i>' : ''}
+                    </div>
+                    <input type="${inputType}" id="${inputId}" name="${key}" ${isSelected ? 'checked' : ''}>
+                `;
+
+                itemDiv.onclick = () => {
+                    const input = itemDiv.querySelector('input');
+                    const wasChecked = input.checked;
+
+                    if (inputType === 'radio') {
+                        // Deseleccionar otros en el mismo grupo visualmente
+                        groupDiv.querySelectorAll('.option-item').forEach(el => el.classList.remove('selected'));
+                        groupDiv.querySelectorAll('.selection-box').forEach(el => el.innerHTML = '');
+                    }
+
+                    input.checked = inputType === 'radio' ? true : !wasChecked;
+                    handleOptionChange(key, item, input.checked, group.multiple);
+
+                    // Actualizar este item
+                    if (input.checked) {
+                        itemDiv.classList.add('selected');
+                        itemDiv.querySelector('.selection-box').innerHTML = '<i class="fas fa-check"></i>';
+                    } else {
+                        itemDiv.classList.remove('selected');
+                        itemDiv.querySelector('.selection-box').innerHTML = '';
+                    }
+
+                    // Re-renderizar si es radio para limpiar otros (o simplemente confiar en la lógica de arriba)
+                    if (inputType === 'radio') renderModalOptions();
+                };
+
+                groupDiv.appendChild(itemDiv);
+            });
+
+            body.appendChild(groupDiv);
+        });
+    }
+
+    // Campo de comentarios
+    const commentDiv = document.createElement('div');
+    commentDiv.className = 'option-group';
+    commentDiv.innerHTML = `
+        <h3>Instrucciones especiales</h3>
+        <textarea id="modal-notes" class="comment-box" rows="2" placeholder="Ej: sin cebolla, más salsa..."></textarea>
+    `;
+    body.appendChild(commentDiv);
+}
+
+function updateSelectionSummary() {
+    const summaryEl = document.getElementById('modal-selection-summary');
+    const parts = [];
+
+    Object.keys(selectedOptions).forEach(key => {
+        const val = selectedOptions[key];
+        if (Array.isArray(val) && val.length > 0) {
+            parts.push(val.map(i => i.name).join(', '));
+        } else if (val && val.name) {
+            parts.push(val.name);
+        }
+    });
+
+    summaryEl.textContent = parts.length > 0 ? parts.join(' | ') : 'Personaliza tu pedido';
+}
+
+function handleOptionChange(groupKey, item, isChecked, isMultiple) {
+    if (isMultiple) {
+        if (!selectedOptions[groupKey]) selectedOptions[groupKey] = [];
+        if (isChecked) {
+            selectedOptions[groupKey].push(item);
+        } else {
+            selectedOptions[groupKey] = selectedOptions[groupKey].filter(i => i.name !== item.name);
+        }
+    } else {
+        selectedOptions[groupKey] = item;
+    }
+    updateModalUI();
+    updateSelectionSummary();
+}
+
+function updateModalQty(delta) {
+    modalQty = Math.max(1, modalQty + delta);
+    updateModalUI();
+}
+
+function updateModalUI() {
+    const qtyValue = document.getElementById('modal-qty-value');
+    const totalPriceEl = document.getElementById('modal-total-price');
+
+    qtyValue.textContent = modalQty;
+
+    let total = currentConfigProduct.priceBase || 0;
+
+    Object.keys(selectedOptions).forEach(key => {
+        const val = selectedOptions[key];
+        if (Array.isArray(val)) {
+            val.forEach(item => total += item.price);
+        } else if (val) {
+            total += val.price;
+        }
+    });
+
+    totalPriceEl.textContent = `$${total * modalQty}`;
+}
+
+function handleModalAdd() {
+    const product = currentConfigProduct;
+    const notes = document.getElementById('modal-notes').value.trim();
+
+    // Validar requeridos
+    let missing = [];
+    if (product.options) {
+        Object.keys(product.options).forEach(key => {
+            if (product.options[key].required && !selectedOptions[key]) {
+                missing.push(product.options[key].title);
+            }
+        });
+    }
+
+    if (missing.length > 0) {
+        alert(`Por favor completa: ${missing.join(', ')}`);
+        return;
+    }
+
+    // Calcular precio final por unidad
+    let unitPrice = product.priceBase || 0;
+    const details = {};
+
+    Object.keys(selectedOptions).forEach(key => {
+        const val = selectedOptions[key];
+        if (Array.isArray(val)) {
+            unitPrice += val.reduce((acc, i) => acc + i.price, 0);
+            details[key] = val.map(i => i.name);
+        } else if (val) {
+            unitPrice += val.price;
+            details[key] = val.name;
+        }
+    });
+
+    const config = {
+        qty: modalQty,
+        totalPrice: unitPrice * modalQty,
+        details: details,
+        notes: notes
+    };
+
+    addToCart(product.id, config);
+    closeProductModal();
 }
 
 function showToast(message) {
@@ -503,8 +657,8 @@ function showToast(message) {
     }, 3000);
 }
 
-function updateCartQty(productId, delta) {
-    const itemIndex = cart.findIndex(item => item.id === productId);
+function updateCartQty(itemUid, delta) {
+    const itemIndex = cart.findIndex(item => (item.configId || item.id) === itemUid);
     if (itemIndex > -1) {
         cart[itemIndex].qty += delta;
         if (cart[itemIndex].qty <= 0) {
@@ -526,23 +680,40 @@ function updateCartUI() {
     if (cart.length === 0) {
         container.innerHTML = '<div class="empty-cart-msg">Tu carrito está vacío</div>';
     } else {
-        cart.forEach(item => {
-            const itemTotal = item.price * item.qty;
+        cart.forEach((item, index) => {
+            const itemPrice = item.price;
+            const itemTotal = itemPrice * item.qty;
             total += itemTotal;
             count += item.qty;
+
+            const itemUid = item.configId || item.id;
+
+            let configHtml = '';
+            if (item.config) {
+                configHtml = '<div class="cart-item-config">';
+                Object.keys(item.config).forEach(key => {
+                    const val = item.config[key];
+                    configHtml += `<span><strong>${key}:</strong> ${Array.isArray(val) ? val.join(', ') : val}</span>`;
+                });
+                if (item.notes) {
+                    configHtml += `<span><strong>Notas:</strong> ${item.notes}</span>`;
+                }
+                configHtml += '</div>';
+            }
 
             const div = document.createElement('div');
             div.className = 'cart-item';
             div.innerHTML = `
                 <div class="cart-item-info">
                     <h4>${item.name}</h4>
-                    <span class="cart-item-price">$${item.price}</span>
+                    <span class="cart-item-price">$${itemPrice}</span>
+                    ${configHtml}
                 </div>
                 <div class="cart-item-controls">
-                    <button class="cart-qty-btn" onclick="updateCartQty(${item.id}, -1)">-</button>
+                    <button class="cart-qty-btn" onclick="updateCartQty('${itemUid}', -1)">-</button>
                     <span>${item.qty}</span>
-                    <button class="cart-qty-btn" onclick="updateCartQty(${item.id}, 1)">+</button>
-                    <button class="cart-remove" onclick="updateCartQty(${item.id}, -999)" title="Eliminar"><i class="fas fa-trash"></i></button>
+                    <button class="cart-qty-btn" onclick="updateCartQty('${itemUid}', 1)">+</button>
+                    <button class="cart-remove" onclick="updateCartQty('${itemUid}', -999)" title="Eliminar"><i class="fas fa-trash"></i></button>
                 </div>
             `;
             container.appendChild(div);
@@ -571,18 +742,30 @@ function handleCheckout() {
     let msg = `Hola, quiero hacer un pedido en ${BUSINESS_NAME}:\n\n*Pedido:*\n`;
     let total = 0;
 
-    cart.forEach(item => {
-        msg += `- ${item.qty} x ${item.name} - $${item.price * item.qty}\n`;
+    cart.forEach((item, index) => {
+        msg += `${index + 1}) *${item.name}* x${item.qty}\n`;
+        if (item.config) {
+            Object.keys(item.config).forEach(key => {
+                const val = item.config[key];
+                msg += `   - ${key}: ${Array.isArray(val) ? val.join(', ') : val}\n`;
+            });
+        }
+        if (item.notes) {
+            msg += `   - Notas: ${item.notes}\n`;
+        }
+        msg += `   Subtotal: $${item.price * item.qty}\n\n`;
         total += item.price * item.qty;
     });
 
-    msg += `\n*Total aproximado:* $${total}\n\n`;
+    msg += `*Total a pagar:* $${total}\n\n`;
     msg += `*Nombre:* ${nombre}\n`;
     msg += `*Dirección/Retiro:* ${direccion}\n`;
 
     if (comentarios) {
-        msg += `*Comentarios:* ${comentarios}\n`;
+        msg += `*Comentarios adicionales:* ${comentarios}\n`;
     }
+
+    msg += `\n_¿Me confirman disponibilidad?_`;
 
     const encodedMsg = encodeURIComponent(msg);
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMsg}`;
@@ -653,3 +836,10 @@ function initReservations() {
         showToast("Solicitud de reserva enviada");
     });
 }
+
+
+
+
+
+
+

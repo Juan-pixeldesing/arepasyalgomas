@@ -18,6 +18,7 @@
     <meta property="og:image" content="IMG/img-4.jpg">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -234,9 +235,37 @@
         </div>
     </div>
 
+    <!-- Modal de Configuración de Producto -->
+    <div class="modal-overlay" id="product-modal-overlay"></div>
+    <div class="product-modal" id="product-modal">
+        <div class="product-modal-header">
+            <div class="modal-header-content" style="width: 100%;">
+                <div class="modal-header-top">
+                    <h2 id="modal-product-name">Configurar Producto</h2>
+                    <button class="modal-close" id="product-modal-close">&times;</button>
+                </div>
+                <div id="modal-selection-summary">Selecciona tus opciones</div>
+            </div>
+        </div>
+        <div class="product-modal-body" id="product-modal-body">
+            <!-- Opciones dinámicas inyectadas por JS -->
+        </div>
+        <div class="product-modal-footer">
+            <div class="modal-qty-container">
+                <button class="qty-btn" id="modal-qty-minus">-</button>
+                <span id="modal-qty-value">1</span>
+                <button class="qty-btn" id="modal-qty-plus">+</button>
+            </div>
+            <button class="btn btn-primary" id="btn-modal-add">
+                Agregar <span id="modal-total-price">$0</span>
+            </button>
+        </div>
+    </div>
+
     <!-- Notificaciones -->
     <div id="toast-container" class="toast-container"></div>
 
+    <script src="MENU_DATA.js"></script>
     <script src="script.js"></script>
 </body>
 
