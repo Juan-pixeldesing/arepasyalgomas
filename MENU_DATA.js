@@ -146,7 +146,7 @@ const MENU_DATA = [
         desc: "Queso, panceta y huevos revueltos.",
         priceBase: 360,
         category: "Arepas",
-        img: "img_comidas/arepagringa.png",
+        img: "img_comidas/arepaginga.png",
         hasOptions: true,
         options: {
             adicionales: {
@@ -289,7 +289,7 @@ const MENU_DATA = [
         desc: "Jugosa carne mechada preparada con hierbas salteadas.",
         priceBase: 400,
         category: "Arepas",
-        img: "img_comidas/arepamechada.png",
+        img: "",
         hasOptions: true,
         options: {
             adicionales: {
