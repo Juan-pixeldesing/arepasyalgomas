@@ -181,9 +181,6 @@ function renderMenu(searchTerm = '') {
         const btnText = "Agregar";
         const btnAction = item.hasOptions ? `openProductModal("${item.id}")` : `addToCart("${item.id}")`;
 
-        card.style.cursor = "pointer";
-        card.setAttribute("onclick", btnAction);
-
         let imgSrc = item.img;
         if (!imgSrc) {
             if (item.category === "Arepas") imgSrc = "IMG/menu-arepa.png";
@@ -207,11 +204,22 @@ function renderMenu(searchTerm = '') {
                 <p class="menu-desc">${item.desc}</p>
                 <div class="menu-card-footer">
                     <button class="btn-add">
-                        <i class="fas ${item.hasOptions ? "fa-cog" : "fa-plus"}"></i> ${btnText}
+                        <i class="fas ${item.hasOptions ? 'fa-cog' : 'fa-plus'}"></i> ${btnText}
                     </button>
                 </div>
             </div>
         `;
+
+        const btnEl = card.querySelector('.btn-add');
+        btnEl.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (item.hasOptions) {
+                openProductModal(item.id);
+            } else {
+                addToCart(item.id);
+            }
+        });
+
         grid.appendChild(card);
     });
 
@@ -522,14 +530,16 @@ function renderModalOptions() {
         });
     }
 
-    // Campo de comentarios
-    const commentDiv = document.createElement('div');
-    commentDiv.className = 'option-group';
-    commentDiv.innerHTML = `
-        <h3>Instrucciones especiales</h3>
-        <textarea id="modal-notes" class="comment-box" rows="2" placeholder="Ej: sin cebolla, más salsa..."></textarea>
-    `;
-    body.appendChild(commentDiv);
+    // Campo de comentarios solo para burgers
+    if (product.id.toLowerCase().includes('burger')) {
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'option-group';
+        commentDiv.innerHTML = `
+            <h3>Instrucciones especiales</h3>
+            <textarea id="modal-notes" class="comment-box" rows="2" placeholder="Ej: sin cebolla, más salsa..."></textarea>
+        `;
+        body.appendChild(commentDiv);
+    }
 }
 
 function updateSelectionSummary() {
@@ -574,23 +584,49 @@ function updateModalUI() {
 
     qtyValue.textContent = modalQty;
 
-    let total = currentConfigProduct.priceBase || 0;
-
-    Object.keys(selectedOptions).forEach(key => {
-        const val = selectedOptions[key];
-        if (Array.isArray(val)) {
-            val.forEach(item => total += item.price);
-        } else if (val) {
-            total += val.price;
-        }
-    });
+    let total = calcModalTotal();
 
     totalPriceEl.textContent = `$${total * modalQty}`;
 }
 
+function calcModalTotal() {
+    const product = currentConfigProduct;
+    // Si hay opciones de radio requeridas, su precio ES el precio total del ítem
+    // (no se suma al priceBase, lo reemplaza)
+    let hasRequiredRadio = false;
+    let radioTotal = 0;
+    let extrasTotal = 0;
+
+    if (product.options) {
+        Object.keys(product.options).forEach(key => {
+            const group = product.options[key];
+            const val = selectedOptions[key];
+            if (group.multiple) {
+                // Extras que sí se suman al priceBase
+                if (Array.isArray(val)) {
+                    val.forEach(item => extrasTotal += item.price);
+                }
+            } else {
+                // Opción de radio: su price ES el precio completo
+                if (val && val.price !== undefined) {
+                    hasRequiredRadio = true;
+                    radioTotal = val.price;
+                }
+            }
+        });
+    }
+
+    if (hasRequiredRadio) {
+        return radioTotal + extrasTotal;
+    } else {
+        return (product.priceBase || 0) + extrasTotal;
+    }
+}
+
 function handleModalAdd() {
     const product = currentConfigProduct;
-    const notes = document.getElementById('modal-notes').value.trim();
+    const notesEl = document.getElementById('modal-notes');
+    const notes = notesEl ? notesEl.value.trim() : '';
 
     // Validar requeridos
     let missing = [];
@@ -608,19 +644,18 @@ function handleModalAdd() {
     }
 
     // Calcular precio final por unidad
-    let unitPrice = product.priceBase || 0;
     const details = {};
 
     Object.keys(selectedOptions).forEach(key => {
         const val = selectedOptions[key];
         if (Array.isArray(val)) {
-            unitPrice += val.reduce((acc, i) => acc + i.price, 0);
             details[key] = val.map(i => i.name);
         } else if (val) {
-            unitPrice += val.price;
             details[key] = val.name;
         }
     });
+
+    const unitPrice = calcModalTotal();
 
     const config = {
         qty: modalQty,

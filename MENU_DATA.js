@@ -146,7 +146,7 @@ const MENU_DATA = [
         desc: "Queso, panceta y huevos revueltos.",
         priceBase: 360,
         category: "Arepas",
-        img: "",
+        img: "img_comidas/arepaginga.png",
         hasOptions: true,
         options: {
             adicionales: {
@@ -323,7 +323,25 @@ const MENU_DATA = [
             }
         }
     },
-    { id: "burger-especial", name: "Arepa Burger Especial", desc: "Doble hamburguesa, tomate, lechuga, huevo frito, panceta, queso y salsas.", price: 480, category: "Arepas", img: "" },
+    {
+        id: "burger-especial",
+        name: "Arepa Burger Especial",
+        desc: "Doble hamburguesa, tomate, lechuga, huevo frito, panceta, queso y salsas.",
+        priceBase: 480,
+        category: "Arepas",
+        img: "img_comidas/arepaburguercombo.png",
+        hasOptions: true,
+        options: {
+            adicionales: {
+                title: "Acompañamiento",
+                required: true,
+                items: [
+                    { name: "Sola (Sin Papas)", price: 480 },
+                    { name: "Con Papas Fritas", price: 610 }
+                ]
+            }
+        }
+    },
     { id: "especial-mechada-porotos", name: "Arepa Mechada Porotos y queso", desc: "Carne mechada, porotos negros y queso muzzarella.", price: 390, category: "Arepas", img: "img_comidas/arepacarnemechadaporotosqueso.png" },
     { id: "especial-verduras-queso", name: "Arepa de Carne,Verduras y Queso", desc: "Carne mechada(carne en hebras) verduras salteadas y queso muzzarella.", price: 380, category: "Arepas", img: "img_comidas/arepacarnemechadaquesoverdura.png" },
     { id: "especial-mixta-queso", name: "Arepa Carne Mechada y Verduras", desc: "Carne mechada y verduras salteadas.", price: 380, category: "Arepas", img: "img_comidas/arepacarneyverdurasç.png" },
