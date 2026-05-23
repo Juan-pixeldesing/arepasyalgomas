@@ -158,14 +158,14 @@ function renderMenu(searchTerm = '') {
         return matchCategory && matchSearch;
     });
 
-    // Ajuste dinámico: priorizar horizontal si son pocos, máximo 3 filas
-    let numRows = 1;
-    if (filtered.length > 4) numRows = 2;
-    if (filtered.length > 8) numRows = 3;
-    grid.style.gridTemplateRows = `repeat(${numRows}, 150px)`;
-    grid.style.gridTemplateColumns = 'initial';
-    grid.style.gridAutoFlow = 'column';
-    grid.style.gridAutoColumns = '320px';
+    // Ajuste dinámico para menú vertical en todas las categorías
+    grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(300px, 1fr))';
+    grid.style.gridTemplateRows = 'auto';
+    grid.style.gridAutoFlow = 'row';
+    grid.style.gridAutoColumns = 'initial';
+    grid.style.overflowX = 'visible';
+    grid.style.scrollSnapType = 'none';
+    grid.style.paddingBottom = '0.5rem';
 
     if (filtered.length === 0) {
         grid.style.gridTemplateRows = "auto";
@@ -215,7 +215,7 @@ function renderMenu(searchTerm = '') {
         grid.appendChild(card);
     });
 
-    grid.scrollTo({ left: 0, behavior: "smooth" });
+    grid.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 
