@@ -289,7 +289,7 @@ const MENU_DATA = [
         desc: "Jugosa carne mechada preparada con hierbas salteadas.",
         priceBase: 400,
         category: "Arepas",
-        img: "",
+        img: "img_comidas/arepamechadasola.png",
         hasOptions: true,
         options: {
             adicionales: {
@@ -309,7 +309,7 @@ const MENU_DATA = [
         desc: "Suprema de pollo en hebras guisada con morrones y cebolla.",
         priceBase: 360,
         category: "Arepas",
-        img: "img_comidas/arepacatira.png",
+        img: "",
         hasOptions: true,
         options: {
             adicionales: {
@@ -323,37 +323,14 @@ const MENU_DATA = [
             }
         }
     },
-    { id: "arepa-pabellon", name: "Arepa Pabellón", desc: "Carne mechada, porotos negros, tajadas y muzzarella.", price: 400, category: "Arepas", img: "" },
     { id: "burger-especial", name: "Arepa Burger Especial", desc: "Doble hamburguesa, tomate, lechuga, huevo frito, panceta, queso y salsas.", price: 480, category: "Arepas", img: "" },
-    { id: "especial-mechada-porotos", name: "Arepa Mechada y Porotos", desc: "Carne mechada, porotos negros y queso muzzarella.", price: 390, category: "Arepas", img: "img_comidas/arepaburguercombo.png" },
-    { id: "especial-verduras-queso", name: "Arepa Verduras y Queso", desc: "Verduras salteadas y queso muzzarella.", price: 350, category: "Arepas", img: "img_comidas/arepaverdurasalteadas.png" },
-    { id: "especial-mixta-queso", name: "Arepa Mixta Especial", desc: "Carne mechada, verduras salteadas y queso.", price: 380, category: "Arepas", img: "img_comidas/arepaverdurascarne.png" },
-    { id: "salchiarepa", name: "Salchiarepa", desc: "Huevos revueltos con tomate, cebolla y panchos picados.", price: 360, category: "Arepas", img: "img_comidas/salchiarepa.png" },
+    { id: "especial-mechada-porotos", name: "Arepa Mechada Porotos y queso", desc: "Carne mechada, porotos negros y queso muzzarella.", price: 390, category: "Arepas", img: "img_comidas/arepacarnemechadaporotosqueso.png" },
+    { id: "especial-verduras-queso", name: "Arepa de Carne,Verduras y Queso", desc: "Carne mechada(carne en hebras) verduras salteadas y queso muzzarella.", price: 380, category: "Arepas", img: "img_comidas/arepacarnemechadaquesoverdura.png" },
+    { id: "especial-mixta-queso", name: "Arepa Carne Mechada y Verduras", desc: "Carne mechada y verduras salteadas.", price: 380, category: "Arepas", img: "img_comidas/arepacarneyverdurasç.png" },
     { id: "arepa-viuda", name: "Arepa Viuda", desc: "Arepa sola sin relleno.", price: 120, category: "Arepas", img: "img_comidas/arepaviuda.png" },
-
     // --- CACHAPAS ---
-    {
-        id: "cachapa-clasica",
-        name: "Cachapa Clásica",
-        desc: "Fina masa de maíz tierno molido a la plancha rellena de sabor a elección.",
-        priceBase: 450,
-        category: "Cachapas",
-        img: "img_comidas/cachapasrellenox3.png",
-        hasOptions: true,
-        options: {
-            sabor: {
-                title: "Elegí el relleno",
-                required: true,
-                items: [
-                    { name: "Carne", price: 450 },
-                    { name: "Pollo", price: 450 },
-                    { name: "Chorizo", price: 450 },
-                    { name: "Cerdo", price: 450 }
-                ]
-            }
-        }
-    },
-    { id: "cachapa-burger", name: "Cachapa Burger", desc: "Rellena de 2 hamburguesas, panceta y muzzarella con fritas.", price: 500, category: "Cachapas", img: "img_comidas/cachapaburguer.png" },
+    { id: "cachapa-pollo", name: "Cachapa de Pollo", desc: "Fina masa de maíz molido cocinado a la plancha en forma de tortilla y rellena con tiras de pollo salteado y Queso mozarella.", price: 450, category: "Cachapas", img: "img_comidas/cachapapollo.png" },
+    { id: "cachapa-burger", name: "Cachapa Burger", desc: "Rellena de 2 hamburguesas, panceta y muzzarella con fritas.", price: 500, category: "Cachapas", img: "" },
     { id: "cachapa-crispy", name: "Cachapa Crispy", desc: "Cachapa rellena de pollo crispy crujiente.", price: 450, category: "Cachapas", img: "img_comidas/cachapacrispy.png" },
     { id: "cachapa-jyq", name: "Cachapa Jamón y Queso", desc: "Masa de maíz con trozos de jamón y muzzarella.", price: 420, category: "Cachapas", img: "img_comidas/cachapajyq.png" },
     { id: "cachapa-solo-queso", name: "Cachapa Solo Queso", desc: "La clásica rellena únicamente de muzzarella.", price: 400, category: "Cachapas", img: "img_comidas/cachapasoloqueso.png" },
@@ -371,22 +348,23 @@ const MENU_DATA = [
     { id: "picada-crispy", name: "Picada Crispy", desc: "Pollo crispy, 4 tostones con queso y papas fritas.", price: 600, category: "Combos & Promos", img: "" },
     { id: "entre-panas", name: "Entre Panas", desc: "6 tequeños + media ración pollo crispy + 3 mini arepitas.", price: 630, category: "Combos & Promos", img: "img_comidas/entrepanas.png" },
     { id: "full-equipo", name: "Full Equipo", desc: "Pollo Crispy + 3 arepitas + 3 tequeños + 3 cachapas med.", price: 840, category: "Combos & Promos", img: "img_comidas/picadafullequipo.png" },
-
+    { id: "combo-arepa-vegetales mas 5 tequeños", name: "Combo  Arepa de vegetales + 5 tequeños + bebida de lata", desc: "Arepa rellena de verduras acompañada de 5 Tequeños y bebida.", price: 630, category: "Combos & Promos", img: "img_comidas/comboarepaverdurastequeñosylata.png" },
     // --- COMIDA CHINA ---
-    { id: "combo-china-1", name: "Media Ración Chow Fan + Pollo Frito", desc: "Media ración de arroz con verduras y pollo frito.", price: 340, category: "Comida China", img: "img_comidas/arrozchowmaspollo.png" },
+    { id: "combo-china-1", name: "Media Ración Chow Fan + Pollo Frito", desc: "Media ración de arroz con verduras y pollo frito.", price: 470, category: "Comida China", img: "img_comidas/verdurasypolloaroz.png" },
     { id: "combo-china-2", name: "Media Ración Chow Fan (1 Prot) + Pollo Frito", desc: "Arroz con una proteína y pollo frito.", price: 470, category: "Comida China", img: "" },
     { id: "combo-china-3", name: "Media Ración Chow Fan (2 Prot) + Pollo Frito", desc: "Arroz con dos proteínas y pollo frito.", price: 410, category: "Comida China", img: "" },
     { id: "combo-china-4", name: "Media Ración Chow Fan + 2 Arrolladitos", desc: "Arroz con proteína y 2 arrolladitos primavera.", price: 480, category: "Comida China", img: "" },
     { id: "combo-china-5", name: "Media Ración Chow Fan + 1/4 Pollo", desc: "Media ración de arroz y un cuarto de pollo frito.", price: 330, category: "Comida China", img: "" },
-    { id: "combo-china-6", name: "Media Ración Chow Fan + 1 proteína", desc: "Arroz salteado con proteína a elección.", price: 330, category: "Comida China", img: "" },
+    { id: "combo-china-6", name: "Media Ración Chow Fan + 1 proteína", desc: "Media ración de arroz salteado con huevo frito, verduras y la proteína de su preferencia. Sazonado con soja y aceite de sésamo..", price: 430, category: "Comida China", img: "img_comidas/chowfanprote.png" },
     { id: "promo-chowfan-1", name: "Promo Arroz Chow Fan Verduras", desc: "Media ración de arroz salteado con verduras.", price: 310, category: "Comida China", img: "" },
     {
+
         id: "promo-chowfan-2",
         name: "Promo Arroz Chow Fan + proteína",
         desc: "Media ración de arroz con una proteína.",
         priceBase: 330,
         category: "Comida China",
-        img: "img_comidas/arrozchowmasprote.png",
+        img: "",
         hasOptions: true,
         options: {
             proteina: {
@@ -468,7 +446,7 @@ const MENU_DATA = [
         desc: "Verduras salteadas sazonadas con aceite de sésamo y soja.",
         priceBase: 320,
         category: "Comida China",
-        img: "img_comidas/verdurassalteadas.png",
+        img: "",
         hasOptions: true,
         options: {
             extra: {
@@ -482,7 +460,7 @@ const MENU_DATA = [
             }
         }
     },
-    { id: "pollo-frito", name: "Pollo Frito", desc: "Ración de pollo frito crujiente.", price: 320, category: "Comida China", img: "img_comidas/dpollofrito.png" },
+    { id: "pollo-frito", name: "Pollo Frito", desc: "Ración de pollo frito crujiente.", price: 320, category: "Comida China", img: "" },
     // --- TEQUEÑOS ---
     {
         id: "tequenos-muzzarella",
