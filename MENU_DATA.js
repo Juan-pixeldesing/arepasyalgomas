@@ -146,7 +146,7 @@ const MENU_DATA = [
         desc: "Queso, panceta y huevos revueltos.",
         priceBase: 360,
         category: "Arepas",
-        img: "img_comidas/arepaginga.png",
+        img: "",
         hasOptions: true,
         options: {
             adicionales: {
