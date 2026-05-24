@@ -348,12 +348,12 @@ const MENU_DATA = [
     { id: "arepa-viuda", name: "Arepa Viuda", desc: "Arepa sola sin relleno.", price: 120, category: "Arepas", img: "img_comidas/arepaviuda.png" },
     // --- CACHAPAS ---
     { id: "cachapa-pollo", name: "Cachapa de Pollo", desc: "Fina masa de maíz molido cocinado a la plancha en forma de tortilla y rellena con tiras de pollo salteado y Queso mozarella.", price: 450, category: "Cachapas", img: "img_comidas/cachapapollo.png" },
-    { id: "cachapa-burger", name: "Cachapa Burger", desc: "Rellena de 2 hamburguesas, panceta y muzzarella con fritas.", price: 500, category: "Cachapas", img: "" },
-    { id: "cachapa-crispy", name: "Cachapa Crispy", desc: "Cachapa rellena de pollo crispy crujiente.", price: 450, category: "Cachapas", img: "img_comidas/cachapacrispy.png" },
+    { id: "cachapa-burger", name: "Cachapa Burger", desc: "Rellena de 2 hamburguesas, panceta y muzzarella con fritas.", price: 500, category: "Cachapas", img: "img_comidas/cachapaburger.png" },
+    { id: "cachapa-crispy", name: "Cachapa Crispy", desc: "Cachapa rellena de pollo crispy crujiente.", price: 450, category: "Cachapas", img: "" },
     { id: "cachapa-jyq", name: "Cachapa Jamón y Queso", desc: "Masa de maíz con trozos de jamón y muzzarella.", price: 420, category: "Cachapas", img: "img_comidas/cachapajyq.png" },
     { id: "cachapa-solo-queso", name: "Cachapa Solo Queso", desc: "La clásica rellena únicamente de muzzarella.", price: 400, category: "Cachapas", img: "img_comidas/cachapasoloqueso.png" },
-    { id: "cachapa-veggie", name: "Cachapa Veggie", desc: "Rellena de vegetales frescos y muzzarella.", price: 410, category: "Cachapas", img: "img_comidas/cachapaveggieconqueso.png" },
-    { id: "cachapa-chori", name: "Cachapa Chori", desc: "Rellena de vegetales frescos y muzzarella.", price: 345, category: "Cachapas", img: "img_comidas/cachapachori.png" },
+    { id: "cachapa-veggie", name: "Cachapa Veggie", desc: "Rellena de vegetales frescos y muzzarella.", price: 410, category: "Cachapas", img: "img_comidas/cachapaveggie2.png" },
+    { id: "cachapa-chori", name: "Cachapa Chori", desc: "Rellena de vegetales frescos y muzzarella.", price: 345, category: "Cachapas", img: "img_comidas/choriarepa.png" },
 
     // --- COMBOS & PROMOS ---
     { id: "combo-llovizna", name: "Combo La Llovizna", desc: "2 cachapas grandes + 5 tequeños + bebida 1.5L.", price: 1200, category: "Combos & Promos", img: "" },
@@ -366,7 +366,7 @@ const MENU_DATA = [
     { id: "picada-crispy", name: "Picada Crispy", desc: "Pollo crispy, 4 tostones con queso y papas fritas.", price: 600, category: "Combos & Promos", img: "" },
     { id: "entre-panas", name: "Entre Panas", desc: "6 tequeños + media ración pollo crispy + 3 mini arepitas.", price: 630, category: "Combos & Promos", img: "img_comidas/entrepanas.png" },
     { id: "full-equipo", name: "Full Equipo", desc: "Pollo Crispy + 3 arepitas + 3 tequeños + 3 cachapas med.", price: 840, category: "Combos & Promos", img: "img_comidas/picadafullequipo.png" },
-    { id: "combo-arepa-vegetales mas 5 tequeños", name: "Combo  Arepa de vegetales + 5 tequeños + bebida de lata", desc: "Arepa rellena de verduras acompañada de 5 Tequeños y bebida.", price: 630, category: "Combos & Promos", img: "img_comidas/comboarepaverdurastequeñosylata.png" },
+
     // --- COMIDA CHINA ---
     { id: "combo-china-1", name: "Media Ración Chow Fan + Pollo Frito", desc: "Media ración de arroz con verduras y pollo frito.", price: 470, category: "Comida China", img: "img_comidas/verdurasypolloaroz.png" },
     { id: "combo-china-2", name: "Media Ración Chow Fan (1 Prot) + Pollo Frito", desc: "Arroz con una proteína y pollo frito.", price: 470, category: "Comida China", img: "" },
@@ -599,29 +599,12 @@ const MENU_DATA = [
     { id: "falafel-5", name: "Croquetas Falafel (x5)", desc: "Croquetas veganas a base de garbanzos y especias.", price: 270, category: "Picadas & Entradas", img: "img_comidas/croqueta_farafel.png" },
     { id: "porcion-papas", name: "Porcion Fritas", desc: "Ración de papas fritas.", price: 270, category: "Picadas & Entradas", img: "img_comidas/papasfritas.png" },
 
-    {
-        id: "patacones-base",
-        name: "Patacones",
-        desc: "Trozos de plátano verde frito con relleno a elección.",
-        priceBase: 490,
-        category: "Picadas & Entradas",
-        hasOptions: true,
-        img: "",
-
-        options: {
-            relleno: {
-                title: "Elegí tu relleno",
-                required: true,
-                items: [
-                    { name: "Carne", price: 0 },
-                    { name: "Pollo", price: 0 },
-                    { name: "Chorizo", price: 0 },
-                    { name: "Cerdo", price: 0 },
-                    { name: "Veggie", price: -30 }
-                ]
-            }
-        }
-    },
+    // --- PATACONES ---
+    { id: "patacon-carne", name: "Patacón con Carne", desc: "Base y tapa de platano verde frito con jugosa carne mechada,tomate,lechuga,cebolla,queso,panceta..", price: 500, category: "Patacones", img: "img_comidas/pataconcarne.png" },
+    { id: "patacon-pollo", name: "Patacón con Pollo", desc: "Base y tapa de platano verde frito con carne de pollo a la plancha,tomate,lechuga,cebolla,queso,panceta..", price: 500, category: "Patacones", img: "" },
+    { id: "patacon-chorizo", name: "Patacón con Chorizo", desc: "Base y tapa de platano verde frito con carne de chorizo a la plancha,tomate,lechuga,cebolla,queso,panceta..", price: 500, category: "Patacones", img: "img_comidas/pataconchori.png" },
+    { id: "patacon-cerdo", name: "Patacón con Cerdo", desc: "Base y tapa de platano verde frito y en el centro carne de cerdo a la plancha,tomate,lechuga,cebolla,queso,panceta.", price: 500, category: "Patacones", img: "img_comidas/pataconcerdo.png" },
+    { id: "patacon-veggie", name: "Patacón Veggie", desc: "Base y tapa de platano frito y en el centro verduras salteadas.", price: 460, category: "Patacones", img: "img_comidas/pataconveggie.jpeg" },
 
     { id: "tostones", name: "Tostones", desc: "Plátano verde frito crujiente.", price: 250, category: "Picadas & Entradas", img: "" },
 

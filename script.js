@@ -103,7 +103,7 @@ function initMenu() {
     const searchInput = document.getElementById('search-input');
 
     const orderedCategories = [
-        'Todas', 'Arepas', 'Combos & Promos', 'Comida China', 'Cachapas',
+        'Todas', 'Arepas', 'Combos & Promos', 'Comida China', 'Cachapas', 'Patacones',
         'Tequeños', 'Empanadas', 'Picadas & Entradas', 'Bebidas', 'Postres', 'Salsas & Extras', 'Otros & Snacks'
     ];
 
@@ -187,15 +187,20 @@ function renderMenu(searchTerm = '') {
             else if (item.category === "Cachapas") imgSrc = "";
             else if (item.category === "Comida China") imgSrc = "";
             else if (item.category === "Tequeños") imgSrc = "";
+            else if (item.category === "Patacones") imgSrc = "";
             else if (item.category === "Empanadas") imgSrc = "IMG/menu-empanada.png";
             else if (item.category === "Postres") imgSrc = "IMG/menu-postre.png";
             else imgSrc = "IMG/img-1.jpg";
         }
 
-        card.innerHTML = `
+        const imgHtml = imgSrc ? `
             <div class="menu-card-img">
                 <img src="${imgSrc}" alt="${item.name}" loading="lazy">
             </div>
+        ` : '';
+
+        card.innerHTML = `
+            ${imgHtml}
             <div class="menu-card-content">
                 <div class="menu-card-header">
                     <h3>${item.name}</h3>
