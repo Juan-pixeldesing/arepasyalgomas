@@ -366,13 +366,13 @@ const MENU_DATA = [
     { id: "entre-panas", name: "Entre Panas", desc: "6 tequeños + media ración pollo crispy + 3 mini arepitas.", price: 680, category: "Combos & Promos", img: "img_comidas/entrepanas.png" },
     { id: "full-equipo", name: "Full Equipo", desc: "Pollo Crispy + 3 arepitas + 3 tequeños + 3 cachapas med.", price: 900, category: "Combos & Promos", img: "img_comidas/picadafullequipo.png" },
     // --- COMIDA CHINA ---
-    { id: "combo-china-1", name: "Media Ración Chow Fan + Pollo Frito", desc: "Media ración de arroz con verduras y pollo frito.", price: 470, category: "Comida China", img: "img_comidas/verdurasypolloaroz.png" },
-    { id: "combo-china-2", name: "Media Ración Chow Fan (1 Prot) + Pollo Frito", desc: "Arroz con una proteína y pollo frito.", price: 470, category: "Comida China", img: "" },
-    { id: "combo-china-3", name: "Media Ración Chow Fan (2 Prot) + Pollo Frito", desc: "Arroz con dos proteínas y pollo frito.", price: 410, category: "Comida China", img: "" },
-    { id: "combo-china-4", name: "Media Ración Chow Fan + 2 Arrolladitos", desc: "Arroz con proteína y 2 arrolladitos primavera.", price: 480, category: "Comida China", img: "" },
-    { id: "combo-china-5", name: "Media Ración Chow Fan + 1/4 Pollo", desc: "Media ración de arroz y un cuarto de pollo frito.", price: 330, category: "Comida China", img: "" },
-    { id: "combo-china-6", name: "Media Ración Chow Fan + 1 proteína", desc: "Media ración de arroz salteado con huevo frito, verduras y la proteína de su preferencia. Sazonado con soja y aceite de sésamo..", price: 430, category: "Comida China", img: "img_comidas/chowfanprote.png" },
-    { id: "promo-chowfan-1", name: "Promo Arroz Chow Fan Verduras", desc: "Media ración de arroz salteado con verduras.", price: 310, category: "Comida China", img: "" },
+    { id: "combo-china-1", name: "Una racion de arroz Chow fan + Pollo Frito", desc: "una racion de verduras con pollo frito.", price: 470, category: "Comida China", img: "img_comidas/verdurasypolloaroz.png" },
+    { id: "combo-china-2", name: "Media Ración Chow Fan (1 Prot) + Pollo Frito", desc: "Arroz con una proteína y pollo frito.", price: 470, category: "Comida China", img: "img_comidas/ok.png" },
+    { id: "combo-china-3", name: "Media Ración Chow Fan (2 Prot) + Pollo Frito", desc: "Arroz con dos proteínas y pollo frito.", price: 410, category: "Comida China", img: "img_comidas/ok.png" },
+    { id: "combo-china-4", name: "Media Ración Chow Fan + 2 Arrolladitos", desc: "Arroz con proteína y 2 arrolladitos primavera.", price: 480, category: "Comida China", img: "img_comidas/arrozchowfany2arrolladitos.png" },
+    { id: "combo-china-5", name: "Media Ración Chow Fan + 1/4 Pollo", desc: "Media ración de arroz y un cuarto de pollo frito.", price: 330, category: "Comida China", img: "img_comidas/ok.png" },
+    { id: "combo-china-6", name: "Arroz Chow Fan + 1 proteína", desc: "una racion de arroz salteado con huevo frito, verduras y la proteína de su preferencia. Sazonado con soja y aceite de sésamo..", price: 430, category: "Comida China", img: "img_comidas/chowfanprote.png" },
+    { id: "promo-chowfan-1", name: "Promo Arroz Chow Fan Verduras", desc: "Media ración de arroz salteado con verduras.", price: 310, category: "Comida China", img: "img_comidas/promoarrozchowfanconverduras.png" },
     {
 
         id: "promo-chowfan-2",
@@ -380,7 +380,7 @@ const MENU_DATA = [
         desc: "Media ración de arroz con una proteína.",
         priceBase: 330,
         category: "Comida China",
-        img: "",
+        img: "img_comidas/ajjaj.png",
         hasOptions: true,
         options: {
             proteina: {
@@ -419,7 +419,7 @@ const MENU_DATA = [
         desc: "Arroz salteado con huevo y verduras al wok.",
         priceBase: 350,
         category: "Comida China",
-        img: "",
+        img: "img_comidas/por.png",
         hasOptions: true,
         options: {
             proteinas: {
@@ -441,7 +441,7 @@ const MENU_DATA = [
         desc: "Fideos al wok con verduras sazonados con sésamo y soja.",
         priceBase: 450,
         category: "Comida China",
-        img: "",
+        img: "img_comidas/af.png",
         hasOptions: true,
         options: {
             proteinas: {
@@ -462,7 +462,7 @@ const MENU_DATA = [
         desc: "Verduras salteadas sazonadas con aceite de sésamo y soja.",
         priceBase: 320,
         category: "Comida China",
-        img: "",
+        img: "img_comidas/ok.png",
         hasOptions: true,
         options: {
             extra: {
