@@ -184,13 +184,9 @@ function renderMenu(searchTerm = '') {
         let imgSrc = item.img;
         if (!imgSrc) {
             if (item.category === "Arepas") imgSrc = "IMG/menu-arepa.png";
-            else if (item.category === "Cachapas") imgSrc = "";
-            else if (item.category === "Comida China") imgSrc = "";
-            else if (item.category === "Tequeños") imgSrc = "";
-            else if (item.category === "Patacones") imgSrc = "";
             else if (item.category === "Empanadas") imgSrc = "IMG/menu-empanada.png";
             else if (item.category === "Postres") imgSrc = "IMG/menu-postre.png";
-            else imgSrc = "IMG/img-1.jpg";
+            else imgSrc = "";
         }
 
         const imgHtml = imgSrc ? `

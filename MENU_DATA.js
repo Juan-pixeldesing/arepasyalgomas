@@ -360,13 +360,11 @@ const MENU_DATA = [
     { id: "combo-roques", name: "Combo Los Roques", desc: "2 cachapas grandes + bebida 1.5L.", price: 980, category: "Combos & Promos", img: "" },
     { id: "combo-guaricha", name: "Combo La Guaricha", desc: "3 cachapas medianas (queso) + 10 tequeños + bebida 1.5L.", price: 1010, category: "Combos & Promos", img: "" },
     { id: "combo-canaima", name: "Combo Canaima", desc: "3 cachapas med. + 3 teq. + media ración pollo frito.", price: 700, category: "Combos & Promos", img: "" },
-    { id: "combo-cachamay", name: "Combo Cachamay", desc: "Tres cachapas rellenas de queso.", price: 460, category: "Combos & Promos", img: "" },
     { id: "bien-resuelta", name: "Bien Resuelta", desc: "3 arepas a elección + 10 tequeños + bebida 1.5L.", price: 1600, category: "Combos & Promos", img: "img_comidas/bienresuelta.jpeg" },
-    { id: "crispy-box", name: "Crispy Box", desc: "Pollo Crispy + 5 Tequeños + Fritas + Bebida 1.5L.", price: 850, category: "Combos & Promos", img: "" },
+    { id: "crispy-box", name: "Crispy Box", desc: "Pollo Crispy + 5 Tequeños + Fritas + Bebida 1.5L.", price: 850, category: "Combos & Promos", img: "img_comidas/crispybox.png" },
     { id: "picada-crispy", name: "Picada Crispy", desc: "Pollo crispy, 4 tostones con queso y papas fritas.", price: 600, category: "Combos & Promos", img: "" },
-    { id: "entre-panas", name: "Entre Panas", desc: "6 tequeños + media ración pollo crispy + 3 mini arepitas.", price: 630, category: "Combos & Promos", img: "img_comidas/entrepanas.png" },
-    { id: "full-equipo", name: "Full Equipo", desc: "Pollo Crispy + 3 arepitas + 3 tequeños + 3 cachapas med.", price: 840, category: "Combos & Promos", img: "img_comidas/picadafullequipo.png" },
-
+    { id: "entre-panas", name: "Entre Panas", desc: "6 tequeños + media ración pollo crispy + 3 mini arepitas.", price: 680, category: "Combos & Promos", img: "img_comidas/entrepanas.png" },
+    { id: "full-equipo", name: "Full Equipo", desc: "Pollo Crispy + 3 arepitas + 3 tequeños + 3 cachapas med.", price: 900, category: "Combos & Promos", img: "img_comidas/picadafullequipo.png" },
     // --- COMIDA CHINA ---
     { id: "combo-china-1", name: "Media Ración Chow Fan + Pollo Frito", desc: "Media ración de arroz con verduras y pollo frito.", price: 470, category: "Comida China", img: "img_comidas/verdurasypolloaroz.png" },
     { id: "combo-china-2", name: "Media Ración Chow Fan (1 Prot) + Pollo Frito", desc: "Arroz con una proteína y pollo frito.", price: 470, category: "Comida China", img: "" },
@@ -519,25 +517,6 @@ const MENU_DATA = [
         }
     },
     {
-        id: "tequenos-chocolate",
-        name: "Tequeños Chocolate",
-        desc: "Dedos de masa crujiente rellenos de chocolate fundido.",
-        priceBase: 310,
-        category: "Tequeños",
-        img: "img_comidas/tequeñochocolate.png",
-        hasOptions: true,
-        options: {
-            cantidad: {
-                title: "Elegí cantidad",
-                required: true,
-                items: [
-                    { name: "Porción x5", price: 310 },
-                    { name: "Porción x10", price: 560 }
-                ]
-            }
-        }
-    },
-    {
         id: "tequenos-oregano",
         name: "Tequeños Oregano",
         desc: "Bastones de queso envuelto en ricas tiras de masa con oregano.",
@@ -597,7 +576,27 @@ const MENU_DATA = [
     { id: "burger-tequeno", name: "Burger Tequeños", desc: "Hamburguesa especial envuelta en masa de tequeño.", price: 580, category: "Tequeños", img: "img_comidas/burguertequeño.png" },
     // --- PICADAS & ENTRADAS ---
     { id: "falafel-5", name: "Croquetas Falafel (x5)", desc: "Croquetas veganas a base de garbanzos y especias.", price: 270, category: "Picadas & Entradas", img: "img_comidas/croqueta_farafel.png" },
-    { id: "porcion-papas", name: "Porcion Fritas", desc: "Ración de papas fritas.", price: 270, category: "Picadas & Entradas", img: "img_comidas/papasfritas.png" },
+    {
+        id: "porcion-papas",
+        name: "Porcion Fritas",
+        desc: "Ración de papas fritas.",
+        priceBase: 270,
+        category: "Picadas & Entradas",
+        img: "img_comidas/papasfritas.png",
+        hasOptions: true,
+        options: {
+            adicionales: {
+                title: "Adicionales",
+                required: true,
+                items: [
+                    { name: "Solas", price: 270 },
+                    { name: "Con Cheddar", price: 310 },
+                    { name: "Con Panceta", price: 310 },
+                    { name: "Con Cheddar y Panceta", price: 350 }
+                ]
+            }
+        }
+    },
 
     // --- PATACONES ---
     { id: "patacon-carne", name: "Patacón con Carne", desc: "Base y tapa de plátano verde frito con jugosa carne mechada, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "img_comidas/pataconcarne.png" },
@@ -615,6 +614,7 @@ const MENU_DATA = [
     { id: "pepsi-15", name: "Pepsi 1.5L", desc: "Bebida familiar.", price: 210, category: "Bebidas", img: "img_comidas/pepsi.png" },
     { id: "coca-600", name: "Coca Cola 600ml", desc: "Bebida individual.", price: 130, category: "Bebidas", img: "img_comidas/coca.png" },
     { id: "coca-15", name: "Coca Cola 1.5 L", desc: "Bebida familiar.", price: 220, category: "Bebidas", img: "img_comidas/coca.png" },
+    { id: "malta-polar", name: "Malta Maltin Polar", desc: "Típica bebida de malta venezolana.", price: 140, category: "Bebidas", img: "img_comidas/maltamaltinpolar.png" },
     { id: "salsa-soja", name: "Salsa de Soja", desc: "Salsa de soja extra para tus platos.", price: 40, category: "Salsas & Extras", img: "img_comidas/salsasoja.png" },
     { id: "salsa-agridulce", name: "Salsa Agridulce", desc: "Salsa agridulce casera.", price: 40, category: "Salsas & Extras", img: "img_comidas/salsaagridulce.png" },
     { id: "salsa-verde", name: "Salsa Verde", desc: "Tradicionalmente confesionada a base de verduras.", price: 50, category: "Salsas & Extras", img: "img_comidas/salsaverde.png" },
