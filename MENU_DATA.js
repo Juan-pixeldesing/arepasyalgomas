@@ -605,7 +605,7 @@ const MENU_DATA = [
     { id: "patacon-cerdo", name: "Patacón con Cerdo", desc: "Base y tapa de plátano verde frito y en el centro carne de cerdo a la plancha, tomate, lechuga, cebolla, queso, panceta.", price: 500, category: "Patacones", img: "img_comidas/pataconcerdo.png" },
     { id: "patacon-veggie", name: "Patacón Veggie", desc: "Base y tapa de plátano frito y en el centro verduras salteadas.", price: 460, category: "Patacones", img: "img_comidas/pataconveggie.jpeg" },
 
-    { id: "tostones", name: "Tostones", desc: "Plátano verde frito crujiente.", price: 250, category: "Picadas & Entradas", img: "" },
+    { id: "tostone", name: "Tostones Con Queso", desc: "Mini base de platano verde frito con queso Mozarella y salsas a eleccion.", price: 250, category: "Picadas & Entradas", img: "img_comidas/tostones.png" },
 
     // --- BEBIDAS ---
     { id: "monster-energy", name: "Monster Energy 473ml", desc: "Bebida energética.", price: 135, category: "Bebidas", img: "img_comidas/monster.png" },
@@ -632,6 +632,7 @@ const MENU_DATA = [
     { id: "tenders", name: "Tenders de pollo Crispy", desc: "Trozos de suprema de pollo fritos con cobertura extra crocante.", price: 380, category: "Pollo Frito", img: "img_comidas/tendersdepollocrispy.png" },
 
     // --- EMPANADAS ---
-    { id: "empanada-pollo", name: "Empanada de Pollo", desc: "Empanada de maíz frita.", price: 240, category: "Empanadas", img: "img_comidas/empanada_pollo.png" },
+    { id: "empanada-pollo", name: "Empanada de Pollo", desc: "Empanada de maíz frita.", price: 250, category: "Empanadas", img: "img_comidas/empanada_pollo.png" },
     { id: "empanada-jyq", name: "Empanada de Jamón y Queso", desc: "Empanada de maíz frita.", price: 230, category: "Empanadas", img: "img_comidas/empanadajyq.png" },
+    { id: "empanada-mechada", name: "Empanada de Carne Mechada con Queso Muzza", desc: "Empanada de harina de maiz frita crocante rellena de carne mechada y Queso Muzza.", price: 250, category: "Empanadas", img: "img_comidas/empanadamechada.png" },
 ];

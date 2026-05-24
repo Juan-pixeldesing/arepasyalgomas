@@ -158,6 +158,13 @@ function renderMenu(searchTerm = '') {
         return matchCategory && matchSearch;
     });
 
+    // Los productos con foto aparecen primero
+    filtered.sort((a, b) => {
+        const aHasImg = a.img ? 1 : 0;
+        const bHasImg = b.img ? 1 : 0;
+        return bHasImg - aHasImg;
+    });
+
     // Ajuste dinámico para menú vertical en todas las categorías
     grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(300px, 1fr))';
     grid.style.gridTemplateRows = 'auto';
