@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --primary: #FFD700; /* Gold Maize */
     --primary-glow: rgba(255, 215, 0, 0.4);
     --secondary: #FF4D4D; /* Neon Red */
@@ -545,11 +545,8 @@ section {
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
     flex-grow: 1;
-    display: -webkit-box;
-    -webkit-line-clamp: 4; /* MÃ¡ximo 4 lÃ­neas */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .btn-add {

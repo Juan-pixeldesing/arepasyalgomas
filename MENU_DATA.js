@@ -361,7 +361,7 @@ const MENU_DATA = [
     { id: "combo-guaricha", name: "Combo La Guaricha", desc: "3 cachapas medianas (queso) + 10 tequeños + bebida 1.5L.", price: 1010, category: "Combos & Promos", img: "" },
     { id: "combo-canaima", name: "Combo Canaima", desc: "3 cachapas med. + 3 teq. + media ración pollo frito.", price: 700, category: "Combos & Promos", img: "" },
     { id: "combo-cachamay", name: "Combo Cachamay", desc: "Tres cachapas rellenas de queso.", price: 460, category: "Combos & Promos", img: "" },
-    { id: "bien-resuelta", name: "Bien Resuelta", desc: "3 arepas a elección + 10 tequeños + bebida 1.5L.", price: 1600, category: "Combos & Promos", img: "" },
+    { id: "bien-resuelta", name: "Bien Resuelta", desc: "3 arepas a elección + 10 tequeños + bebida 1.5L.", price: 1600, category: "Combos & Promos", img: "img_comidas/bienresuelta.jpeg" },
     { id: "crispy-box", name: "Crispy Box", desc: "Pollo Crispy + 5 Tequeños + Fritas + Bebida 1.5L.", price: 850, category: "Combos & Promos", img: "" },
     { id: "picada-crispy", name: "Picada Crispy", desc: "Pollo crispy, 4 tostones con queso y papas fritas.", price: 600, category: "Combos & Promos", img: "" },
     { id: "entre-panas", name: "Entre Panas", desc: "6 tequeños + media ración pollo crispy + 3 mini arepitas.", price: 630, category: "Combos & Promos", img: "img_comidas/entrepanas.png" },
@@ -600,11 +600,11 @@ const MENU_DATA = [
     { id: "porcion-papas", name: "Porcion Fritas", desc: "Ración de papas fritas.", price: 270, category: "Picadas & Entradas", img: "img_comidas/papasfritas.png" },
 
     // --- PATACONES ---
-    { id: "patacon-carne", name: "Patacón con Carne", desc: "Base y tapa de platano verde frito con jugosa carne mechada,tomate,lechuga,cebolla,queso,panceta..", price: 500, category: "Patacones", img: "img_comidas/pataconcarne.png" },
-    { id: "patacon-pollo", name: "Patacón con Pollo", desc: "Base y tapa de platano verde frito con carne de pollo a la plancha,tomate,lechuga,cebolla,queso,panceta..", price: 500, category: "Patacones", img: "" },
-    { id: "patacon-chorizo", name: "Patacón con Chorizo", desc: "Base y tapa de platano verde frito con carne de chorizo a la plancha,tomate,lechuga,cebolla,queso,panceta..", price: 500, category: "Patacones", img: "img_comidas/pataconchori.png" },
-    { id: "patacon-cerdo", name: "Patacón con Cerdo", desc: "Base y tapa de platano verde frito y en el centro carne de cerdo a la plancha,tomate,lechuga,cebolla,queso,panceta.", price: 500, category: "Patacones", img: "img_comidas/pataconcerdo.png" },
-    { id: "patacon-veggie", name: "Patacón Veggie", desc: "Base y tapa de platano frito y en el centro verduras salteadas.", price: 460, category: "Patacones", img: "img_comidas/pataconveggie.jpeg" },
+    { id: "patacon-carne", name: "Patacón con Carne", desc: "Base y tapa de plátano verde frito con jugosa carne mechada, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "img_comidas/pataconcarne.png" },
+    { id: "patacon-pollo", name: "Patacón con Pollo", desc: "Base y tapa de plátano verde frito con carne de pollo a la plancha, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "" },
+    { id: "patacon-chorizo", name: "Patacón con Chorizo", desc: "Base y tapa de plátano verde frito con carne de chorizo a la plancha, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "img_comidas/pataconchori.png" },
+    { id: "patacon-cerdo", name: "Patacón con Cerdo", desc: "Base y tapa de plátano verde frito y en el centro carne de cerdo a la plancha, tomate, lechuga, cebolla, queso, panceta.", price: 500, category: "Patacones", img: "img_comidas/pataconcerdo.png" },
+    { id: "patacon-veggie", name: "Patacón Veggie", desc: "Base y tapa de plátano frito y en el centro verduras salteadas.", price: 460, category: "Patacones", img: "img_comidas/pataconveggie.jpeg" },
 
     { id: "tostones", name: "Tostones", desc: "Plátano verde frito crujiente.", price: 250, category: "Picadas & Entradas", img: "" },
 
