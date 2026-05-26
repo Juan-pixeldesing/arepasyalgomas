@@ -366,15 +366,175 @@ const MENU_DATA = [
     { id: "entre-panas", name: "Entre Panas", desc: "6 tequeños + media ración pollo crispy + 3 mini arepitas.", price: 680, category: "Combos & Promos", img: "img_comidas/entrepanas.png" },
     { id: "full-equipo", name: "Full Equipo", desc: "Pollo Crispy + 3 arepitas + 3 tequeños + 3 cachapas med.", price: 900, category: "Combos & Promos", img: "img_comidas/picadafullequipo.png" },
     // --- COMIDA CHINA ---
-    { id: "combo-china-1", name: "Una racion de arroz Chow fan + Pollo Frito", desc: "una racion de verduras con pollo frito.", price: 470, category: "Comida China", img: "img_comidas/verdurasypolloaroz.png" },
-    { id: "combo-china-2", name: "Media Ración Chow Fan (1 Prot) + Pollo Frito", desc: "Arroz con una proteína y pollo frito.", price: 470, category: "Comida China", img: "img_comidas/ok.png" },
-    { id: "combo-china-3", name: "Media Ración Chow Fan (2 Prot) + Pollo Frito", desc: "Arroz con dos proteínas y pollo frito.", price: 410, category: "Comida China", img: "img_comidas/ok.png" },
-    { id: "combo-china-4", name: "Media Ración Chow Fan + 2 Arrolladitos", desc: "Arroz con proteína y 2 arrolladitos primavera.", price: 480, category: "Comida China", img: "img_comidas/arrozchowfany2arrolladitos.png" },
-    { id: "combo-china-5", name: "Media Ración Chow Fan + 1/4 Pollo", desc: "Media ración de arroz y un cuarto de pollo frito.", price: 330, category: "Comida China", img: "img_comidas/ok.png" },
-    { id: "combo-china-6", name: "Arroz Chow Fan + 1 proteína", desc: "una racion de arroz salteado con huevo frito, verduras y la proteína de su preferencia. Sazonado con soja y aceite de sésamo..", price: 430, category: "Comida China", img: "img_comidas/chowfanprote.png" },
-    { id: "promo-chowfan-1", name: "Promo Arroz Chow Fan Verduras", desc: "Media ración de arroz salteado con verduras.", price: 310, category: "Comida China", img: "img_comidas/promoarrozchowfanconverduras.png" },
     {
-
+        id: "combo-china-1",
+        name: "Una racion de arroz Chow fan + Pollo Frito",
+        desc: "una racion de verduras con pollo frito.",
+        priceBase: 470,
+        category: "Comida China",
+        img: "img_comidas/arrozchowfanpollo.png",
+        hasOptions: true,
+        options: {
+            "Ingredientes adicionales": {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Morrón rojo", price: 0 },
+                    { name: "Morrón verde", price: 0 },
+                    { name: "Cebolla", price: 0 },
+                    { name: "Zucchini", price: 0 },
+                    { name: "Zanahoria", price: 0 },
+                    { name: "Brotes de soya", price: 0 },
+                    { name: "Repollo", price: 0 }
+                ]
+            }
+        }
+    },
+    {
+        id: "combo-china-2",
+        name: "Media Ración Chow Fan (1 Prot) + Pollo Frito",
+        desc: "Arroz con una proteína y pollo frito.",
+        priceBase: 470,
+        category: "Comida China",
+        img: "img_comidas/arrozchowfan2protes.png",
+        hasOptions: true,
+        options: {
+            "Ingredientes adicionales": {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Morrón rojo", price: 0 },
+                    { name: "Morrón verde", price: 0 },
+                    { name: "Cebolla", price: 0 },
+                    { name: "Zucchini", price: 0 },
+                    { name: "Zanahoria", price: 0 },
+                    { name: "Brotes de soya", price: 0 },
+                    { name: "Repollo", price: 0 }
+                ]
+            }
+        }
+    },
+    {
+        id: "combo-china-3",
+        name: "Media Ración Chow Fan (2 Prot) + Pollo Frito",
+        desc: "Arroz con dos proteínas y pollo frito.",
+        priceBase: 410,
+        category: "Comida China",
+        img: "img_comidas/arrozchowfan2protes.png",
+        hasOptions: true,
+        options: {
+            "Ingredientes adicionales": {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Morrón rojo", price: 0 },
+                    { name: "Morrón verde", price: 0 },
+                    { name: "Cebolla", price: 0 },
+                    { name: "Zucchini", price: 0 },
+                    { name: "Zanahoria", price: 0 },
+                    { name: "Brotes de soya", price: 0 },
+                    { name: "Repollo", price: 0 }
+                ]
+            }
+        }
+    },
+    {
+        id: "combo-china-4",
+        name: "Media Ración Chow Fan + 2 Arrolladitos",
+        desc: "Arroz con proteína y 2 arrolladitos primavera.",
+        priceBase: 480,
+        category: "Comida China",
+        img: "img_comidas/arrozchowfany2arrolladitos.png",
+        hasOptions: true,
+        options: {
+            "Ingredientes adicionales": {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Morrón rojo", price: 0 },
+                    { name: "Morrón verde", price: 0 },
+                    { name: "Cebolla", price: 0 },
+                    { name: "Zucchini", price: 0 },
+                    { name: "Zanahoria", price: 0 },
+                    { name: "Brotes de soya", price: 0 },
+                    { name: "Repollo", price: 0 }
+                ]
+            }
+        }
+    },
+    {
+        id: "combo-china-5",
+        name: "Media Ración Chow Fan + 1/4 Pollo",
+        desc: "Media ración de arroz y un cuarto de pollo frito.",
+        priceBase: 330,
+        category: "Comida China",
+        img: "img_comidas/ok.png",
+        hasOptions: true,
+        options: {
+            "Ingredientes adicionales": {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Morrón rojo", price: 0 },
+                    { name: "Morrón verde", price: 0 },
+                    { name: "Cebolla", price: 0 },
+                    { name: "Zucchini", price: 0 },
+                    { name: "Zanahoria", price: 0 },
+                    { name: "Brotes de soya", price: 0 },
+                    { name: "Repollo", price: 0 }
+                ]
+            }
+        }
+    },
+    {
+        id: "combo-china-6",
+        name: "Arroz Chow Fan + 1 proteína",
+        desc: "una racion de arroz salteado con huevo frito, verduras y la proteína de su preferencia. Sazonado con soja y aceite de sésamo..",
+        priceBase: 430,
+        category: "Comida China",
+        img: "img_comidas/chowfanprote.png",
+        hasOptions: true,
+        options: {
+            "Ingredientes adicionales": {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Morrón rojo", price: 0 },
+                    { name: "Morrón verde", price: 0 },
+                    { name: "Cebolla", price: 0 },
+                    { name: "Zucchini", price: 0 },
+                    { name: "Zanahoria", price: 0 },
+                    { name: "Brotes de soya", price: 0 },
+                    { name: "Repollo", price: 0 }
+                ]
+            }
+        }
+    },
+    {
+        id: "promo-chowfan-1",
+        name: "Promo Arroz Chow Fan Verduras",
+        desc: "Media ración de arroz salteado con verduras.",
+        priceBase: 310,
+        category: "Comida China",
+        img: "img_comidas/promoarrozchowfanconverduras.png",
+        hasOptions: true,
+        options: {
+            "Ingredientes adicionales": {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Morrón rojo", price: 0 },
+                    { name: "Morrón verde", price: 0 },
+                    { name: "Cebolla", price: 0 },
+                    { name: "Zucchini", price: 0 },
+                    { name: "Zanahoria", price: 0 },
+                    { name: "Brotes de soya", price: 0 },
+                    { name: "Repollo", price: 0 }
+                ]
+            }
+        }
+    },
+    {
         id: "promo-chowfan-2",
         name: "Promo Arroz Chow Fan + proteína",
         desc: "Media ración de arroz con una proteína.",
@@ -390,6 +550,19 @@ const MENU_DATA = [
                     { name: "Carne", price: 330 },
                     { name: "Pollo", price: 330 },
                     { name: "Cerdo", price: 330 }
+                ]
+            },
+            "Ingredientes adicionales": {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Morrón rojo", price: 0 },
+                    { name: "Morrón verde", price: 0 },
+                    { name: "Cebolla", price: 0 },
+                    { name: "Zucchini", price: 0 },
+                    { name: "Zanahoria", price: 0 },
+                    { name: "Brotes de soya", price: 0 },
+                    { name: "Repollo", price: 0 }
                 ]
             }
         }
@@ -419,7 +592,7 @@ const MENU_DATA = [
         desc: "Arroz salteado con huevo y verduras al wok.",
         priceBase: 350,
         category: "Comida China",
-        img: "img_comidas/por.png",
+        img: "",
         hasOptions: true,
         options: {
             proteinas: {
@@ -431,6 +604,19 @@ const MENU_DATA = [
                     { name: "Dos proteínas", price: 100 },
                     { name: "Tres proteínas", price: 130 },
                     { name: "Cuatro proteínas", price: 160 }
+                ]
+            },
+            "Ingredientes adicionales": {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Morrón rojo", price: 0 },
+                    { name: "Morrón verde", price: 0 },
+                    { name: "Cebolla", price: 0 },
+                    { name: "Zucchini", price: 0 },
+                    { name: "Zanahoria", price: 0 },
+                    { name: "Brotes de soya", price: 0 },
+                    { name: "Repollo", price: 0 }
                 ]
             }
         }
@@ -453,6 +639,19 @@ const MENU_DATA = [
                     { name: "Dos proteínas", price: 80 },
                     { name: "Tres proteínas", price: 120 }
                 ]
+            },
+            "Ingredientes adicionales": {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Morrón rojo", price: 0 },
+                    { name: "Morrón verde", price: 0 },
+                    { name: "Cebolla", price: 0 },
+                    { name: "Zucchini", price: 0 },
+                    { name: "Zanahoria", price: 0 },
+                    { name: "Brotes de soya", price: 0 },
+                    { name: "Repollo", price: 0 }
+                ]
             }
         }
     },
@@ -462,7 +661,7 @@ const MENU_DATA = [
         desc: "Verduras salteadas sazonadas con aceite de sésamo y soja.",
         priceBase: 320,
         category: "Comida China",
-        img: "img_comidas/ok.png",
+        img: "",
         hasOptions: true,
         options: {
             extra: {
@@ -473,10 +672,23 @@ const MENU_DATA = [
                     { name: "Con Carne", price: 40 },
                     { name: "Con Cerdo", price: 40 }
                 ]
+            },
+            "Ingredientes adicionales": {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Morrón rojo", price: 0 },
+                    { name: "Morrón verde", price: 0 },
+                    { name: "Cebolla", price: 0 },
+                    { name: "Zucchini", price: 0 },
+                    { name: "Zanahoria", price: 0 },
+                    { name: "Brotes de soya", price: 0 },
+                    { name: "Repollo", price: 0 }
+                ]
             }
         }
     },
-    { id: "pollo-frito", name: "Pollo Frito", desc: "Ración de pollo frito crujiente.", price: 320, category: "Comida China", img: "" },
+    { id: "pollo-frito", name: "Pollo Frito", desc: "Ración de pollo frito crujiente.", price: 320, category: "Comida China", img: "img_comidas/pollofrito.png" },
     // --- TEQUEÑOS ---
     {
         id: "tequenos-muzzarella",

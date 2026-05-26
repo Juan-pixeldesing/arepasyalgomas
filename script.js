@@ -228,6 +228,19 @@ function renderMenu(searchTerm = '') {
             }
         });
 
+        if (imgSrc) {
+            const imgContainer = card.querySelector('.menu-card-img');
+            if (imgContainer) {
+                imgContainer.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const lightbox = document.getElementById('lightbox');
+                    const lightboxImg = document.getElementById('lightbox-img');
+                    lightboxImg.src = imgSrc;
+                    lightbox.classList.add('active');
+                });
+            }
+        }
+
         grid.appendChild(card);
     });
 
@@ -251,6 +264,12 @@ function initCarousel() {
         imgEl.src = `IMG/${img}`;
         imgEl.alt = `Foto ${index + 1} de Arepas y Algo Más`;
         imgEl.loading = "lazy";
+        imgEl.addEventListener('click', () => {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = `IMG/${img}`;
+            lightbox.classList.add('active');
+        });
         li.appendChild(imgEl);
         track.appendChild(li);
 
@@ -326,7 +345,7 @@ function initGallery() {
 
         div.addEventListener('click', () => {
             lightboxImg.src = `IMG/${img}`;
-            lightbox.style.display = 'block';
+            lightbox.classList.add('active');
         });
 
         div.appendChild(imgEl);
@@ -334,12 +353,18 @@ function initGallery() {
     });
 
     closeBtn.addEventListener('click', () => {
-        lightbox.style.display = 'none';
+        lightbox.classList.remove('active');
     });
 
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
-            lightbox.style.display = 'none';
+            lightbox.classList.remove('active');
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
         }
     });
 
