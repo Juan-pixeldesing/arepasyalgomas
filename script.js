@@ -473,7 +473,7 @@ function openProductModal(productId) {
             if (group.required) {
                 selectedOptions[key] = group.items[0];
             } else if (group.multiple) {
-                selectedOptions[key] = [];
+                selectedOptions[key] = group.items.filter(item => item.selected);
             }
         });
     }

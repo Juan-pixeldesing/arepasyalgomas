@@ -4,7 +4,7 @@ const MENU_DATA = [
         id: "reina-pepiada",
         name: "Arepa Reina Pepiada",
         desc: "Una mezcla de pollo, palta y mayonesa.",
-        priceBase: 370,
+        priceBase: 375,
         category: "Arepas",
         img: "img_comidas/arepapepiada.png",
         hasOptions: true,
@@ -13,9 +13,9 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola", price: 370 },
-                    { name: "Con Fritas", price: 550 },
-                    { name: "Con Tequeños", price: 650 }
+                    { name: "Sola", price: 375 },
+                    { name: "Con Fritas", price: 560 },
+                    { name: "Con Tequeños", price: 660 }
                 ]
             }
         }
@@ -24,7 +24,7 @@ const MENU_DATA = [
         id: "arepa-sifrina",
         name: "Arepa Sifrina",
         desc: "Una Reina Pepiada con mucho queso.",
-        priceBase: 360,
+        priceBase: 365,
         category: "Arepas",
         img: "img_comidas/arepasifrina.png",
         hasOptions: true,
@@ -33,9 +33,9 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola", price: 360 },
-                    { name: "Con Fritas", price: 540 },
-                    { name: "Con Tequeños", price: 640 }
+                    { name: "Sola", price: 365 },
+                    { name: "Con Fritas", price: 550 },
+                    { name: "Con Tequeños", price: 650 }
                 ]
             }
         }
@@ -44,7 +44,7 @@ const MENU_DATA = [
         id: "arepa-pelua",
         name: "Arepa Pelúa",
         desc: "Carne vacuna en hierbas salteadas con morrón, cebolla y queso muzzarella.",
-        priceBase: 370,
+        priceBase: 375,
         category: "Arepas",
         img: "img_comidas/arepapelua.png",
         hasOptions: true,
@@ -53,9 +53,9 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola", price: 370 },
-                    { name: "Con Fritas", price: 550 },
-                    { name: "Con Tequeños", price: 650 }
+                    { name: "Sola", price: 375 },
+                    { name: "Con Fritas", price: 560 },
+                    { name: "Con Tequeños", price: 660 }
                 ]
             }
         }
@@ -64,7 +64,7 @@ const MENU_DATA = [
         id: "arepa-rumbera",
         name: "Arepa Rumbera",
         desc: "Carne de cerdo a la plancha y queso muzzarella.",
-        priceBase: 360,
+        priceBase: 365,
         category: "Arepas",
         img: "img_comidas/areparumbera.png",
         hasOptions: true,
@@ -73,9 +73,9 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola", price: 360 },
-                    { name: "Con Fritas", price: 540 },
-                    { name: "Con Tequeños", price: 640 }
+                    { name: "Sola", price: 365 },
+                    { name: "Con Fritas", price: 550 },
+                    { name: "Con Tequeños", price: 650 }
                 ]
             }
         }
@@ -84,7 +84,7 @@ const MENU_DATA = [
         id: "arepa-perico",
         name: "Arepa Perico",
         desc: "Huevos revueltos con morrones y cebolla.",
-        priceBase: 350,
+        priceBase: 355,
         category: "Arepas",
         img: "img_comidas/arepaperico.png",
         hasOptions: true,
@@ -93,9 +93,9 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola", price: 350 },
-                    { name: "Con Fritas", price: 530 },
-                    { name: "Con Tequeños", price: 630 }
+                    { name: "Sola", price: 355 },
+                    { name: "Con Fritas", price: 540 },
+                    { name: "Con Tequeños", price: 640 }
                 ]
             }
         }
@@ -104,7 +104,7 @@ const MENU_DATA = [
         id: "arepa-domino",
         name: "Arepa Domino",
         desc: "Porotos negros con queso muzzarella.",
-        priceBase: 350,
+        priceBase: 355,
         category: "Arepas",
         img: "img_comidas/arepadomino.png",
         hasOptions: true,
@@ -113,9 +113,9 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola", price: 350 },
-                    { name: "Con Fritas", price: 530 },
-                    { name: "Con Tequeños", price: 630 }
+                    { name: "Sola", price: 355 },
+                    { name: "Con Fritas", price: 540 },
+                    { name: "Con Tequeños", price: 640 }
                 ]
             }
         }
@@ -124,7 +124,7 @@ const MENU_DATA = [
         id: "arepa-veggie-sencilla",
         name: "Arepa Veggie Sencilla",
         desc: "Mix de vegetales, verduras salteadas y palta.",
-        priceBase: 350,
+        priceBase: 355,
         category: "Arepas",
         img: "img_comidas/arepaveggie.png",
         hasOptions: true,
@@ -133,9 +133,9 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola", price: 350 },
-                    { name: "Con Fritas", price: 530 },
-                    { name: "Con Tequeños", price: 630 }
+                    { name: "Sola", price: 355 },
+                    { name: "Con Fritas", price: 540 },
+                    { name: "Con Tequeños", price: 640 }
                 ]
             }
         }
@@ -144,7 +144,7 @@ const MENU_DATA = [
         id: "arepa-gringa",
         name: "Arepa Gringa",
         desc: "Queso, panceta y huevos revueltos.",
-        priceBase: 360,
+        priceBase: 365,
         category: "Arepas",
         img: "img_comidas/arepaginga.png",
         hasOptions: true,
@@ -153,9 +153,9 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola", price: 360 },
-                    { name: "Con Fritas", price: 540 },
-                    { name: "ConTequeños", price: 640 }
+                    { name: "Sola", price: 365 },
+                    { name: "Con Fritas", price: 550 },
+                    { name: "ConTequeños", price: 650 }
                 ]
             }
         }
@@ -164,7 +164,7 @@ const MENU_DATA = [
         id: "arepa-turca",
         name: "Arepa Turca",
         desc: "Tomate, lechuga, falafel (croquetas árabes) y pollo.",
-        priceBase: 350,
+        priceBase: 355,
         category: "Arepas",
         img: "img_comidas/arepaturca.png",
         hasOptions: true,
@@ -173,9 +173,9 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola", price: 350 },
-                    { name: "Con Fritas", price: 530 },
-                    { name: "Con Tequeños", price: 630 }
+                    { name: "Sola", price: 355 },
+                    { name: "Con Fritas", price: 540 },
+                    { name: "Con Tequeños", price: 640 }
                 ]
             }
         }
@@ -184,7 +184,7 @@ const MENU_DATA = [
         id: "arepa-burger-sencilla",
         name: "Arepa Burger Sencilla",
         desc: "Rellena con hamburguesa, muzzarella, lechuga, tomate y salsa.",
-        priceBase: 340,
+        priceBase: 345,
         category: "Arepas",
         img: "img_comidas/arepaburguersencilla.png",
         hasOptions: true,
@@ -193,9 +193,9 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola", price: 340 },
-                    { name: "Con Fritas", price: 520 },
-                    { name: "Con Tequeños", price: 620 }
+                    { name: "Sola", price: 345 },
+                    { name: "Con Fritas", price: 530 },
+                    { name: "Con Tequeños", price: 630 }
                 ]
             }
         }
@@ -207,7 +207,7 @@ const MENU_DATA = [
         id: "arepa-jyq",
         name: "Arepa Jamón y Queso",
         desc: "Jamón en trocitos y queso muzzarella rallado.",
-        priceBase: 340,
+        priceBase: 345,
         category: "Arepas",
         img: "img_comidas/arepajyq.png",
         hasOptions: true,
@@ -216,9 +216,9 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola", price: 340 },
-                    { name: "Con Fritas", price: 520 },
-                    { name: "Con Tequeños", price: 620 }
+                    { name: "Sola", price: 345 },
+                    { name: "Con Fritas", price: 530 },
+                    { name: "Con Tequeños", price: 630 }
                 ]
             }
         }
@@ -227,7 +227,7 @@ const MENU_DATA = [
         id: "chori-arepa",
         name: "Chori Arepa",
         desc: "Trozos de chorizo premium a la plancha con queso.",
-        priceBase: 350,
+        priceBase: 355,
         category: "Arepas",
         img: "img_comidas/choriarepa.png",
         hasOptions: true,
@@ -236,9 +236,9 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola", price: 350 },
-                    { name: "Con Fritas", price: 530 },
-                    { name: "Con Tequeños", price: 630 }
+                    { name: "Sola", price: 355 },
+                    { name: "Con Fritas", price: 540 },
+                    { name: "Con Tequeños", price: 640 }
                 ]
             }
         }
@@ -247,69 +247,9 @@ const MENU_DATA = [
         id: "arepa-weekend",
         name: "Arepa Weekend",
         desc: "Atún con tomates, cebolla, mayonesa y queso muzzarella.",
-        priceBase: 350,
-        category: "Arepas",
-        img: "img_comidas/arepaweekend.png",
-        hasOptions: true,
-        options: {
-            adicionales: {
-                title: "Acompañamiento",
-                required: true,
-                items: [
-                    { name: "Sola", price: 350 },
-                    { name: "Con Fritas", price: 530 },
-                    { name: "Con Tequeños", price: 630 }
-                ]
-            }
-        }
-    },
-    {
-        id: "arepa-caprese",
-        name: "Arepa Caprese",
-        desc: "Rellena de queso, tomates, albahaca y un toque de aceite de oliva.",
-        priceBase: 350,
-        category: "Arepas",
-        img: "img_comidas/arepacaprese.png",
-        hasOptions: true,
-        options: {
-            adicionales: {
-                title: "Acompañamiento",
-                required: true,
-                items: [
-                    { name: "Sola", price: 350 },
-                    { name: "Con Fritas", price: 530 },
-                    { name: "Con Tequeños", price: 630 }
-                ]
-            }
-        }
-    },
-    {
-        id: "arepa-mechada-solo",
-        name: "Arepa Carne Mechada",
-        desc: "Jugosa carne mechada preparada con hierbas salteadas.",
-        priceBase: 400,
-        category: "Arepas",
-        img: "img_comidas/arepamechadasola.png",
-        hasOptions: true,
-        options: {
-            adicionales: {
-                title: "Acompañamiento",
-                required: true,
-                items: [
-                    { name: "Sola", price: 400 },
-                    { name: "Con Fritas", price: 560 },
-                    { name: "Con Tequeños", price: 660 }
-                ]
-            }
-        }
-    },
-    {
-        id: "arepa-catira",
-        name: "Arepa Catira",
-        desc: "Suprema de pollo en hebras guisada con morrones y cebolla.",
         priceBase: 360,
         category: "Arepas",
-        img: "",
+        img: "img_comidas/arepaweekend.png",
         hasOptions: true,
         options: {
             adicionales: {
@@ -324,10 +264,70 @@ const MENU_DATA = [
         }
     },
     {
+        id: "arepa-caprese",
+        name: "Arepa Caprese",
+        desc: "Rellena de queso, tomates, albahaca y un toque de aceite de oliva.",
+        priceBase: 360,
+        category: "Arepas",
+        img: "img_comidas/arepacaprese.png",
+        hasOptions: true,
+        options: {
+            adicionales: {
+                title: "Acompañamiento",
+                required: true,
+                items: [
+                    { name: "Sola", price: 360 },
+                    { name: "Con Fritas", price: 540 },
+                    { name: "Con Tequeños", price: 640 }
+                ]
+            }
+        }
+    },
+    {
+        id: "arepa-mechada-solo",
+        name: "Arepa Carne Mechada",
+        desc: "Jugosa carne mechada preparada con hierbas salteadas.",
+        priceBase: 410,
+        category: "Arepas",
+        img: "img_comidas/arepamechadasola.png",
+        hasOptions: true,
+        options: {
+            adicionales: {
+                title: "Acompañamiento",
+                required: true,
+                items: [
+                    { name: "Sola", price: 410 },
+                    { name: "Con Fritas", price: 570 },
+                    { name: "Con Tequeños", price: 670 }
+                ]
+            }
+        }
+    },
+    {
+        id: "arepa-catira",
+        name: "Arepa Catira",
+        desc: "Suprema de pollo en hebras guisada con morrones y cebolla.",
+        priceBase: 365,
+        category: "Arepas",
+        img: "",
+        hasOptions: true,
+        options: {
+            adicionales: {
+                title: "Acompañamiento",
+                required: true,
+                items: [
+                    { name: "Sola", price: 365 },
+                    { name: "Con Fritas", price: 550 },
+                    { name: "Con Tequeños", price: 650 }
+                ]
+            }
+        }
+    },
+    {
         id: "burger-especial",
         name: "Arepa Burger Especial",
         desc: "Doble hamburguesa, tomate, lechuga, huevo frito, panceta, queso y salsas.",
-        priceBase: 480,
+        priceBase: 485,
         category: "Arepas",
         img: "img_comidas/arepaburguercombo.png",
         hasOptions: true,
@@ -336,32 +336,33 @@ const MENU_DATA = [
                 title: "Acompañamiento",
                 required: true,
                 items: [
-                    { name: "Sola (Sin Papas)", price: 480 },
-                    { name: "Con Papas Fritas", price: 610 }
+                    { name: "Sola (Sin Papas)", price: 490 },
+                    { name: "Con Papas Fritas", price: 620 }
                 ]
             }
         }
     },
-    { id: "especial-mechada-porotos", name: "Arepa Mechada Porotos y queso", desc: "Carne mechada, porotos negros y queso muzzarella.", price: 390, category: "Arepas", img: "img_comidas/arepacarnemechadaporotosqueso.png" },
-    { id: "especial-verduras-queso", name: "Arepa de Carne,Verduras y Queso", desc: "Carne mechada(carne en hebras) verduras salteadas y queso muzzarella.", price: 380, category: "Arepas", img: "img_comidas/arepacarnemechadaquesoverdura.png" },
-    { id: "especial-mixta-queso", name: "Arepa Carne Mechada y Verduras", desc: "Carne mechada y verduras salteadas.", price: 380, category: "Arepas", img: "img_comidas/arepacarneyverdurasç.png" },
-    { id: "arepa-viuda", name: "Arepa Viuda", desc: "Arepa sola sin relleno.", price: 120, category: "Arepas", img: "img_comidas/arepaviuda.png" },
+    { id: "especial-mechada-porotos", name: "Arepa Mechada Porotos y queso", desc: "Carne mechada, porotos negros y queso muzzarella.", price: 395, category: "Arepas", img: "img_comidas/arepacarnemechadaporotosqueso.png" },
+    { id: "especial-verduras-queso", name: "Arepa de Carne,Verduras y Queso", desc: "Carne mechada(carne en hebras) verduras salteadas y queso muzzarella.", price: 385, category: "Arepas", img: "img_comidas/arepacarnemechadaquesoverdura.png" },
+    { id: "especial-mixta-queso", name: "Arepa Carne Mechada y Verduras", desc: "Carne mechada y verduras salteadas.", price: 385, category: "Arepas", img: "img_comidas/arepacarneyverdurasç.png" },
+    { id: "arepa-viuda", name: "Arepa Viuda", desc: "Arepa sola sin relleno.", price: 125, category: "Arepas", img: "img_comidas/arepaviuda.png" },
     // --- CACHAPAS ---
-    { id: "cachapa-pollo", name: "Cachapa de Pollo", desc: "Fina masa de maíz molido cocinado a la plancha en forma de tortilla y rellena con tiras de pollo salteado y Queso mozarella.", price: 450, category: "Cachapas", img: "img_comidas/cachapapollo.png" },
-    { id: "cachapa-burger", name: "Cachapa Burger", desc: "Rellena de 2 hamburguesas, panceta y muzzarella con fritas.", price: 500, category: "Cachapas", img: "img_comidas/cachapaburger.png" },
-    { id: "cachapa-crispy", name: "Cachapa Crispy", desc: "Cachapa rellena de pollo crispy crujiente.", price: 450, category: "Cachapas", img: "" },
-    { id: "cachapa-jyq", name: "Cachapa Jamón y Queso", desc: "Masa de maíz con trozos de jamón y muzzarella.", price: 420, category: "Cachapas", img: "img_comidas/cachapajyq.png" },
-    { id: "cachapa-solo-queso", name: "Cachapa Solo Queso", desc: "La clásica rellena únicamente de muzzarella.", price: 400, category: "Cachapas", img: "img_comidas/cachapasoloqueso.png" },
-    { id: "cachapa-veggie", name: "Cachapa Veggie", desc: "Rellena de vegetales frescos y muzzarella.", price: 410, category: "Cachapas", img: "img_comidas/cachapaveggie2.png" },
-    { id: "cachapa-chori", name: "Cachapa Chori", desc: "Rellena de vegetales frescos y muzzarella.", price: 345, category: "Cachapas", img: "img_comidas/choriarepa.png" },
-
+    { id: "cachapa-pollo", name: "Cachapa de Pollo", desc: "Fina masa de maíz molido cocinado a la plancha en forma de tortilla y rellena con tiras de pollo y Queso mozarella.", price: 470, category: "Cachapas", img: "img_comidas/cachapapollo.png" },
+    { id: "cachapa-burger", name: "Cachapa Burger", desc: "Rellena de 2 hamburguesas, panceta y muzzarella con fritas.", price: 550, category: "Cachapas", img: "img_comidas/cachapaburger.png" },
+    { id: "cachapa-crispy", name: "Cachapa Crispy", desc: "Cachapa rellena de pollo crispy crujiente.", price: 470, category: "Cachapas", img: "" },
+    { id: "cachapa-jyq", name: "Cachapa Jamón y Queso", desc: "Masa de maíz con trozos de jamón y muzzarella.", price: 440, category: "Cachapas", img: "img_comidas/cachapajyq.png" },
+    { id: "cachapa-solo-queso", name: "Cachapa Solo Queso", desc: "La clásica rellena únicamente de muzzarella.", price: 420, category: "Cachapas", img: "img_comidas/cachapasoloqueso.png" },
+    { id: "cachapa-veggie", name: "Cachapa Veggie", desc: "Rellena de vegetales frescos y muzzarella.", price: 430, category: "Cachapas", img: "img_comidas/cachapaveggie2.png" },
+    { id: "cachapa-chori", name: "Cachapa Chori", desc: "Fina masa de maíz molido cocinado a la plancha en forma de tortilla y rellena con Queso mozarella Y Chorizo.", price: 470, category: "Cachapas", img: "img_comidas/choriarepa.png" },
+    { id: "cachapa-mechada", name: "Cachapa Carne Mechada", desc: "Fina masa de maíz molido cocinado a la plancha en forma de tortilla y rellena con Queso mozarella Y Carne Mechada.", price: 470, category: "Cachapas", img: "img_comidas/cachapacarnemechada.png" },
+    { id: "cachapa-cerdo", name: "Cachapa Carne De Cerdo", desc: "Fina masa de maíz molido cocinado a la plancha en forma de tortilla y rellena con Queso mozarella Y Carne de Cerdo.", price: 470, category: "Cachapas", img: "img_comidas/cachapacerdo.png" },
     // --- COMBOS & PROMOS ---
-    { id: "combo-llovizna", name: "Combo La Llovizna", desc: "2 cachapas grandes + 5 tequeños + bebida 1.5L.", price: 1200, category: "Combos & Promos", img: "" },
-    { id: "combo-roques", name: "Combo Los Roques", desc: "2 cachapas grandes + bebida 1.5L.", price: 980, category: "Combos & Promos", img: "" },
-    { id: "combo-guaricha", name: "Combo La Guaricha", desc: "3 cachapas medianas (queso) + 10 tequeños + bebida 1.5L.", price: 1010, category: "Combos & Promos", img: "" },
-    { id: "combo-canaima", name: "Combo Canaima", desc: "3 cachapas med. + 3 teq. + media ración pollo frito.", price: 700, category: "Combos & Promos", img: "" },
-    { id: "bien-resuelta", name: "Bien Resuelta", desc: "3 arepas a elección + 10 tequeños + bebida 1.5L.", price: 1600, category: "Combos & Promos", img: "img_comidas/bienresuelta.jpeg" },
-    { id: "crispy-box", name: "Crispy Box", desc: "Pollo Crispy + 5 Tequeños + Fritas + Bebida 1.5L.", price: 850, category: "Combos & Promos", img: "img_comidas/crispybox.png" },
+    { id: "combo-llovizna", name: "Combo La Llovizna", desc: "2 cachapas grandes + 5 tequeños + bebida 1.5L.", price: 1250, category: "Combos & Promos", img: "" },
+    { id: "combo-roques", name: "Combo Los Roques", desc: "2 cachapas grandes + bebida 1.5L.", price: 1000, category: "Combos & Promos", img: "" },
+    { id: "combo-guaricha", name: "Combo La Guaricha", desc: "3 cachapas medianas (queso) + 10 tequeños + bebida 1.5L.", price: 1200, category: "Combos & Promos", img: "" },
+    { id: "combo-canaima", name: "Combo Canaima", desc: "3 cachapas med. + 3 teq. + media ración pollo frito.", price: 750, category: "Combos & Promos", img: "" },
+    { id: "bien-resuelta", name: "Bien Resuelta", desc: "3 arepas a elección + 10 tequeños + bebida 1.5L.", price: 1650, category: "Combos & Promos", img: "img_comidas/bienresuelta.jpeg" },
+    { id: "crispy-box", name: "Crispy Box", desc: "Pollo Crispy + 5 Tequeños + Fritas + Bebida 1.5L.", price: 880, category: "Combos & Promos", img: "img_comidas/crispybox.png" },
     { id: "picada-crispy", name: "Picada Crispy", desc: "Pollo crispy, 4 tostones con queso y papas fritas.", price: 600, category: "Combos & Promos", img: "" },
     { id: "entre-panas", name: "Entre Panas", desc: "6 tequeños + media ración pollo crispy + 3 mini arepitas.", price: 680, category: "Combos & Promos", img: "img_comidas/entrepanas.png" },
     { id: "full-equipo", name: "Full Equipo", desc: "Pollo Crispy + 3 arepitas + 3 tequeños + 3 cachapas med.", price: 900, category: "Combos & Promos", img: "img_comidas/picadafullequipo.png" },
@@ -370,7 +371,7 @@ const MENU_DATA = [
         id: "combo-china-1",
         name: "Una racion de arroz Chow fan + Pollo Frito",
         desc: "una racion de verduras con pollo frito.",
-        priceBase: 470,
+        priceBase: 480,
         category: "Comida China",
         img: "img_comidas/arrozchowfanpollo.png",
         hasOptions: true,
@@ -394,7 +395,7 @@ const MENU_DATA = [
         id: "combo-china-2",
         name: "Media Ración Chow Fan (1 Prot) + Pollo Frito",
         desc: "Arroz con una proteína y pollo frito.",
-        priceBase: 470,
+        priceBase: 480,
         category: "Comida China",
         img: "img_comidas/arrozchowfan2protes.png",
         hasOptions: true,
@@ -418,7 +419,7 @@ const MENU_DATA = [
         id: "combo-china-3",
         name: "Media Ración Chow Fan (2 Prot) + Pollo Frito",
         desc: "Arroz con dos proteínas y pollo frito.",
-        priceBase: 410,
+        priceBase: 420,
         category: "Comida China",
         img: "img_comidas/arrozchowfan2protes.png",
         hasOptions: true,
@@ -442,7 +443,7 @@ const MENU_DATA = [
         id: "combo-china-4",
         name: "Media Ración Chow Fan + 2 Arrolladitos",
         desc: "Arroz con proteína y 2 arrolladitos primavera.",
-        priceBase: 480,
+        priceBase: 490,
         category: "Comida China",
         img: "img_comidas/arrozchowfany2arrolladitos.png",
         hasOptions: true,
@@ -466,7 +467,7 @@ const MENU_DATA = [
         id: "combo-china-5",
         name: "Media Ración Chow Fan + 1/4 Pollo",
         desc: "Media ración de arroz y un cuarto de pollo frito.",
-        priceBase: 330,
+        priceBase: 340,
         category: "Comida China",
         img: "img_comidas/ok.png",
         hasOptions: true,
@@ -490,7 +491,7 @@ const MENU_DATA = [
         id: "combo-china-6",
         name: "Arroz Chow Fan + 1 proteína",
         desc: "una racion de arroz salteado con huevo frito, verduras y la proteína de su preferencia. Sazonado con soja y aceite de sésamo..",
-        priceBase: 430,
+        priceBase: 440,
         category: "Comida China",
         img: "img_comidas/chowfanprote.png",
         hasOptions: true,
@@ -514,7 +515,7 @@ const MENU_DATA = [
         id: "promo-chowfan-1",
         name: "Promo Arroz Chow Fan Verduras",
         desc: "Media ración de arroz salteado con verduras.",
-        priceBase: 310,
+        priceBase: 320,
         category: "Comida China",
         img: "img_comidas/promoarrozchowfanconverduras.png",
         hasOptions: true,
@@ -538,7 +539,7 @@ const MENU_DATA = [
         id: "promo-chowfan-2",
         name: "Promo Arroz Chow Fan + proteína",
         desc: "Media ración de arroz con una proteína.",
-        priceBase: 330,
+        priceBase: 340,
         category: "Comida China",
         img: "img_comidas/ajjaj.png",
         hasOptions: true,
@@ -571,7 +572,7 @@ const MENU_DATA = [
         id: "promo-primavera",
         name: "Arrolladitos Primavera",
         desc: "Ración de 5 arrolladitos de verduras.",
-        priceBase: 250,
+        priceBase: 270,
         category: "Comida China",
         img: "img_comidas/arrolladitoprimavera.png",
         hasOptions: true,
@@ -590,7 +591,7 @@ const MENU_DATA = [
         id: "chow-fan-base",
         name: "Arroz Chow Fan",
         desc: "Arroz salteado con huevo y verduras al wok.",
-        priceBase: 350,
+        priceBase: 360,
         category: "Comida China",
         img: "",
         hasOptions: true,
@@ -625,7 +626,7 @@ const MENU_DATA = [
         id: "chow-mein-base",
         name: "Chow Mein",
         desc: "Fideos al wok con verduras sazonados con sésamo y soja.",
-        priceBase: 450,
+        priceBase: 470,
         category: "Comida China",
         img: "img_comidas/af.png",
         hasOptions: true,
@@ -636,8 +637,8 @@ const MENU_DATA = [
                 items: [
                     { name: "Verduras únicamente", price: 0 },
                     { name: "Una proteína", price: 60 },
-                    { name: "Dos proteínas", price: 80 },
-                    { name: "Tres proteínas", price: 120 }
+                    { name: "Dos proteínas", price: 100 },
+                    { name: "Tres proteínas", price: 10 }
                 ]
             },
             "Ingredientes adicionales": {
@@ -659,7 +660,7 @@ const MENU_DATA = [
         id: "chop-suey-base",
         name: "Chop Suey",
         desc: "Verduras salteadas sazonadas con aceite de sésamo y soja.",
-        priceBase: 320,
+        priceBase: 330,
         category: "Comida China",
         img: "",
         hasOptions: true,
@@ -688,7 +689,7 @@ const MENU_DATA = [
             }
         }
     },
-    { id: "pollo-frito", name: "Pollo Frito", desc: "Ración de pollo frito crujiente.", price: 320, category: "Comida China", img: "img_comidas/pollofrito.png" },
+    { id: "pollo-frito", name: "Pollo Frito", desc: "Ración de pollo frito crujiente.", price: 330, category: "Comida China", img: "img_comidas/pollofrito.png" },
     // --- TEQUEÑOS ---
     {
         id: "tequenos-muzzarella",
@@ -811,11 +812,116 @@ const MENU_DATA = [
     },
 
     // --- PATACONES ---
-    { id: "patacon-carne", name: "Patacón con Carne", desc: "Base y tapa de plátano verde frito con jugosa carne mechada, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "img_comidas/pataconcarne.png" },
-    { id: "patacon-pollo", name: "Patacón con Pollo", desc: "Base y tapa de plátano verde frito con carne de pollo a la plancha, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "" },
-    { id: "patacon-chorizo", name: "Patacón con Chorizo", desc: "Base y tapa de plátano verde frito con carne de chorizo a la plancha, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "img_comidas/pataconchori.png" },
-    { id: "patacon-cerdo", name: "Patacón con Cerdo", desc: "Base y tapa de plátano verde frito y en el centro carne de cerdo a la plancha, tomate, lechuga, cebolla, queso, panceta.", price: 500, category: "Patacones", img: "img_comidas/pataconcerdo.png" },
-    { id: "patacon-veggie", name: "Patacón Veggie", desc: "Base y tapa de plátano frito y en el centro verduras salteadas.", price: 460, category: "Patacones", img: "img_comidas/pataconveggie.jpeg" },
+    {
+        id: "patacon-carne",
+        name: "Patacón con Carne",
+        desc: "Base y tapa de plátano verde frito con jugosa carne mechada, tomate, lechuga, cebolla, queso, panceta...",
+        priceBase: 500,
+        category: "Patacones",
+        img: "img_comidas/pataconcarne.png",
+        hasOptions: true,
+        options: {
+            ingredientes: {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Cebolla", price: 0, selected: true },
+                    { name: "Queso Mozzarela", price: 0, selected: true },
+                    { name: "Panceta", price: 0, selected: true },
+                    { name: "Lechuga", price: 0, selected: true },
+                    { name: "Tomate", price: 0, selected: true }
+                ]
+            }
+        }
+    },
+    {
+        id: "patacon-pollo",
+        name: "Patacón con Pollo",
+        desc: "Base y tapa de plátano verde frito con carne de pollo a la plancha, tomate, lechuga, cebolla, queso, panceta...",
+        priceBase: 500,
+        category: "Patacones",
+        img: "",
+        hasOptions: true,
+        options: {
+            ingredientes: {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Cebolla", price: 0, selected: true },
+                    { name: "Queso Mozzarela", price: 0, selected: true },
+                    { name: "Panceta", price: 0, selected: true },
+                    { name: "Lechuga", price: 0, selected: true },
+                    { name: "Tomate", price: 0, selected: true }
+                ]
+            }
+        }
+    },
+    {
+        id: "patacon-chorizo",
+        name: "Patacón con Chorizo",
+        desc: "Base y tapa de plátano verde frito con carne de chorizo a la plancha, tomate, lechuga, cebolla, queso, panceta...",
+        priceBase: 500,
+        category: "Patacones",
+        img: "img_comidas/pataconchori.png",
+        hasOptions: true,
+        options: {
+            ingredientes: {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Cebolla", price: 0, selected: true },
+                    { name: "Queso Mozzarela", price: 0, selected: true },
+                    { name: "Panceta", price: 0, selected: true },
+                    { name: "Lechuga", price: 0, selected: true },
+                    { name: "Tomate", price: 0, selected: true }
+                ]
+            }
+        }
+    },
+    {
+        id: "patacon-cerdo",
+        name: "Patacón con Cerdo",
+        desc: "Base y tapa de plátano verde frito y en el centro carne de cerdo a la plancha, tomate, lechuga, cebolla, queso, panceta.",
+        priceBase: 500,
+        category: "Patacones",
+        img: "img_comidas/pataconcerdo.png",
+        hasOptions: true,
+        options: {
+            ingredientes: {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Cebolla", price: 0, selected: true },
+                    { name: "Queso Mozzarela", price: 0, selected: true },
+                    { name: "Panceta", price: 0, selected: true },
+                    { name: "Lechuga", price: 0, selected: true },
+                    { name: "Tomate", price: 0, selected: true }
+                ]
+            }
+        }
+    },
+    {
+        id: "patacon-veggie",
+        name: "Patacón Veggie",
+        desc: "Base y tapa de plátano frito y en el centro verduras salteadas.",
+        priceBase: 460,
+        category: "Patacones",
+        img: "img_comidas/pataconveggie.jpeg",
+        hasOptions: true,
+        options: {
+            ingredientes: {
+                title: "Ingredientes adicionales (Gratis)",
+                multiple: true,
+                items: [
+                    { name: "Cebolla", price: 0, selected: true },
+                    { name: "Queso Mozzarela", price: 0, selected: true },
+                    { name: "Panceta", price: 0, selected: false },
+                    { name: "Lechuga", price: 0, selected: true },
+                    { name: "Tomate", price: 0, selected: true }
+                ]
+            }
+        }
+    },
 
     { id: "tostone", name: "Tostones Con Queso", desc: "Mini base de platano verde frito con queso Mozarella y salsas a eleccion.", price: 250, category: "Picadas & Entradas", img: "img_comidas/tostones.png" },
 
