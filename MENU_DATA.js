@@ -695,7 +695,7 @@ const MENU_DATA = [
         id: "tequenos-muzzarella",
         name: "Tequeños Mozzarella",
         desc: "Dedos de masa crujiente rellenos de muzzarella.",
-        priceBase: 275,
+        priceBase: 300,
         category: "Tequeños",
         img: "img_comidas/tequeñomozarela.png",
         hasOptions: true,
@@ -704,8 +704,8 @@ const MENU_DATA = [
                 title: "Elegí cantidad",
                 required: true,
                 items: [
-                    { name: "Porción x5", price: 275 },
-                    { name: "Porción x10", price: 500 }
+                    { name: "Porción x5", price: 300 },
+                    { name: "Porción x10", price: 550 }
                 ]
             }
         }
@@ -714,7 +714,7 @@ const MENU_DATA = [
         id: "tequenos-cheddar",
         name: "Tequeños Cheddar",
         desc: "Dedos de masa crujiente rellenos de queso cheddar.",
-        priceBase: 300,
+        priceBase: 310,
         category: "Tequeños",
         img: "img_comidas/tequeñoscheddar.png",
         hasOptions: true,
@@ -723,8 +723,8 @@ const MENU_DATA = [
                 title: "Elegí cantidad",
                 required: true,
                 items: [
-                    { name: "Porción x5", price: 300 },
-                    { name: "Porción x10", price: 550 }
+                    { name: "Porción x5", price: 310 },
+                    { name: "Porción x10", price: 600 }
                 ]
             }
         }
@@ -761,8 +761,8 @@ const MENU_DATA = [
                 title: "Elegí cantidad",
                 required: true,
                 items: [
-                    { name: "Porción x5", price: 300 },
-                    { name: "Porción x10", price: 550 }
+                    { name: "Porción x5", price: 310 },
+                    { name: "Porción x10", price: 600 }
                 ]
             }
         }
@@ -770,7 +770,7 @@ const MENU_DATA = [
     {
         id: "tequenos-normales",
         name: "Tequeños ",
-        desc: "Bastones de queso envuelto en ricas tiras de masa con oregano.",
+        desc: "Bastones de queso envuelto en ricas tiras de masa con Queso Blanco Venezolano.",
         priceBase: 300,
         category: "Tequeños",
         img: "img_comidas/tequeñosnormales.png",
@@ -786,14 +786,14 @@ const MENU_DATA = [
             }
         }
     },
-    { id: "burger-tequeno", name: "Burger Tequeños", desc: "Hamburguesa especial envuelta en masa de tequeño.", price: 580, category: "Tequeños", img: "img_comidas/burguertequeño.png" },
+    { id: "burger-tequeno", name: "Burger Tequeños", desc: "Hamburguesa especial envuelta en masa de tequeño.", price: 600, category: "Tequeños", img: "img_comidas/burguertequeño.png" },
     // --- PICADAS & ENTRADAS ---
     { id: "falafel-5", name: "Croquetas Falafel (x5)", desc: "Croquetas veganas a base de garbanzos y especias.", price: 270, category: "Picadas & Entradas", img: "img_comidas/croqueta_farafel.png" },
     {
         id: "porcion-papas",
         name: "Porcion Fritas",
         desc: "Ración de papas fritas.",
-        priceBase: 270,
+        priceBase: 280,
         category: "Picadas & Entradas",
         img: "img_comidas/papasfritas.png",
         hasOptions: true,
@@ -802,7 +802,7 @@ const MENU_DATA = [
                 title: "Adicionales",
                 required: true,
                 items: [
-                    { name: "Solas", price: 270 },
+                    { name: "Solas", price: 280 },
                     { name: "Con Cheddar", price: 310 },
                     { name: "Con Panceta", price: 310 },
                     { name: "Con Cheddar y Panceta", price: 350 }
@@ -812,118 +812,13 @@ const MENU_DATA = [
     },
 
     // --- PATACONES ---
-    {
-        id: "patacon-carne",
-        name: "Patacón con Carne",
-        desc: "Base y tapa de plátano verde frito con jugosa carne mechada, tomate, lechuga, cebolla, queso, panceta...",
-        priceBase: 500,
-        category: "Patacones",
-        img: "img_comidas/pataconcarne.png",
-        hasOptions: true,
-        options: {
-            ingredientes: {
-                title: "Ingredientes adicionales (Gratis)",
-                multiple: true,
-                items: [
-                    { name: "Cebolla", price: 0, selected: true },
-                    { name: "Queso Mozzarela", price: 0, selected: true },
-                    { name: "Panceta", price: 0, selected: true },
-                    { name: "Lechuga", price: 0, selected: true },
-                    { name: "Tomate", price: 0, selected: true }
-                ]
-            }
-        }
-    },
-    {
-        id: "patacon-pollo",
-        name: "Patacón con Pollo",
-        desc: "Base y tapa de plátano verde frito con carne de pollo a la plancha, tomate, lechuga, cebolla, queso, panceta...",
-        priceBase: 500,
-        category: "Patacones",
-        img: "",
-        hasOptions: true,
-        options: {
-            ingredientes: {
-                title: "Ingredientes adicionales (Gratis)",
-                multiple: true,
-                items: [
-                    { name: "Cebolla", price: 0, selected: true },
-                    { name: "Queso Mozzarela", price: 0, selected: true },
-                    { name: "Panceta", price: 0, selected: true },
-                    { name: "Lechuga", price: 0, selected: true },
-                    { name: "Tomate", price: 0, selected: true }
-                ]
-            }
-        }
-    },
-    {
-        id: "patacon-chorizo",
-        name: "Patacón con Chorizo",
-        desc: "Base y tapa de plátano verde frito con carne de chorizo a la plancha, tomate, lechuga, cebolla, queso, panceta...",
-        priceBase: 500,
-        category: "Patacones",
-        img: "img_comidas/pataconchori.png",
-        hasOptions: true,
-        options: {
-            ingredientes: {
-                title: "Ingredientes adicionales (Gratis)",
-                multiple: true,
-                items: [
-                    { name: "Cebolla", price: 0, selected: true },
-                    { name: "Queso Mozzarela", price: 0, selected: true },
-                    { name: "Panceta", price: 0, selected: true },
-                    { name: "Lechuga", price: 0, selected: true },
-                    { name: "Tomate", price: 0, selected: true }
-                ]
-            }
-        }
-    },
-    {
-        id: "patacon-cerdo",
-        name: "Patacón con Cerdo",
-        desc: "Base y tapa de plátano verde frito y en el centro carne de cerdo a la plancha, tomate, lechuga, cebolla, queso, panceta.",
-        priceBase: 500,
-        category: "Patacones",
-        img: "img_comidas/pataconcerdo.png",
-        hasOptions: true,
-        options: {
-            ingredientes: {
-                title: "Ingredientes adicionales (Gratis)",
-                multiple: true,
-                items: [
-                    { name: "Cebolla", price: 0, selected: true },
-                    { name: "Queso Mozzarela", price: 0, selected: true },
-                    { name: "Panceta", price: 0, selected: true },
-                    { name: "Lechuga", price: 0, selected: true },
-                    { name: "Tomate", price: 0, selected: true }
-                ]
-            }
-        }
-    },
-    {
-        id: "patacon-veggie",
-        name: "Patacón Veggie",
-        desc: "Base y tapa de plátano frito y en el centro verduras salteadas.",
-        priceBase: 460,
-        category: "Patacones",
-        img: "img_comidas/pataconveggie.jpeg",
-        hasOptions: true,
-        options: {
-            ingredientes: {
-                title: "Ingredientes adicionales (Gratis)",
-                multiple: true,
-                items: [
-                    { name: "Cebolla", price: 0, selected: true },
-                    { name: "Queso Mozzarela", price: 0, selected: true },
-                    { name: "Panceta", price: 0, selected: false },
-                    { name: "Lechuga", price: 0, selected: true },
-                    { name: "Tomate", price: 0, selected: true }
-                ]
-            }
-        }
-    },
+    { id: "patacon-carne", name: "Patacón con Carne", desc: "Base y tapa de plátano verde frito con jugosa carne mechada, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "img_comidas/pataconcarne.png" },
+    { id: "patacon-pollo", name: "Patacón con Pollo", desc: "Base y tapa de plátano verde frito con carne de pollo a la plancha, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "" },
+    { id: "patacon-chorizo", name: "Patacón con Chorizo", desc: "Base y tapa de plátano verde frito con carne de chorizo a la plancha, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "img_comidas/pataconchori.png" },
+    { id: "patacon-cerdo", name: "Patacón con Cerdo", desc: "Base y tapa de plátano verde frito y en el centro carne de cerdo a la plancha, tomate, lechuga, cebolla, queso, panceta.", price: 500, category: "Patacones", img: "img_comidas/pataconcerdo.png" },
+    { id: "patacon-veggie", name: "Patacón Veggie", desc: "Base y tapa de plátano frito y en el centro verduras salteadas.", price: 460, category: "Patacones", img: "img_comidas/pataconveggie.jpeg" },
 
-    { id: "tostone", name: "Tostones Con Queso", desc: "Mini base de platano verde frito con queso Mozarella y salsas a eleccion.", price: 250, category: "Picadas & Entradas", img: "img_comidas/tostones.png" },
+    { id: "tostone", name: "Tostones Con Queso", desc: "Mini base de platano verde frito con queso Mozarella y salsas a eleccion.", price: 260, category: "Picadas & Entradas", img: "img_comidas/tostones.png" },
 
     // --- BEBIDAS ---
     { id: "monster-energy", name: "Monster Energy 473ml", desc: "Bebida energética.", price: 135, category: "Bebidas", img: "img_comidas/monster.png" },
