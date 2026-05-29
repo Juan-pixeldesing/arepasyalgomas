@@ -812,11 +812,116 @@ const MENU_DATA = [
     },
 
     // --- PATACONES ---
-    { id: "patacon-carne", name: "Patacón con Carne", desc: "Base y tapa de plátano verde frito con jugosa carne mechada, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "img_comidas/pataconcarne.png" },
-    { id: "patacon-pollo", name: "Patacón con Pollo", desc: "Base y tapa de plátano verde frito con carne de pollo a la plancha, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "" },
-    { id: "patacon-chorizo", name: "Patacón con Chorizo", desc: "Base y tapa de plátano verde frito con carne de chorizo a la plancha, tomate, lechuga, cebolla, queso, panceta...", price: 500, category: "Patacones", img: "img_comidas/pataconchori.png" },
-    { id: "patacon-cerdo", name: "Patacón con Cerdo", desc: "Base y tapa de plátano verde frito y en el centro carne de cerdo a la plancha, tomate, lechuga, cebolla, queso, panceta.", price: 500, category: "Patacones", img: "img_comidas/pataconcerdo.png" },
-    { id: "patacon-veggie", name: "Patacón Veggie", desc: "Base y tapa de plátano frito y en el centro verduras salteadas.", price: 460, category: "Patacones", img: "img_comidas/pataconveggie.jpeg" },
+    {
+        id: "patacon-carne",
+        name: "Patacón con Carne",
+        desc: "Base y tapa de plátano verde frito con jugosa carne mechada, tomate, lechuga, cebolla, queso, panceta...",
+        priceBase: 500,
+        category: "Patacones",
+        img: "img_comidas/pataconcarne.png",
+        hasOptions: true,
+        options: {
+            ingredientes: {
+                title: "Elegí tus ingredientes (Precio incluido)",
+                multiple: true,
+                items: [
+                    { name: "Lechuga", price: 0, selected: true },
+                    { name: "Tomate", price: 0, selected: true },
+                    { name: "Cebolla", price: 0, selected: true },
+                    { name: "Panceta", price: 0, selected: true },
+                    { name: "Queso", price: 0, selected: true }
+                ]
+            }
+        }
+    },
+    {
+        id: "patacon-pollo",
+        name: "Patacón con Pollo",
+        desc: "Base y tapa de plátano verde frito con carne de pollo a la plancha, tomate, lechuga, cebolla, queso, panceta...",
+        priceBase: 500,
+        category: "Patacones",
+        img: "",
+        hasOptions: true,
+        options: {
+            ingredientes: {
+                title: "Elegí tus ingredientes (Precio incluido)",
+                multiple: true,
+                items: [
+                    { name: "Lechuga", price: 0, selected: true },
+                    { name: "Tomate", price: 0, selected: true },
+                    { name: "Cebolla", price: 0, selected: true },
+                    { name: "Panceta", price: 0, selected: true },
+                    { name: "Queso", price: 0, selected: true }
+                ]
+            }
+        }
+    },
+    {
+        id: "patacon-chorizo",
+        name: "Patacón con Chorizo",
+        desc: "Base y tapa de plátano verde frito con carne de chorizo a la plancha, tomate, lechuga, cebolla, queso, panceta...",
+        priceBase: 500,
+        category: "Patacones",
+        img: "img_comidas/pataconchori.png",
+        hasOptions: true,
+        options: {
+            ingredientes: {
+                title: "Elegí tus ingredientes (Precio incluido)",
+                multiple: true,
+                items: [
+                    { name: "Lechuga", price: 0, selected: true },
+                    { name: "Tomate", price: 0, selected: true },
+                    { name: "Cebolla", price: 0, selected: true },
+                    { name: "Panceta", price: 0, selected: true },
+                    { name: "Queso", price: 0, selected: true }
+                ]
+            }
+        }
+    },
+    {
+        id: "patacon-cerdo",
+        name: "Patacón con Cerdo",
+        desc: "Base y tapa de plátano verde frito y en el centro carne de cerdo a la plancha, tomate, lechuga, cebolla, queso, panceta.",
+        priceBase: 500,
+        category: "Patacones",
+        img: "img_comidas/pataconcerdo.png",
+        hasOptions: true,
+        options: {
+            ingredientes: {
+                title: "Elegí tus ingredientes (Precio incluido)",
+                multiple: true,
+                items: [
+                    { name: "Lechuga", price: 0, selected: true },
+                    { name: "Tomate", price: 0, selected: true },
+                    { name: "Cebolla", price: 0, selected: true },
+                    { name: "Panceta", price: 0, selected: true },
+                    { name: "Queso", price: 0, selected: true }
+                ]
+            }
+        }
+    },
+    {
+        id: "patacon-veggie",
+        name: "Patacón Veggie",
+        desc: "Base y tapa de plátano frito y en el centro de verduras salteadas.",
+        priceBase: 460,
+        category: "Patacones",
+        img: "img_comidas/pataconveggie.jpeg",
+        hasOptions: true,
+        options: {
+            ingredientes: {
+                title: "Elegí tus ingredientes (Precio incluido)",
+                multiple: true,
+                items: [
+                    { name: "Lechuga", price: 0, selected: true },
+                    { name: "Tomate", price: 0, selected: true },
+                    { name: "Cebolla", price: 0, selected: true },
+                    { name: "Panceta", price: 0, selected: false },
+                    { name: "Queso", price: 0, selected: true }
+                ]
+            }
+        }
+    },
 
     { id: "tostone", name: "Tostones Con Queso", desc: "Mini base de platano verde frito con queso Mozarella y salsas a eleccion.", price: 260, category: "Picadas & Entradas", img: "img_comidas/tostones.png" },
 
