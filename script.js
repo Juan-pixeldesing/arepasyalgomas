@@ -18,6 +18,22 @@ let toggleCartGlobal;
 let currentConfigProduct = null;
 let modalQty = 1;
 let selectedOptions = {};
+let currentDetailProduct = null;
+
+function getProductImage(product) {
+    if (product.img) return product.img;
+    if (product.category === "Arepas") return "IMG/menu-arepa.png";
+    if (product.category === "Empanadas") return "IMG/menu-empanada.png";
+    if (product.category === "Postres") return "IMG/menu-postre.png";
+    return "";
+}
+
+function getProductDisplayPrice(product) {
+    if (product.hasOptions) {
+        return product.priceBase > 0 ? `Desde $${product.priceBase}` : "Ver opciones";
+    }
+    return `$${product.price}`;
+}
 
 // --- INICIALIZACIÓN ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initGallery();
     initCart();
     initProductModal();
+    initProductDetailModal();
     initReservations();
     initScrollReveal();
 
@@ -183,18 +200,12 @@ function renderMenu(searchTerm = '') {
 
     filtered.forEach(item => {
         const card = document.createElement("div");
-        card.className = "menu-card";
-        const displayPrice = item.hasOptions ? (item.priceBase > 0 ? `Desde $${item.priceBase}` : "Ver opciones") : `$${item.price}`;
+        const displayPrice = getProductDisplayPrice(item);
         const btnText = "Agregar";
-        const btnAction = item.hasOptions ? `openProductModal("${item.id}")` : `addToCart("${item.id}")`;
 
-        let imgSrc = item.img;
-        if (!imgSrc) {
-            if (item.category === "Arepas") imgSrc = "IMG/menu-arepa.png";
-            else if (item.category === "Empanadas") imgSrc = "IMG/menu-empanada.png";
-            else if (item.category === "Postres") imgSrc = "IMG/menu-postre.png";
-            else imgSrc = "";
-        }
+        let imgSrc = getProductImage(item);
+
+        card.className = "menu-card";
 
         const imgHtml = imgSrc ? `
             <div class="menu-card-img">
@@ -233,10 +244,7 @@ function renderMenu(searchTerm = '') {
             if (imgContainer) {
                 imgContainer.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    const lightbox = document.getElementById('lightbox');
-                    const lightboxImg = document.getElementById('lightbox-img');
-                    lightboxImg.src = imgSrc;
-                    lightbox.classList.add('active');
+                    openProductDetailModal(item.id);
                 });
             }
         }
@@ -458,6 +466,67 @@ function initProductModal() {
     addBtn.onclick = handleModalAdd;
 }
 
+function initProductDetailModal() {
+    const overlay = document.getElementById('product-detail-overlay');
+    const closeBtn = document.getElementById('product-detail-close');
+    const addBtn = document.getElementById('product-detail-add');
+
+    closeBtn.onclick = closeProductDetailModal;
+    overlay.onclick = closeProductDetailModal;
+
+    addBtn.onclick = () => {
+        if (!currentDetailProduct) return;
+
+        const productId = currentDetailProduct.id;
+        const hasOptions = currentDetailProduct.hasOptions;
+        closeProductDetailModal();
+
+        if (hasOptions) {
+            openProductModal(productId);
+        } else {
+            addToCart(productId);
+        }
+    };
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && document.getElementById('product-detail-modal').classList.contains('active')) {
+            closeProductDetailModal();
+        }
+    });
+}
+
+function openProductDetailModal(productId) {
+    const product = MENU_DATA.find(p => p.id == productId);
+    if (!product) return;
+
+    const imgSrc = getProductImage(product);
+    if (!imgSrc) return;
+
+    currentDetailProduct = product;
+
+    document.getElementById('product-detail-img').src = imgSrc;
+    document.getElementById('product-detail-img').alt = product.name;
+    document.getElementById('product-detail-name').textContent = product.name;
+    document.getElementById('product-detail-price').textContent = getProductDisplayPrice(product);
+    document.getElementById('product-detail-desc').textContent = product.desc;
+
+    const addBtn = document.getElementById('product-detail-add');
+    addBtn.innerHTML = product.hasOptions
+        ? '<i class="fas fa-cog"></i> CONFIGURAR PEDIDO'
+        : '<i class="fas fa-shopping-cart"></i> AGREGAR AL PEDIDO';
+
+    document.getElementById('product-detail-overlay').classList.add('active');
+    document.getElementById('product-detail-modal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProductDetailModal() {
+    document.getElementById('product-detail-overlay').classList.remove('active');
+    document.getElementById('product-detail-modal').classList.remove('active');
+    document.body.style.overflow = '';
+    currentDetailProduct = null;
+}
+
 function openProductModal(productId) {
     const product = MENU_DATA.find(p => p.id == productId);
     if (!product) return;
@@ -483,11 +552,13 @@ function openProductModal(productId) {
 
     document.getElementById('product-modal-overlay').classList.add('active');
     document.getElementById('product-modal').classList.add('active');
+    document.body.style.overflow = 'hidden';
 }
 
 function closeProductModal() {
     document.getElementById('product-modal-overlay').classList.remove('active');
     document.getElementById('product-modal').classList.remove('active');
+    document.body.style.overflow = '';
     currentConfigProduct = null;
 }
 

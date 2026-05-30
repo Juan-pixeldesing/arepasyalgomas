@@ -353,7 +353,7 @@ const MENU_DATA = [
     { id: "cachapa-jyq", name: "Cachapa Jamón y Queso", desc: "Masa de maíz con trozos de jamón y muzzarella.", price: 440, category: "Cachapas", img: "img_comidas/cachapajyq.png" },
     { id: "cachapa-solo-queso", name: "Cachapa Solo Queso", desc: "La clásica rellena únicamente de muzzarella.", price: 420, category: "Cachapas", img: "img_comidas/cachapasoloqueso.png" },
     { id: "cachapa-veggie", name: "Cachapa Veggie", desc: "Rellena de vegetales frescos y muzzarella.", price: 430, category: "Cachapas", img: "img_comidas/cachapaveggie2.png" },
-    { id: "cachapa-chori", name: "Cachapa Chori", desc: "Fina masa de maíz molido cocinado a la plancha en forma de tortilla y rellena con Queso mozarella Y Chorizo.", price: 470, category: "Cachapas", img: "img_comidas/choriarepa.png" },
+    { id: "cachapa-chori", name: "Cachapa Chori", desc: "Fina masa de maíz molido cocinado a la plancha en forma de tortilla y rellena con Queso mozarella Y Chorizo.", price: 470, category: "Cachapas", img: "img_comidas/cachapachori.png" },
     { id: "cachapa-mechada", name: "Cachapa Carne Mechada", desc: "Fina masa de maíz molido cocinado a la plancha en forma de tortilla y rellena con Queso mozarella Y Carne Mechada.", price: 470, category: "Cachapas", img: "img_comidas/cachapacarnemechada.png" },
     { id: "cachapa-cerdo", name: "Cachapa Carne De Cerdo", desc: "Fina masa de maíz molido cocinado a la plancha en forma de tortilla y rellena con Queso mozarella Y Carne de Cerdo.", price: 470, category: "Cachapas", img: "img_comidas/cachapacerdo.png" },
     // --- COMBOS & PROMOS ---
@@ -541,7 +541,7 @@ const MENU_DATA = [
         desc: "Media ración de arroz con una proteína.",
         priceBase: 340,
         category: "Comida China",
-        img: "img_comidas/ajjaj.png",
+        img: "img_comidas/chowfanprote.png",
         hasOptions: true,
         options: {
             proteina: {
@@ -593,7 +593,7 @@ const MENU_DATA = [
         desc: "Arroz salteado con huevo y verduras al wok.",
         priceBase: 360,
         category: "Comida China",
-        img: "",
+        img: "img_comidas/chowfanprote.png",
         hasOptions: true,
         options: {
             proteinas: {
@@ -662,7 +662,7 @@ const MENU_DATA = [
         desc: "Verduras salteadas sazonadas con aceite de sésamo y soja.",
         priceBase: 330,
         category: "Comida China",
-        img: "",
+        img: "img_comidas/promoarrozchowfanconverduras.png",
         hasOptions: true,
         options: {
             extra: {

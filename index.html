@@ -119,6 +119,31 @@
         <img class="lightbox-content" id="lightbox-img" src="" alt="Imagen ampliada">
     </div>
 
+    <!-- Modal Detalle del Producto -->
+    <div class="modal-overlay" id="product-detail-overlay"></div>
+    <div class="product-detail-modal" id="product-detail-modal">
+        <div class="product-detail-header">
+            <div class="product-detail-title">
+                <i class="fas fa-search"></i>
+                <h2>Detalle del Producto</h2>
+            </div>
+            <button class="product-detail-close" id="product-detail-close" aria-label="Cerrar">&times;</button>
+        </div>
+        <div class="product-detail-body">
+            <div class="product-detail-image">
+                <img id="product-detail-img" src="" alt="">
+            </div>
+            <div class="product-detail-info">
+                <h3 id="product-detail-name"></h3>
+                <p class="product-detail-price" id="product-detail-price"></p>
+                <p class="product-detail-desc" id="product-detail-desc"></p>
+                <button class="btn-detail-add" id="product-detail-add">
+                    <i class="fas fa-shopping-cart"></i> AGREGAR AL PEDIDO
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Reservas -->
     <section class="reservas-section" id="reservas">
         <div class="reservas-container">
