@@ -214,18 +214,9 @@ function renderMenu(searchTerm = '') {
         return bHasImg - aHasImg;
     });
 
-    // Ajuste dinámico para menú vertical en todas las categorías
-    grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(300px, 1fr))';
-    grid.style.gridTemplateRows = 'auto';
-    grid.style.gridAutoFlow = 'row';
-    grid.style.gridAutoColumns = 'initial';
-    grid.style.overflowX = 'visible';
-    grid.style.scrollSnapType = 'none';
-    grid.style.paddingBottom = '0.5rem';
+    grid.classList.toggle('menu-grid--empty', filtered.length === 0);
 
     if (filtered.length === 0) {
-        grid.style.gridTemplateRows = "auto";
-        grid.style.gridTemplateColumns = "1fr";
         grid.innerHTML = `<p style="text-align:center; color: var(--text-muted); padding: 2rem;">No se encontraron productos.</p>`;
         return;
     }
