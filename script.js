@@ -63,28 +63,60 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // --- SCROLL REVEAL ---
-function initScrollReveal() {
-    const observerOptions = {
-        threshold: 0.05
-    };
+function revealSection(section) {
+    section.classList.add('reveal-active');
+}
 
+function initScrollReveal() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('reveal-active');
+                revealSection(entry.target);
             }
         });
-    }, observerOptions);
+    }, {
+        threshold: 0.01,
+        rootMargin: '80px 0px 80px 0px'
+    });
 
     document.querySelectorAll('section').forEach(section => {
         section.classList.add('reveal');
-        // Si ya es visible, revelarlo de inmediato
+
         const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-            section.classList.add('reveal-active');
+        if (rect.top < window.innerHeight + 100 && rect.bottom > -100) {
+            revealSection(section);
         }
+
         observer.observe(section);
     });
+
+    function revealFromHash() {
+        const id = location.hash.slice(1);
+        if (!id) return;
+        const target = document.getElementById(id);
+        if (target && target.tagName === 'SECTION') {
+            revealSection(target);
+        }
+    }
+
+    revealFromHash();
+    window.addEventListener('hashchange', revealFromHash);
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', () => {
+            const id = link.getAttribute('href').slice(1);
+            if (!id) return;
+            const target = document.getElementById(id);
+            if (target && target.tagName === 'SECTION') {
+                setTimeout(() => revealSection(target), 50);
+            }
+        });
+    });
+
+    // Respaldo por si el navegador del celular no dispara bien el observer
+    setTimeout(() => {
+        document.querySelectorAll('section.reveal:not(.reveal-active)').forEach(revealSection);
+    }, 1500);
 }
 
 // --- NAVBAR ---
