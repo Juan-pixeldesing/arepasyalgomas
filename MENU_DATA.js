@@ -939,10 +939,10 @@ const MENU_DATA = [
     { id: "salsa-ajo", name: "Salsa de Ajo", desc: "salsa de ajo un toque especial a tu paladar.", price: 50, category: "Salsas & Extras", img: "img_comidas/salsaajo.png" },
 
     // --- POSTRES ---
-    { id: "postre-3leches", name: "Tres Leches", desc: "Bizcocho bañado en tres tipos de leche.", price: 240, category: "Postres", img: "img_comidas/3leches.png" },
-    { id: "postre-3leches-choc", name: "Tres Leches Chocolate", desc: "Versión de chocolate del clásico postre.", price: 240, category: "Postres", img: "img_comidas/3lecheschocolate.png" },
-    { id: "postre-3leches-coco", name: "Tres Leches Coco/DDL", desc: "Con coco y dulce de leche.", price: 240, category: "Postres", img: "img_comidas/3lechescoco.png" },
-    { id: "quesillo", name: "Quesillo", desc: "Postre tradicional tipo flan venezolano.", price: 240, category: "Postres", img: "img_comidas/quesillo.png" },
+    { id: "postre-3leches", name: "Tres Leches", desc: "Bizcocho bañado en tres tipos de leche.", price: 240, category: "Postres", img: "img_comidas/3leches.png", unavailable: true },
+    { id: "postre-3leches-choc", name: "Tres Leches Chocolate", desc: "Versión de chocolate del clásico postre.", price: 240, category: "Postres", img: "img_comidas/3lecheschocolate.png", unavailable: true },
+    { id: "postre-3leches-coco", name: "Tres Leches Coco/DDL", desc: "Con coco y dulce de leche.", price: 240, category: "Postres", img: "img_comidas/3lechescoco.png", unavailable: true },
+    { id: "quesillo", name: "Quesillo", desc: "Postre tradicional tipo flan venezolano.", price: 240, category: "Postres", img: "img_comidas/quesillo.png", unavailable: true },
 
     // --- POLLO FRITO
     { id: "guri-pack", name: "Guri pack-porcion infantil", desc: "Media ración de fritas, media ración de tenders de pollo acompañado de 2 tequeños.", price: 400, category: "Pollo Frito", img: "img_comidas/guripack.png" },

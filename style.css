@@ -653,7 +653,76 @@ section {
     box-shadow: 0 0 20px var(--primary-glow);
 }
 
-/* Galería */
+/* --- Productos No Disponibles --- */
+.menu-card.unavailable {
+    opacity: 0.75;
+    cursor: default;
+}
+
+.menu-card.unavailable:hover {
+    transform: none;
+    border-color: var(--border-color);
+    box-shadow: none;
+}
+
+.menu-card.unavailable .menu-card-img img {
+    filter: grayscale(60%) contrast(1.06) saturate(0.6) brightness(0.85);
+}
+
+.menu-card.unavailable:hover .menu-card-img img {
+    transform: none;
+    filter: grayscale(60%) contrast(1.06) saturate(0.6) brightness(0.85);
+}
+
+.unavailable-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(180, 0, 0, 0.92), rgba(80, 0, 0, 0.95));
+    border: 1px solid rgba(255, 80, 80, 0.35);
+    border-radius: 12px;
+    padding: 7px 12px 6px;
+    gap: 1px;
+    width: fit-content;
+    box-shadow: 0 2px 12px rgba(200, 0, 0, 0.3);
+    animation: badgePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% { box-shadow: 0 2px 12px rgba(200, 0, 0, 0.3); }
+    50%       { box-shadow: 0 2px 18px rgba(255, 60, 60, 0.55); }
+}
+
+.unavailable-badge .badge-title {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.unavailable-badge .badge-subtitle {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: rgba(255, 200, 200, 0.85);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.btn-add:disabled,
+.btn-add[disabled] {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+    filter: none;
+    transform: none;
+}
+
+
 .gallery-section {
     background-color: var(--bg-dark);
     max-width: 100%;

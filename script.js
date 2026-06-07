@@ -224,17 +224,26 @@ function renderMenu(searchTerm = '') {
     filtered.forEach(item => {
         const card = document.createElement("div");
         const displayPrice = getProductDisplayPrice(item);
-        const btnText = "Agregar";
+        const isUnavailable = item.unavailable === true;
 
         let imgSrc = getProductImage(item);
 
-        card.className = "menu-card";
+        card.className = `menu-card${isUnavailable ? ' unavailable' : ''}`;
 
         const imgHtml = imgSrc ? `
             <div class="menu-card-img">
                 <img src="${imgSrc}" alt="${item.name}" loading="lazy">
             </div>
         ` : '';
+
+        const footerContent = isUnavailable
+            ? `<div class="unavailable-badge">
+                <span class="badge-title">No disponible</span>
+                <span class="badge-subtitle">Arepas y Algo Más</span>
+               </div>`
+            : `<button class="btn-add">
+                <i class="fas ${item.hasOptions ? 'fa-cog' : 'fa-plus'}"></i> Agregar
+               </button>`;
 
         card.innerHTML = `
             ${imgHtml}
@@ -245,24 +254,24 @@ function renderMenu(searchTerm = '') {
                 </div>
                 <p class="menu-desc">${item.desc}</p>
                 <div class="menu-card-footer">
-                    <button class="btn-add">
-                        <i class="fas ${item.hasOptions ? 'fa-cog' : 'fa-plus'}"></i> ${btnText}
-                    </button>
+                    ${footerContent}
                 </div>
             </div>
         `;
 
-        const btnEl = card.querySelector('.btn-add');
-        btnEl.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (item.hasOptions) {
-                openProductModal(item.id);
-            } else {
-                addToCart(item.id);
-            }
-        });
+        if (!isUnavailable) {
+            const btnEl = card.querySelector('.btn-add');
+            btnEl.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (item.hasOptions) {
+                    openProductModal(item.id);
+                } else {
+                    addToCart(item.id);
+                }
+            });
+        }
 
-        if (imgSrc) {
+        if (imgSrc && !isUnavailable) {
             const imgContainer = card.querySelector('.menu-card-img');
             if (imgContainer) {
                 imgContainer.addEventListener('click', (e) => {
@@ -274,6 +283,7 @@ function renderMenu(searchTerm = '') {
 
         grid.appendChild(card);
     });
+
 
     grid.scrollTo({ top: 0, behavior: "smooth" });
 }
